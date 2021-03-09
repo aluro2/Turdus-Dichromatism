@@ -1,0 +1,18 @@
+.Rproj.user
+.Rproj.user/ 
+.Rhistory
+.RData
+.Ruserdata
+.rstudio
+.rstudio/
+.local
+.local/
+.config
+.config/
+.bash_history
+.nohup.out
+nohup.out
+
+# Dirs
+Turdus_Spectral_Data/
+Turdus_Spectral_Data.tar.gz

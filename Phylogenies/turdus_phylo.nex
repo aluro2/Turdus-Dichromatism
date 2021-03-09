@@ -1,0 +1,157 @@
+#NEXUS
+[R-package APE, Tue Jan 24 20:45:13 2017]
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 72;
+	TAXLABELS
+		Turdus_lherminieri
+		Turdus_amaurochalinus
+		Turdus_ignobilis
+		Turdus_maranonicus
+		Turdus_chiguanco
+		Turdus_chiguanco_anthracinus
+		Turdus_fuscater
+		Turdus_nigriceps
+		Turdus_serranus
+		Turdus_olivater
+		Turdus_fulviventris
+		Turdus_reevei
+		Turdus_falcklandii
+		Turdus_albocinctus
+		Turdus_rubrocanus_gouldi
+		Turdus_rubrocanus
+		Turdus_naumanni
+		Turdus_atrogularis
+		Turdus_ruficollis
+		Turdus_torquatus
+		Turdus_pilaris
+		Turdus_kessleri
+		Turdus_celaenops
+		Turdus_chrysolaus
+		Turdus_obscurus
+		Turdus_pallidus
+		Turdus_poliocephalus_layardi
+		Turdus_boulboul
+		Turdus_cardis
+		Turdus_hortulorum
+		Turdus_dissimilis
+		Turdus_unicolor
+		Turdus_niveiceps
+		Turdus_aurantius
+		Turdus_plumbeus_plumbeus
+		Turdus_plumbeus_schistaceus
+		Turdus_plumbeus_rubripes
+		Turdus_pelios
+		Turdus_olivaceofuscus
+		Turdus_infuscatus
+		Turdus_nigrescens
+		Turdus_migratorius
+		Turdus_migratorius_confinis
+		Turdus_rufitorques
+		Turdus_leucops
+		Turdus_jamaicensis
+		Turdus_swalesi
+		Turdus_libonyanus
+		Turdus_tephronotus
+		Turdus_ludoviciae
+		Turdus_mandarinus
+		Turdus_flavipes
+		Turdus_albicollis
+		Turdus_assimilis
+		Turdus_grayi
+		Turdus_nudigenis
+		Turdus_maculirostris
+		Turdus_rufiventris
+		Turdus_lawrencii
+		Turdus_obsoletus
+		Turdus_fumigatus
+		Turdus_hauxwelli
+		Turdus_leucomelas
+		Turdus_iliacus
+		Turdus_plebejus
+		Turdus_merula
+		Turdus_abyssinicus
+		Turdus_olivaceus
+		Turdus_helleri
+		Turdus_philomelos
+		Turdus_viscivorus
+		Turdus_mupinensis
+	;
+END;
+BEGIN TREES;
+	TRANSLATE
+		1	Turdus_lherminieri,
+		2	Turdus_amaurochalinus,
+		3	Turdus_ignobilis,
+		4	Turdus_maranonicus,
+		5	Turdus_chiguanco,
+		6	Turdus_chiguanco_anthracinus,
+		7	Turdus_fuscater,
+		8	Turdus_nigriceps,
+		9	Turdus_serranus,
+		10	Turdus_olivater,
+		11	Turdus_fulviventris,
+		12	Turdus_reevei,
+		13	Turdus_falcklandii,
+		14	Turdus_albocinctus,
+		15	Turdus_rubrocanus_gouldi,
+		16	Turdus_rubrocanus,
+		17	Turdus_naumanni,
+		18	Turdus_atrogularis,
+		19	Turdus_ruficollis,
+		20	Turdus_torquatus,
+		21	Turdus_pilaris,
+		22	Turdus_kessleri,
+		23	Turdus_celaenops,
+		24	Turdus_chrysolaus,
+		25	Turdus_obscurus,
+		26	Turdus_pallidus,
+		27	Turdus_poliocephalus_layardi,
+		28	Turdus_boulboul,
+		29	Turdus_cardis,
+		30	Turdus_hortulorum,
+		31	Turdus_dissimilis,
+		32	Turdus_unicolor,
+		33	Turdus_niveiceps,
+		34	Turdus_aurantius,
+		35	Turdus_plumbeus_plumbeus,
+		36	Turdus_plumbeus_schistaceus,
+		37	Turdus_plumbeus_rubripes,
+		38	Turdus_pelios,
+		39	Turdus_olivaceofuscus,
+		40	Turdus_infuscatus,
+		41	Turdus_nigrescens,
+		42	Turdus_migratorius,
+		43	Turdus_migratorius_confinis,
+		44	Turdus_rufitorques,
+		45	Turdus_leucops,
+		46	Turdus_jamaicensis,
+		47	Turdus_swalesi,
+		48	Turdus_libonyanus,
+		49	Turdus_tephronotus,
+		50	Turdus_ludoviciae,
+		51	Turdus_mandarinus,
+		52	Turdus_flavipes,
+		53	Turdus_albicollis,
+		54	Turdus_assimilis,
+		55	Turdus_grayi,
+		56	Turdus_nudigenis,
+		57	Turdus_maculirostris,
+		58	Turdus_rufiventris,
+		59	Turdus_lawrencii,
+		60	Turdus_obsoletus,
+		61	Turdus_fumigatus,
+		62	Turdus_hauxwelli,
+		63	Turdus_leucomelas,
+		64	Turdus_iliacus,
+		65	Turdus_plebejus,
+		66	Turdus_merula,
+		67	Turdus_abyssinicus,
+		68	Turdus_olivaceus,
+		69	Turdus_helleri,
+		70	Turdus_philomelos,
+		71	Turdus_viscivorus,
+		72	Turdus_mupinensis
+	;
+	TREE * UNTITLED = [&R] (((((((1:2.633634,((((((2:0.512401,(3:0.141877,4:0.141877):0.370524):1.008152,((((5:0.0897735,6:0.0897735)NA:0.8079615,(7:0.750912,(8:0.65965,9:0.65965):0.091262):0.146823):0.135805,10:1.03354):0.305438,11:1.338977):0.181576,12:1.520553):0.286902,13:1.807455):0.280209,((((((14:0.40362,(15:0.062422,16:0.062422):0.341198)RUBRO:0.482828,((17:0.255125,(18:0.117381,19:0.117381):0.137744):0.190327,20:0.445452):0.440996,21:0.886448):0.113552,22:1)EUNOM:0.418634,(((23:0.353505,24:0.353505):0.28914,25:0.642645):0.183236,(26:0.669785,27:0.669785):0.156095):0.592754):0.179667,(28:1.179385,((29:0.462315,30:0.462315):0.220815,(31:0.230024,32:0.230024):0.453105):0.496255):0.418916,33:1.598301):0.285422,((34:1.173212,(35:0.1173212,(36:0.01173232,37:0.01173232)NA:0.10559088)NA:1.0558908):0.38898,38:1.562193):0.321531,39:1.883724):0.20394):0.130605,((40:1.126754,41:1.126754):0.158581,((42:0.0266333,43:0.0266343)NA:0.2396997,44:0.266333):1.019001):0.932935):0.150604,45:2.368873,(46:1.935652,47:1.935652):0.433221)EUNOCICLAS:0.264761):0.199075,(((48:2.092993,49:2.092993):0.161639,50:2.254633):0.15467,51:2.409303):0.423405):0.076506,(((52:2.229899,(53:1.654351,54:1.654351):0.575548,(((55:0.86332,56:0.86332):0.153596,57:1.016916):0.286551,58:1.303467):0.926431,59:2.229899,60:2.229899):0.172053,((61:1.242267,62:1.242267):0.779556,63:2.021823):0.380128)HAPLOMELAS:0.372017,(64:2.40486,65:2.40486):0.369109,66:2.773969):0.135245):0.405162,((67:0.4877,68:0.4877):1.466325,69:1.954025):1.360351):1.738395,70:5.052771):0.611895,71:5.664666)THREETWO:1.135334,72:6.8)OLDEST;
+END;
