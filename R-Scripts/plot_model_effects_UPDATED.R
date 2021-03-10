@@ -36,7 +36,7 @@ models <-
 breeding_season_length_x_migration <-
   plot(
     conditional_effects(
-      models$breeding_model_n_achromatic_patches_3,
+      models$breeding_model_n_achromatic_patches_1,
       effects = "std_breeding_months:migratory_behavior",
       # conditions = data.frame(migratory_behavior = c("no", "partial", "yes")),
       # Use median values
@@ -127,7 +127,7 @@ sympatry_plots <-
     }
   )
 
-sympatry_plots[[1]] + sympatry_plots [[2]] + sympatry_plots[[3]]
+(sympatry_plots[[1]] + labs(x="")) + sympatry_plots[[2]] + (sympatry_plots[[3]] + labs(x=""))
 
 ggsave(filename = "Figures/Figure_02_Sympatric_Species.png",
        width = 10,
@@ -138,7 +138,7 @@ ggsave(filename = "Figures/Figure_02_Sympatric_Species.png",
 # Migration Plot -----------------------------------------------------------
 
 migration_plots <-
-  models[grepl("breeding_model_n_chromatic", names(models))] %>%
+  models[grepl("breeding_model_n_achromatic", names(models))] %>%
   purrr::imap(
     .,
     function(x, n){
@@ -161,7 +161,7 @@ migration_plots <-
             x,
             effects = "migratory_behavior",
             robust = T,
-            probs = c(0.05, 0.95),
+            probs = c(0.10, 0.90),
             method = "fitted",
             re_formula = NULL,
             nsamples = 5000,
