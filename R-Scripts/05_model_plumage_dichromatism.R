@@ -33,6 +33,7 @@ model_data <-
 # Sympatry Model: Max VIF  = 5.4
 # car::vif(glm(n_chromatic_patches_1 ~ n_species_10 + n_species_20 + n_species_30, family =  binomial, data = model_data ))
 
+# Phylogenetic matrix
 phylo_mat <-
   read_rds("Data/phylo_mat.RDS")
 

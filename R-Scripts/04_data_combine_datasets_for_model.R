@@ -97,12 +97,12 @@ comb_dat <-
 # uncertainty in biogeography: a Bayesian approach to dispersal-vicariance
 # analysis of the thrushes (Aves: Turdus). Systematic Biology, 57(2), 257-268.
 # Phylogeny has been modified to include "subspecies" as sister species to their
-# presumed main species.
+# presumed "main" species.
 phylo <-
   read.nexus("Phylogenies/turdus_phylo.nex")  %>%
   drop.tip(., "Turdus_poliocephalus_layardi")
 
-# Get a phylogentic matrix, using Ornstein-Uhlenbeck model
+# Get a phylogenetic matrix, using Ornstein-Uhlenbeck model
 
 phylo_mat <-
   vcvPhylo(
