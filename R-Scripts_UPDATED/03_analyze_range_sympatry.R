@@ -37,6 +37,9 @@ saveRDS(pres_abs_matrix, file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix_U
 #dev.off()
 
 ## Get Range sizes in square kilometers
+pres_abs_matrix <-
+  readRDS(file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix_UPDATED.RDS")
+
 ranges_km2 <-
   lets.rangesize(pres_abs_matrix, units = "squaremeter") %>%
   as.data.frame(.) %>%

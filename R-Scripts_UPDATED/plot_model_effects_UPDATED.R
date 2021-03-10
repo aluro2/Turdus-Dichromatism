@@ -36,12 +36,12 @@ models <-
 breeding_season_length_x_migration <-
   plot(
     conditional_effects(
-      models$breeding_model_n_achromatic_patches_32
+      models$breeding_model_n_achromatic_patches_3,
       effects = "std_breeding_months:migratory_behavior",
       # conditions = data.frame(migratory_behavior = c("no", "partial", "yes")),
       # Use median values
       robust = T,
-      probs = c(0.05, 0.95),
+      probs = c(0.10, 0.90),
       method = "fitted",
       re_formula = NULL,
       nsamples = 5000

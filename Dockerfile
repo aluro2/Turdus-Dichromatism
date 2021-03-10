@@ -23,7 +23,6 @@ RUN R -e "devtools::install_version('pavo', version = '2.4.0', repos='http://cra
 && R -e "devtools::install_version('letsR', version = '3.2', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)"
 
 # Install extra R packages
-RUN R -e "devtools::install_version('flextable', version = '0.5.10', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)"
-
-Run R -e "devtools::install_version('patchwork', version = '1.0.0', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)"
-
+RUN R -e "devtools::install_version('flextable', version = '0.5.10', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)" \
+&& R -e "devtools::install_version('patchwork', version = '1.0.0', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)" \
+&& R -e "devtools::install_version('bayestestR', version = '1.0.0', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)"
