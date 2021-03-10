@@ -12,7 +12,7 @@ library(stringr)
 # Import kfold IC model comparison tables ---------------------------------
 
 model_kfolds <-
-  read_tsv("Results_UPDATED/model_kfolds_comparison.tsv")
+  read_tsv("Results/model_kfolds_comparison.tsv")
 
 # Make pdf tables ---------------------------------------------------------
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Get Project Directory
-analysis_dir="$(dirname $(dirname $(dirname $(realpath $0 ))))/Turdus_analyses"
+analysis_dir="$(dirname $(dirname $(dirname $(realpath $0 ))))/Turdus-Dichromatism"
 echo $analysis_dir
 
 # Change to Project Directory
@@ -11,6 +11,6 @@ cd $analysis_dir
 export R_PROGRESSR_ENABLE=TRUE
 
 # Start R Script
-Rscript R-Scripts_UPDATED/analyze_within_species_between_sex_JNDs.R --parallel=8
+Rscript R-Scripts/analyze_within_species_between_sex_JNDs.R --parallel=8
 
 echo END OF: analyze_within_species_between_sex_JNDs.R

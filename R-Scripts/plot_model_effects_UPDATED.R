@@ -13,9 +13,9 @@ library(pbapply)
 # Get model paths ----------------------------------------------------------
 
 model_paths <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws", full.names = T) %>%
+  list.files(path = "Results/Model_Posterior_Draws", full.names = T) %>%
   setNames(str_remove(
-    list.files("Results_UPDATED/Model_Posterior_Draws/"),
+    list.files("Results/Model_Posterior_Draws/"),
     ".RDS"
   )) %>%
   # Ignore Intercept Only (null) and Phylogeny Only Models

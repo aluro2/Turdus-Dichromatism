@@ -13,9 +13,9 @@ library(brms)
 
 # Get paths to import models
 model_paths <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws", full.names = T) %>%
+  list.files(path = "Results/Model_Posterior_Draws", full.names = T) %>%
   setNames(str_remove(
-    list.files("Results_UPDATED/Model_Posterior_Draws/"),
+    list.files("Results/Model_Posterior_Draws/"),
     '.RDS')
   ) %>%
   # Ignore Intercept Only (null) and Phylogeny Only Models
@@ -23,7 +23,7 @@ model_paths <-
 
 # Create grouping factor to separate models by responses
 model_groups <-
-  list.files("Results_UPDATED/Model_Posterior_Draws/") %>%
+  list.files("Results/Model_Posterior_Draws/") %>%
   str_remove('.RDS') %>%
   str_split_fixed(., '_', 3) %>%
   .[,3] %>%

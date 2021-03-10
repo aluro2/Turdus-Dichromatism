@@ -11,7 +11,7 @@ library(purrr)
 # Import data and phylogenetic matrix-------------------------------------------------------------
 
 model_data <-
-  read_rds("Data_UPDATED/model_data.rds") %>%
+  read_rds("Data/model_data.rds") %>%
   mutate(
     # natural-log transform breeding range sizes
     ln_birdlifeintl_range_size_km2 = log(birdlifeintl_range_size_km2),
@@ -34,7 +34,7 @@ model_data <-
 # car::vif(glm(n_chromatic_patches_1 ~ n_species_10 + n_species_20 + n_species_30, family =  binomial, data = model_data ))
 
 phylo_mat <-
-  read_rds("Data_UPDATED/phylo_mat.RDS")
+  read_rds("Data/phylo_mat.RDS")
 
 # Model Formulas and Names ---------------------------------------------------------
 
@@ -95,11 +95,11 @@ null_model_formulas <-
 all_model_formulas <-
   c(model_formulas, null_model_formulas)
 
-## Run brms models and save in Results_UPDATED/Model_Posterior_Draws
+## Run brms models and save in Results/Model_Posterior_Draws
 
 purrr::imap(all_model_formulas, function(y, n) {
   formula <- y
-  save_name <- paste("Results_UPDATED/Model_Posterior_Draws/", n, ".RDS", sep = "")
+  save_name <- paste("Results/Model_Posterior_Draws/", n, ".RDS", sep = "")
   brm(
     formula,
     data = model_data,

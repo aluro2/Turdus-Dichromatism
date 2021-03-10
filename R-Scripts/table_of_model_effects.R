@@ -1,7 +1,6 @@
 
 # Load packages -----------------------------------------------------------
 library(dplyr, warn.conflicts = F)
-library(readr)
 library(purrr, warn.conflicts = F)
 library(brms)
 library(bayestestR)
@@ -14,9 +13,9 @@ library(pbapply)
 # Get model paths ----------------------------------------------------------
 
 model_paths <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws", full.names = T) %>%
+  list.files(path = "Results/Model_Posterior_Draws", full.names = T) %>%
   setNames(str_remove(
-    list.files("Results_UPDATED/Model_Posterior_Draws/"),
+    list.files("Results/Model_Posterior_Draws/"),
     '.RDS')
   ) %>%
   # Ignore Intercept Only (null) and Phylogeny Only Models
@@ -89,7 +88,6 @@ posterior_summary_data <-
     # Combine all model posterior summaries into single df
     map_df(., bind_rows)
 
-
 ####################################
 
 table_data <-
@@ -111,7 +109,7 @@ table_data <-
     sep = " "
   )  %>%
   unite(
-    col = "Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction",
+    col = "Posterior Median [90% Highest-Density Interval], Probability of Direction",
     median.90_ci,
     pd,
     sep = ""
@@ -120,17 +118,9 @@ table_data <-
   pivot_wider(
     id_cols = c(Model, Parameter),
     names_from = c(`Plumage Metric`,`JND Threshold`),
-    values_from = `Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction`,
+    values_from = `Posterior Median [90% Highest-Density Interval], Probability of Direction`,
     names_sep = ", "
-  ) %>%
-  # Include phylogenetic signal of models
-  bind_rows(.,
-            read_csv("Results_UPDATED/model_phylogenetic_signal_lambda.csv")) %>%
-  # Rearrange so phylogenetic signal is last for each model/response
-  group_by(Model) %>%
-  group_split() %>%
-  bind_rows() %>%
-  arrange(fct_relevel(Model, c('Breeding Timing','Breeding Spacing','Breeding Sympatry')))
+  )
 
 # Table ----------------------------------------------------------------
 
@@ -151,7 +141,7 @@ typology <-
   type = c(
     "Model",
     "Parameter",
-    rep("Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction", 6)
+    rep("Response Posterior Median [90% Highest-Density Interval], Probability of Direction", 6)
     ),
   what = c(
     "Model",
@@ -264,12 +254,12 @@ table_data %>%
   ) %>%
   # Island vs. Mainland
   color(
-    i = 11,
+    i = 10,
     j = 6,
     color = "red"
   ) %>%
   bold(
-    i = 11,
+    i = 10,
     j = 6,
   ) %>%
   # Breeding Range Size
@@ -284,12 +274,12 @@ table_data %>%
   ) %>%
   # Number of Sympatric Species
   color(
-    i = 16,
+    i = 14,
     j = 6:8,
     color = "blue"
   ) %>%
   bold(
-    i = 16,
+    i = 14,
     j = 6:8,
   ) %>%
   ### TABLE FORMATTING
@@ -302,8 +292,8 @@ table_data %>%
   set_table_properties(., width = 1, layout = "autofit") %>%
   #fit_to_width(max_width = 11) #%>%
   # Export as .docx file
-  save_as_pptx(
-    path = "Figures/Table_02_model_effects.pptx"
+  save_as_docx(
+    path = "Figures/Table_02_model_effects.docx"
   )
 
 

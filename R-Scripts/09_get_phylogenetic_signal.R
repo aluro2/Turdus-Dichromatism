@@ -10,7 +10,7 @@ library(phylosignal)
 
 # Import model data
 model_data <-
-  read_rds("Data_UPDATED/model_data.rds") %>%
+  read_rds("Data/model_data.rds") %>%
   mutate(
     # natural-log transform breeding range sizes
     ln_birdlifeintl_range_size_km2 = log(birdlifeintl_range_size_km2),
@@ -79,6 +79,6 @@ phylogenetic_signal <-
 
 write_csv(
   phylogenetic_signal,
-  path = "Results_UPDATED/trait_phylogenetic_signals.csv"
+  path = "Results/trait_phylogenetic_signals.csv"
 )
 

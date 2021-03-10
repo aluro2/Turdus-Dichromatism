@@ -56,8 +56,8 @@ message("Plumage reflectance spectra averaged within individual bird skins")
 
 #  Save Data --------------------------------------------------------------
 
-saveRDS(avg_specs, "Data_UPDATED/reflectance_spectra.RDS")
+saveRDS(avg_specs, "Data/reflectance_spectra.RDS")
 
-write_csv(avg_specs, "Data_UPDATED/Data_CSV/reflectance_spectra.csv")
+write_csv(avg_specs, "Data/Data_CSV/reflectance_spectra.csv")
 
 message("Averaged reflectance spectra saved in Data and Data_CSV")

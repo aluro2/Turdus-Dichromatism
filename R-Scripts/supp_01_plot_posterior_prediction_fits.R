@@ -17,10 +17,10 @@ library(png)
 # Get model paths ----------------------------------------------------------
 
 model_paths <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws", full.names = T)
+  list.files(path = "Results/Model_Posterior_Draws", full.names = T)
 
 model_names <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws/") %>%
+  list.files(path = "Results/Model_Posterior_Draws/") %>%
   str_remove(., ".RDS")
 
 models <-

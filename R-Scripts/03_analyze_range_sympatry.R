@@ -25,7 +25,7 @@ pres_abs_matrix <-
 
 rm(turdus_ranges)
 
-saveRDS(pres_abs_matrix, file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix_UPDATED.RDS")
+saveRDS(pres_abs_matrix, file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix.RDS")
 
 # Make a Turdus genus breeding range map showing number of Turdus species within a range
 #colfunc <- colorRampPalette(colors = c("yellow","blue"), space = "rgb", bias = 1)
@@ -38,7 +38,7 @@ saveRDS(pres_abs_matrix, file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix_U
 
 ## Get Range sizes in square kilometers
 pres_abs_matrix <-
-  readRDS(file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix_UPDATED.RDS")
+  readRDS(file = "Turdus_Data/turdus_letsR_data/pres_abs_matrix.RDS")
 
 ranges_km2 <-
   lets.rangesize(pres_abs_matrix, units = "squaremeter") %>%
@@ -50,11 +50,11 @@ ranges_km2 <-
 overlaps <-
   lets.overlap(pres_abs_matrix, method = "Proportional")
 
-saveRDS(overlaps, file = "Turdus_Data/turdus_letsR_data/overlaps_UPDATED.RDS")
+saveRDS(overlaps, file = "Turdus_Data/turdus_letsR_data/overlaps.RDS")
 
 ## Number of sympatric species, where presence indicated by range overlaps >10%
 overlaps<-
-  readRDS("Turdus_Data/turdus_letsR_data/overlaps_UPDATED.RDS")
+  readRDS("Turdus_Data/turdus_letsR_data/overlaps.RDS")
 
 n_species_overlap <-
   list(
@@ -111,7 +111,7 @@ sympatry_dat <-
   left_join(n_species_overlap, median_sympatric_overlap) %>%
   replace(is.na(.), 0)
 
-write_csv(sympatry_dat, "Data_UPDATED/sympatry_data_UPDATED.csv")
+write_csv(sympatry_dat, "Data/sympatry_data.csv")
 
 ## Plot number of species considered to be sympatric at different % range overlap cutoffs
 sympatry_dat %>%

@@ -11,14 +11,14 @@ library(purrr)
 # Get model paths ----------------------------------------------------------
 
 model_paths <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws", full.names = T) %>%
+  list.files(path = "Results/Model_Posterior_Draws", full.names = T) %>%
   setNames(str_remove(
-    list.files("Results_UPDATED/Model_Posterior_Draws/"),
+    list.files("Results/Model_Posterior_Draws/"),
     '.RDS')
   )
 
 model_groups <-
-  list.files("Results_UPDATED/Model_Posterior_Draws/") %>%
+  list.files("Results/Model_Posterior_Draws/") %>%
   str_remove('.RDS') %>%
   str_split_fixed(., '_', 3) %>%
   .[,3] %>%

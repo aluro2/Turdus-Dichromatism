@@ -13,7 +13,7 @@ library(tidybayes, warn.conflicts = F)
 # Import models  ----------------------------------------------------------
 {
   model_paths <-
-    list.files("Results_UPDATED/Model_Posterior_Draws", full.names = T)
+    list.files("Results/Model_Posterior_Draws", full.names = T)
 
   model_names <-
     str_remove(str_split_fixed(model_paths, "/", 3)[,3], ".rds")

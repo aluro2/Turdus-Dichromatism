@@ -14,7 +14,7 @@ library(pbapply)
 # Import reflectance spectra ----------------------------------------------
 
 reflectance_spectra <-
-  readRDS("Data_UPDATED/reflectance_spectra.RDS")
+  readRDS("Data/reflectance_spectra.RDS")
 
 # Receptor-Noise Limited Modelling of plumage dichromatism  ---------------
 # Using Turdus merula visual system (Hart et al. 2000, doi: 10.1007/s003590050437)
@@ -131,8 +131,8 @@ jnds_patches_within_sp_btw_sexes <-
 
 # Save data ---------------------------------------------------------------
 
-saveRDS(jnds_patches_within_sp_btw_sexes, "Data_UPDATED/turdus_plumage_jnds_btw_sexes.RDS")
+saveRDS(jnds_patches_within_sp_btw_sexes, "Data/turdus_plumage_jnds_btw_sexes.RDS")
 
-write_csv(jnds_patches_within_sp_btw_sexes, "Data_UPDATED/Data_CSV/turdus_plumage_jnds_btw_sexes.csv")
+write_csv(jnds_patches_within_sp_btw_sexes, "Data/Data_CSV/turdus_plumage_jnds_btw_sexes.csv")
 
 message("JND data saved as turdus_plumage_jnds_btw_sexes in Data and Data_CSV.")

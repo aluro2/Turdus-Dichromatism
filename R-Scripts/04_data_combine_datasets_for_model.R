@@ -15,12 +15,12 @@ library(phytools, warn.conflicts = F)
 # Life history data. Gathered from Clement, P., & Hathway, R. (2010). Thrushes.
 # Bloomsbury Publishing and Handbook of the Birds of the World
 lifehistory_data <-
-  read_csv("Data_UPDATED/life_history_data.csv")
+  read_csv("Data/life_history_data.csv")
 
 # Import sympatry/range data generated from R-Scripts/analyze_range_sympatry.R
 # Range and sympatry data from BirdLife International breeding range maps
 sympatry_data <-
-  read_csv("Data_UPDATED/sympatry_data_UPDATED.csv") %>%
+  read_csv("Data/sympatry_data.csv") %>%
   select(species = species_1, everything()) %>%
   mutate(species = str_replace(species, " ", "_")) %>%
   # Fix species scientific names to match names on phylogeny tips
@@ -39,7 +39,7 @@ sympatry_data <-
 
 # Import JND data, generated from R-Scripts/analyze_within_species_between_sex_JNDs.R
 jnds_data <-
-  read_rds("Data_UPDATED/turdus_plumage_jnds_btw_sexes.RDS") %>%
+  read_rds("Data/turdus_plumage_jnds_btw_sexes.RDS") %>%
   ungroup(.) %>%
   # Fix species scientific names to match names on phylogeny tips
   mutate(.,
@@ -111,7 +111,7 @@ phylo_mat <-
     model = "BM"
   )
 
-saveRDS(phylo_mat, "Data_UPDATED/phylo_mat.RDS")
+saveRDS(phylo_mat, "Data/phylo_mat.RDS")
 
 # Phylogeny tip names to match with dataset species names
 tips <-
@@ -151,4 +151,4 @@ tips %>%
   anti_join(., model_data, by = names(.)[1])
 
 
-saveRDS(model_data, "Data_UPDATED/model_data.rds")
+saveRDS(model_data, "Data/model_data.rds")

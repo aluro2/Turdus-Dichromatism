@@ -11,10 +11,10 @@ library(purrr)
 # Get model paths ----------------------------------------------------------
 
 model_paths <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws", full.names = T)
+  list.files(path = "Results/Model_Posterior_Draws", full.names = T)
 
 model_names <-
-  list.files(path = "Results_UPDATED/Model_Posterior_Draws/") %>%
+  list.files(path = "Results/Model_Posterior_Draws/") %>%
   str_remove(., ".RDS")
 
 models <-
@@ -33,7 +33,7 @@ purrr::imap(
   models,
   function(x, n){
     model <- x
-    save_name <- paste("Results_UPDATED/model_kfold_IC/", n, "_kfold.RDS", sep = "")
+    save_name <- paste("Results/model_kfold_IC/", n, "_kfold.RDS", sep = "")
     kfold(
       x,
       K = 16,

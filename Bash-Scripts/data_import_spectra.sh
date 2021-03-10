@@ -11,6 +11,6 @@ cd $analysis_dir
 export R_PROGRESSR_ENABLE=TRUE
 
 # Start R Script
-Rscript R-Scripts_UPDATED/data_import_spectra.R --parallel=6
+Rscript R-Scripts/data_import_spectra.R --parallel=6
 
 echo END OF: data_import_spectra.R
