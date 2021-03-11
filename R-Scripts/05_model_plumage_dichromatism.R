@@ -20,19 +20,6 @@ model_data <-
     obs = row_number(phylo)
   )
 
-## Variance Inflation Factor (VIF) checks --
-# Breeding model: Max VIF = 194 with unstandardized breeding_months
-# car::vif(glm(n_achromatic_patches_1 ~ breeding_months*migratory_behavior, family =  binomial, data = model_data ))
-
-# Breeding Model: Max VIF = 5 with standardized breeding_months
-# car::vif(glm(n_achromatic_patches_1 ~ std_breeding_months*migratory_behavior, family =  binomial, data = model_data ))
-
-# Landmass Model: Max VIF = 1.4
-# car::vif(glm(n_achromatic_patches_1 ~ landmass * ln_birdlifeintl_range_size_km2, family =  binomial, data = model_data ))
-
-# Sympatry Model: Max VIF  = 5.4
-# car::vif(glm(n_chromatic_patches_1 ~ n_species_10 + n_species_20 + n_species_30, family =  binomial, data = model_data ))
-
 # Phylogenetic matrix
 phylo_mat <-
   read_rds("Data/phylo_mat.RDS")

@@ -116,7 +116,7 @@ sympatry_dat %>%
   gather(key = sympatry_metric, value = value, -species_1) %>%
   filter(!sympatry_metric == "median_sym_overlap") %>%
   ggplot(., aes(x = sympatry_metric, y = value, group = species_1)) +
-  geom_line(aes(color = species_1), position=position_jitter(height = 0.1)) +
+  geom_line(color = "blue", alpha = 0.3, position=position_jitter(height = 0.1)) +
+  stat_summary(aes(y = value, x = sympatry_metric, group = 1), fun = median, geom = "line", size = 3, color = "darkblue") +
   labs(y = "Count of Sypatric Species",
-       x = "Percent of Range Overlap Cutoff for Sympatry") +
-  theme(legend.position="right")
+       x = "Percent of Range Overlap Cutoff for Sympatry") 
