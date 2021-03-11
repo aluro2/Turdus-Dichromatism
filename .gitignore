@@ -16,3 +16,7 @@ nohup.out
 # Dirs
 Turdus_Spectral_Data/
 Turdus_Spectral_Data.tar.gz
+
+# Files
+.docx
+.odt
