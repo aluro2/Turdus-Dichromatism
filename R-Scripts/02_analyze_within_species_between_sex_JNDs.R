@@ -126,7 +126,7 @@ jnds_patches_within_sp_btw_sexes <-
   select(., species = species1, patch = patch1, dS, dL) %>%
   group_by(species, patch) %>%
   # Get mean and standard deviation (sd) of JND values for each species
-  summarise(mean_dS = mean(dS), sd_dS = sd(dS), mean_dL = mean(dL), sd_dL = sd(dL))
+  summarise(mean_dS = mean(dS), sd_dS = sd(dS), mean_dL = mean(dL), sd_dL = sd(dL), n = n())
 
 
 # Save data ---------------------------------------------------------------
