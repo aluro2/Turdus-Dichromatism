@@ -10,6 +10,6 @@ libreoffice --headless --convert-to docx turdus-dichromatism-ABL.odt
 
 echo "Conversion to .docx complete!"
 
-pandoc -s turdus-dichromatism-ABL.odt -t gfm -o turdus-dichromatism-ABL.md
+pandoc -s turdus-dichromatism-ABL.docx -t gfm -o turdus-dichromatism-ABL.md
 
 echo "Conversion to .md complete!"

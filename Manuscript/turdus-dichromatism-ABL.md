@@ -39,7 +39,7 @@ measurements were made relative to a diffuse reflectance white standard
 (Spectralon WS-1-SL, Labsphere, North Sutton NH, USA).
 
 We used a receptor-noise limited visual model \[2\] of the European
-Blackbird (*Turdus merula*) visual system \[3\] in the *pavo \[4\]*⁠
+Blackbird (*Turdus merula*) visual system \[3\] in the *pavo* \[4\]⁠
 package in R v4.0.0 \[5\]⁠ to calculate avian-perceived chromatic and
 achromatic visual contrast (in units of “Just-Noticeable Differences”,
 or JNDs) of male vs. female plumage patches for all sampled *Turdus*
@@ -134,6 +134,19 @@ sexually-dichromatic plumage patches \[16\]⁠.
 We obtained N ≥ 4000 effective samples for each model parameter and all
 models’ Markov Chains (MCMC) successfully converged (Rhat = 1 for all
 models’ parameters).
+
+*Table 1: Expected log pointwise predictive densities (ELPD) differences
+and kfold information criterion values of models.*
+
+![](media/image1.png)
+
+*Table 2: Model predictor effect estimates (posterior median log-odds)
+on the number of achromatic and chromatic plumage patches with visual
+contrast values \> 1, 2, and 3 JND. Model effects with a probability of
+direction (pd) value ≥*
+
+*0.90 are bolded in red for a negative effect and blue for a positive
+effect on plumage dichromatism.*
 
 **Discussion**
 
