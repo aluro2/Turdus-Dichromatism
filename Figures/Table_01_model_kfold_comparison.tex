@@ -1,27 +1,25 @@
-\documentclass{article} \begin{document}
-\begin{table}
-    \centering\begingroup\fontsize{18}{20}\selectfont
-    
-    \resizebox{\linewidth}{!}{
-    \begin{tabular}{llllll}
-    \toprule
-    \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{4}{l}{Model} \\
-    \cmidrule(l{3pt}r{3pt}){3-6}
-    \textbf{Plumage Metric} & \textbf{JND Threshold} & \textbf{Breeding Sympatry} & \textbf{Breeding Timing} & \textbf{Breeding Spacing} & \textbf{Intercept Only}\\
-    \midrule
-    \addlinespace[0.3em]
-    \multicolumn{6}{l}{\textbf{Achromatic}}\\
-    \hspace{1em} & 1 JND & 0 ± 0 (-122.17 ± 0.67) & -2.51 ± 2.49 (-124.68 ± 2.38) & -2.59 ± 1.01 (-124.76 ± 1.04) & -21.69 ± 7.36 (-143.87 ± 7.51)\\
-    \hspace{1em} & 2 JND & 0 ± 0 (-98.94 ± 7.56) & -1.19 ± 3.95 (-100.13 ± 9.22) & -0.7 ± 1.34 (-99.64 ± 7.92) & -52.42 ± 12.67 (-151.36 ± 13.4)\\
-    \hspace{1em} & 3 JND & -0.04 ± 1.4 (-85.4 ± 8.91) & -1.7 ± 4.41 (-87.07 ± 10.71) & 0 ± 0 (-85.37 ± 8.76) & -28.54 ± 10.02 (-113.91 ± 13.65)\\
-    \midrule
-    \addlinespace[0.3em]
-    \multicolumn{6}{l}{\textbf{Chromatic}}\\
-    \hspace{1em} & 1 JND & 0 ± 0 (-115.75 ± 2.95) & -5.67 ± 3.55 (-121.42 ± 2.28) & -2.73 ± 3.4 (-118.49 ± 2.67) & -14.8 ± 7.22 (-130.55 ± 7.05)\\
-    \hspace{1em} & 2 JND & 0 ± 0 (-88.47 ± 8.77) & -3.8 ± 4.46 (-92.27 ± 10.01) & -3.32 ± 5.29 (-91.79 ± 10.91) & -50.53 ± 14.49 (-139 ± 16.77)\\
-    \hspace{1em} & 3 JND & 0 ± 0 (-62.77 ± 10.41) & -8 ± 4.32 (-70.77 ± 12.29) & -4.43 ± 3.9 (-67.2 ± 11.72) & -47.63 ± 15.34 (-110.4 ± 20.01)\\
-    \bottomrule
-    \end{tabular}}
-    \endgroup{}
-    \end{table}
-\end{document}
+\begin{table}[!h]
+
+\caption{\label{tab:table01}Expected log pointwise predictive densities (ELPD) differences and
+kfold information criterion values of models.}
+\centering
+\resizebox{\linewidth}{!}{
+\begin{tabular}[t]{llllll}
+\toprule
+\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{4}{l}{Model} \\
+\cmidrule(l{3pt}r{3pt}){3-6}
+Plumage Metric & JND Threshold & Breeding Sympatry & Breeding Timing & Breeding Spacing & Intercept Only\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Achromatic}}\\
+\hspace{1em} & 1 JND & 0 ± 0 (-122.17 ± 0.67) & -2.51 ± 2.49 (-124.68 ± 2.38) & -2.59 ± 1.01 (-124.76 ± 1.04) & -21.69 ± 7.36 (-143.87 ± 7.51)\\
+\hspace{1em} & 2 JND & 0 ± 0 (-98.94 ± 7.56) & -1.19 ± 3.95 (-100.13 ± 9.22) & -0.7 ± 1.34 (-99.64 ± 7.92) & -52.42 ± 12.67 (-151.36 ± 13.4)\\
+\hspace{1em} & 3 JND & -0.04 ± 1.4 (-85.4 ± 8.91) & -1.7 ± 4.41 (-87.07 ± 10.71) & 0 ± 0 (-85.37 ± 8.76) & -28.54 ± 10.02 (-113.91 ± 13.65)\\
+\addlinespace[0.3em]
+\multicolumn{6}{l}{\textbf{Chromatic}}\\
+\hspace{1em} & 1 JND & 0 ± 0 (-115.75 ± 2.95) & -5.67 ± 3.55 (-121.42 ± 2.28) & -2.73 ± 3.4 (-118.49 ± 2.67) & -14.8 ± 7.22 (-130.55 ± 7.05)\\
+\hspace{1em} & 2 JND & 0 ± 0 (-88.47 ± 8.77) & -3.8 ± 4.46 (-92.27 ± 10.01) & -3.32 ± 5.29 (-91.79 ± 10.91) & -50.53 ± 14.49 (-139 ± 16.77)\\
+\hspace{1em} & 3 JND & 0 ± 0 (-62.77 ± 10.41) & -8 ± 4.32 (-70.77 ± 12.29) & -4.43 ± 3.9 (-67.2 ± 11.72) & -47.63 ± 15.34 (-110.4 ± 20.01)\\
+\bottomrule
+\end{tabular}}
+\end{table}

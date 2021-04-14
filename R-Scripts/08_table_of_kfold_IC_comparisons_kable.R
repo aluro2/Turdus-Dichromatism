@@ -49,9 +49,12 @@ model_kfolds <-
   mutate(`Plumage Metric` = "")
 
 
-knitr::kable(model_kfolds, format = "latex", booktabs = T, linesep = "\\addlinespace") %>%
+knitr::kable(model_kfolds, format = "latex", booktabs = T, linesep = "\\addlinespace",
+             caption = "Expected log pointwise predictive densities (ELPD) differences and
+kfold information criterion values of models.", 
+             label = "table01") %>%
 add_header_above(c("", "","Model" = 4), align = "l") %>% 
-  kable_styling(latex_options = "scale_down", font_size = 14) %>% 
+  kable_styling(latex_options = c("scale_down", "hold_position")) %>% 
   pack_rows("Achromatic", 1, 3) %>% 
   pack_rows("Chromatic", 4, 6) %>% 
   write_file(path = "Figures/Table_01_model_kfold_comparison.tex")

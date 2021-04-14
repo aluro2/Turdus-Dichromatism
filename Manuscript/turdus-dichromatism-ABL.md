@@ -9,13 +9,16 @@ header-includes:
   - \linenumbers
   - \usepackage{graphicx}
   - \usepackage{booktabs}
+  - \usepackage{caption}
 link-citations: true
 linkcolor: blue
-output:
-    pdf_document:
-    word_document:
 citecolor: blue
 mainfont: Lato
+linestretch: 1.5
+indent: true
+papersize: a4
+geometry:
+ - margin=1in
 ---
 
 # Abstract
@@ -120,7 +123,7 @@ migratory behavior (full migration as the reference category versus partial
 migration or sedentary), and their interaction. *Breeding sympatry* models
 included the number of sympatric species with greater than 30% breeding range
 overlap as the only predictor of the number of sexually-dichromatic plumage
-patches. *Breeding spacing* models included log<sub>e</sub> transformed breeding
+patches. *Breeding spacing* models included $log_{e}$ transformed breeding
 range size (km<sup>2</sup>) and breeding landmass (mainland as the reference
 category versus island). We also ran null models (intercept only) for all
 responses. All models’ intercepts and response standard deviations were assigned
@@ -130,10 +133,10 @@ across 6 chains and assessed Markov Chain Monte Carlo (MCMC) convergence using
 the Gelman-Rubin diagnostic (Rhat) [@gelmanBayesianDataAnalysis2013]. We then
 performed k-fold cross-validation [@vehtariPracticalBayesianModel2017] to refit
 each model *K*=16 times. For each k-fold, the training dataset included a
-randomly selected set of(N - N cdot left( frac{1}{K} right))or N≈63 species, and
-the testing dataset included (N cdot frac{1}{K}) or N≈4 species not included in
-the training dataset. Finally, we compared differences between the models’
-expected log pointwise predictive densities (ELPD) to assess which model(s) best
+randomly selected set of $N- N\frac{1}{K}$ or N≈63 species, and the
+testing dataset included $N\frac{1}{K}$ or N≈4 species not included in the
+training dataset. Finally, we compared differences between the models’ expected
+log pointwise predictive densities (ELPD) to assess which model(s) best
 predicted the number of sexually-dichromatic plumage patches
 [@vehtariPracticalBayesianModel2017]⁠.
 
@@ -143,25 +146,24 @@ We obtained N ≥ 4000 effective samples for each model parameter and all models
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
 parameters).
 
-*Table 1: Expected log pointwise predictive densities (ELPD) differences and
-kfold information criterion values of models.*
 
-\begin{table}
-\centering\begingroup\fontsize{18}{20}\selectfont
+\begin{table}[!h]
 
+\caption{\label{tab:table01}Expected log pointwise predictive densities (ELPD) differences and
+kfold information criterion values of models.}
+\centering
 \resizebox{\linewidth}{!}{
-\begin{tabular}{llllll}
+\begin{tabular}[t]{llllll}
 \toprule
 \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{4}{l}{Model} \\
 \cmidrule(l{3pt}r{3pt}){3-6}
-\textbf{Plumage Metric} & \textbf{JND Threshold} & \textbf{Breeding Sympatry} & \textbf{Breeding Timing} & \textbf{Breeding Spacing} & \textbf{Intercept Only}\\
+Plumage Metric & JND Threshold & Breeding Sympatry & Breeding Timing & Breeding Spacing & Intercept Only\\
 \midrule
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Achromatic}}\\
 \hspace{1em} & 1 JND & 0 ± 0 (-122.17 ± 0.67) & -2.51 ± 2.49 (-124.68 ± 2.38) & -2.59 ± 1.01 (-124.76 ± 1.04) & -21.69 ± 7.36 (-143.87 ± 7.51)\\
 \hspace{1em} & 2 JND & 0 ± 0 (-98.94 ± 7.56) & -1.19 ± 3.95 (-100.13 ± 9.22) & -0.7 ± 1.34 (-99.64 ± 7.92) & -52.42 ± 12.67 (-151.36 ± 13.4)\\
 \hspace{1em} & 3 JND & -0.04 ± 1.4 (-85.4 ± 8.91) & -1.7 ± 4.41 (-87.07 ± 10.71) & 0 ± 0 (-85.37 ± 8.76) & -28.54 ± 10.02 (-113.91 ± 13.65)\\
-\midrule
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Chromatic}}\\
 \hspace{1em} & 1 JND & 0 ± 0 (-115.75 ± 2.95) & -5.67 ± 3.55 (-121.42 ± 2.28) & -2.73 ± 3.4 (-118.49 ± 2.67) & -14.8 ± 7.22 (-130.55 ± 7.05)\\
@@ -169,7 +171,6 @@ kfold information criterion values of models.*
 \hspace{1em} & 3 JND & 0 ± 0 (-62.77 ± 10.41) & -8 ± 4.32 (-70.77 ± 12.29) & -4.43 ± 3.9 (-67.2 ± 11.72) & -47.63 ± 15.34 (-110.4 ± 20.01)\\
 \bottomrule
 \end{tabular}}
-\endgroup{}
 \end{table}
 
 *Table 2: Model predictor effect estimates (posterior median log-odds) on the
