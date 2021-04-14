@@ -92,6 +92,7 @@ typology <-
     ),
     stringsAsFactors = FALSE )
 
+table <-
 table_data %>%
 # Group data
   as_grouped_data(
@@ -102,7 +103,7 @@ table_data %>%
   merge_h(part = "header") %>%
   merge_v(part = "header") %>%
   empty_blanks() %>%
-  theme_booktabs() %>%
+  theme_booktabs() #%>%
   bold(., part = "header") %>%
   ## Bolden best models by ELPD difference, all 0 or < -2
   # Breeding Sympatry
@@ -133,8 +134,15 @@ table_data %>%
     align = "left",
     part = "all"
   ) %>%
-  set_table_properties(., width = 1, layout = "autofit") %>%
+  set_table_properties(., width = 1, layout = "autofit") #%>%
   # Export as .docx file
-  save_as_html(
-    path = "Figures/Table_01_model_kfold_comparison.html"
+  save_as_image(
+    path = "Figures/Table_01_model_kfold_comparison_TEST.pdf"
   )
+
+
+# Kable style table (LaTeX) -----------------------------------------------
+
+  
+knitr::kable(table_data, format = "latex") %>% 
+    row_spec(1, bold = TRUE)
