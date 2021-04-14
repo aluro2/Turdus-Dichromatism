@@ -126,7 +126,8 @@ plots <-
           labs(x = "Median Log-Odds of Dichromatic Plumage Patch",
                y = "Model Paramter",
                color = "Achromatic/Chromatic \n JND Threshold") +
-          facet_wrap(~`Plumage Metric`) +
+          facet_wrap(~`Plumage Metric`, scale = "free_x") +
+          coord_cartesian() +
           theme_linedraw() +
           theme(text = element_text(family = "Lato"),
                 axis.title = element_text(size = 11),
