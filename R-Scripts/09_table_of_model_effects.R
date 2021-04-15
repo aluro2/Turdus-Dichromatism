@@ -90,8 +90,7 @@ posterior_summary_data <-
     # Combine all model posterior summaries into single df
     map_df(., bind_rows)
 
-
-####################################
+#  Get Table data for table construction ----------------------------------
 
 table_data <-
   posterior_summary_data %>%
@@ -133,7 +132,7 @@ table_data <-
   bind_rows() %>%
   arrange(fct_relevel(Model, c('Breeding Timing','Breeding Spacing','Breeding Sympatry')))
 
-# Table ----------------------------------------------------------------
+# Table (flextable) ----------------------------------------------------------------
 
 # Table header labels
 
@@ -299,10 +298,6 @@ table_data %>%
     part = "body"
   ) %>%
   # FootNotes
-
-# Create, display, and save table -----------------------------------------
-
-
   set_table_properties(., width = 1, layout = "autofit") %>%
   #fit_to_width(max_width = 11) #%>%
   # Export as .docx file
@@ -311,34 +306,34 @@ table_data %>%
   )
 
 
+
 # Kable-style table -------------------------------------------------------
 table_data %>% 
   mutate(Model = "") %>% 
-  # # Coloring function for pd >=0.9
-  # mutate(across(`Achromatic, 1 JND`:`Chromatic, 3 JND`,
-  #      ~cell_spec(.x, format = "latex", color = if_else(
-  #        str_detect(.x, "pd") &
-  #          str_detect(.x, "^-.*$") &
-  #          str_detect(.x, "0.9"),
-  #        "red", if_else(
-  #          str_detect(.x, "pd") &
-  #            !str_detect(.x, "^-.*$") &
-  #            str_detect(.x, "0.9"),
-  #          "blue", ifelse(
-  #            !str_detect(.x, "pd") |
-  #              !str_detect(.x, "0.9"),
-  #            "black", .x
-  #          )))))) %>%
-#Bolding function
-# mutate(across(`Achromatic, 1 JND`:`Chromatic, 3 JND`,
-#               ~cell_spec(.x, format = "latex", bold = if_else(
-#                 str_detect(.x, "pd") &
-#                   str_detect(.x, "0.9"),
-#                 TRUE,
-#                 FALSE)))) %>%
+  # Coloring function for pd >=0.9
+  mutate(across(`Achromatic, 1 JND`:`Chromatic, 3 JND`,
+       ~cell_spec(.x, format = "latex", color = if_else(
+         str_detect(.x, "pd") &
+           str_detect(.x, "^-.*$") &
+           str_detect(.x, "0.9"),
+         "red", if_else(
+           str_detect(.x, "pd") &
+             !str_detect(.x, "^-.*$") &
+             str_detect(.x, "0.9"),
+           "blue", ifelse(
+             !str_detect(.x, "pd") |
+               !str_detect(.x, "0.9"),
+             "black", .x
+           ))),
+         # Bolding function
+         bold = if_else(
+           str_detect(.x, "pd") &
+             str_detect(.x, "0.9"),
+           TRUE,
+           FALSE)))) %>%
   knitr::kable(., format = "latex", booktabs = T, linesep = "\\addlinespace",
-               caption = "Model predictor effect estimates (posterior median log-odds) on the
-  number of achromatic and chromatic plumage patches with visual contrast values >
+               caption = "Model predictor effect estimates (posterior median log-odds and 90% credible interval) on the
+  presence of a plumage patch with achromatic or chromatic visual contrast values >
   1, 2, and 3 JND. Model effects with a probability of direction (pd) value ≥ 0.90
   are bolded in red for a negative effect and blue for a positive effect on
   plumage dichromatism.", 
@@ -360,6 +355,6 @@ table_data %>%
              start_row = 12,
              end_row = 14,
              colnum = 1,
-             underline = FALSE) %>% 
+             underline = FALSE) #%>% 
 write_file(path = "Figures/Table_02_model_effects.tex")
 
