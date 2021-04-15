@@ -81,8 +81,8 @@ lambdas <-
   bind_rows() %>%
   mutate_if(is.numeric, round, 2) %>%
   mutate(
-    CI_low = paste("[", CI_low, sep = ""),
-    CI_high = paste(CI_high, "]", sep = "")
+    CI_low = paste("(", CI_low, sep = ""),
+    CI_high = paste(CI_high, ")", sep = "")
   ) %>%
   unite(
     col = ".90_ci",
@@ -91,19 +91,19 @@ lambdas <-
     sep = ", ") %>%
   unite(
     # trick to align values in Table 2
-    col = "Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction",
+    col = "Posterior Median Log-Odds (90% Highest-Density Interval), Probability of Direction",
     `Phylogenetic Signal λ`,
     ".90_ci",
     sep = " "
   )  %>%
   mutate(
-    Parameter = "Phylogenetic Signal λ, Median [90% Credible Interval]"
+    Parameter = "Phylogenetic Signal λ, Median (90% Credible Interval)"
   ) %>%
   # Spread out estimates by response (Achromatic/Chromatic with JND Threshold)
   pivot_wider(
     id_cols = c(Model, Parameter),
     names_from = c(`Plumage Metric`,`JND Threshold`),
-    values_from = `Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction`,
+    values_from = `Posterior Median Log-Odds (90% Highest-Density Interval), Probability of Direction`,
     names_sep = ", "
   )
 

@@ -80,7 +80,8 @@ posterior_summary_data <-
                    b_landmassisland = "Island vs. Mainland",
                    b_ln_birdlifeintl_range_size_km2 = "Breeding Range Size",
                    b_n_species_30 = "Number of Sympatric Species \n (≥ 30% Breeding Range Overlap)"
-            )
+            ),
+          pd = ifelse(pd==1, 0.99, pd)
         ) %>%
         # Reorder datasets
         select(Model, `Plumage Metric`, `JND Threshold`, Parameter, everything(), -CI)
@@ -95,8 +96,8 @@ posterior_summary_data <-
 table_data <-
   posterior_summary_data %>%
   mutate(
-    CI_low = paste("[", CI_low, sep = ""),
-    CI_high = paste(CI_high, "]", sep = ""),
+    CI_low = paste("(", CI_low, sep = ""),
+    CI_high = paste(CI_high, ")", sep = ""),
     pd = paste(", pd = ", pd, sep = "")
   ) %>%
   unite(
@@ -111,7 +112,7 @@ table_data <-
     sep = " "
   )  %>%
   unite(
-    col = "Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction",
+    col = "Posterior Median Log-Odds (90% Highest-Density Interval), Probability of Direction",
     median.90_ci,
     pd,
     sep = ""
@@ -120,7 +121,7 @@ table_data <-
   pivot_wider(
     id_cols = c(Model, Parameter),
     names_from = c(`Plumage Metric`,`JND Threshold`),
-    values_from = `Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction`,
+    values_from = `Posterior Median Log-Odds (90% Highest-Density Interval), Probability of Direction`,
     names_sep = ", "
   ) %>%
   # Include phylogenetic signal of models
@@ -151,7 +152,7 @@ typology <-
   type = c(
     "Model",
     "Parameter",
-    rep("Posterior Median Log-Odds [90% Highest-Density Interval], Probability of Direction", 6)
+    rep("Posterior Median Log-Odds (90% Highest-Density Interval), Probability of Direction", 6)
     ),
   what = c(
     "Model",
@@ -167,7 +168,7 @@ typology <-
   ),
   stringsAsFactors = FALSE )
 
-# Create, display, and save table
+# Create, display, and save table --------------
 table_data %>%
   # Group data
   as_grouped_data(
@@ -299,6 +300,9 @@ table_data %>%
   ) %>%
   # FootNotes
 
+# Create, display, and save table -----------------------------------------
+
+
   set_table_properties(., width = 1, layout = "autofit") %>%
   #fit_to_width(max_width = 11) #%>%
   # Export as .docx file
@@ -306,4 +310,56 @@ table_data %>%
     path = "Figures/Table_02_model_effects.pptx"
   )
 
+
+# Kable-style table -------------------------------------------------------
+table_data %>% 
+  mutate(Model = "") %>% 
+  # # Coloring function for pd >=0.9
+  # mutate(across(`Achromatic, 1 JND`:`Chromatic, 3 JND`,
+  #      ~cell_spec(.x, format = "latex", color = if_else(
+  #        str_detect(.x, "pd") &
+  #          str_detect(.x, "^-.*$") &
+  #          str_detect(.x, "0.9"),
+  #        "red", if_else(
+  #          str_detect(.x, "pd") &
+  #            !str_detect(.x, "^-.*$") &
+  #            str_detect(.x, "0.9"),
+  #          "blue", ifelse(
+  #            !str_detect(.x, "pd") |
+  #              !str_detect(.x, "0.9"),
+  #            "black", .x
+  #          )))))) %>%
+#Bolding function
+# mutate(across(`Achromatic, 1 JND`:`Chromatic, 3 JND`,
+#               ~cell_spec(.x, format = "latex", bold = if_else(
+#                 str_detect(.x, "pd") &
+#                   str_detect(.x, "0.9"),
+#                 TRUE,
+#                 FALSE)))) %>%
+  knitr::kable(., format = "latex", booktabs = T, linesep = "\\addlinespace",
+               caption = "Model predictor effect estimates (posterior median log-odds) on the
+  number of achromatic and chromatic plumage patches with visual contrast values >
+  1, 2, and 3 JND. Model effects with a probability of direction (pd) value ≥ 0.90
+  are bolded in red for a negative effect and blue for a positive effect on
+  plumage dichromatism.", 
+               label = "table02",
+               escape = F) %>%
+    kable_styling(latex_options = "scale_down") %>% 
+    group_rows(group_label = "Breeding Timing",
+               start_row = 1,
+               end_row = 8,
+               colnum = 1,
+               underline =  FALSE,
+               indent = F) %>% 
+  group_rows(group_label = "Breeding Spacing",
+             start_row = 8,
+             end_row = 11,
+             colnum = 1,
+             underline = FALSE) %>% 
+  group_rows(group_label = "Breeding Sympatry",
+             start_row = 12,
+             end_row = 14,
+             colnum = 1,
+             underline = FALSE) %>% 
+write_file(path = "Figures/Table_02_model_effects.tex")
 
