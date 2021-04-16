@@ -154,6 +154,7 @@ parameters).
 kfold information criterion values of models.}
 \centering
 \resizebox{\linewidth}{!}{
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}[t]{llllll}
 \toprule
 \multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{4}{l}{Model} \\
@@ -186,6 +187,7 @@ Plumage Metric & JND Threshold & Breeding Sympatry & Breeding Timing & Breeding 
   plumage dichromatism.}
 \centering
 \resizebox{\linewidth}{!}{
+\renewcommand{\arraystretch}{1.5}
 \begin{tabular}[t]{llllllll}
 \toprule
 Model & Parameter & Achromatic, 1 JND & Achromatic, 2 JND & Achromatic, 3 JND & Chromatic, 1 JND & Chromatic, 2 JND & Chromatic, 3 JND\\
