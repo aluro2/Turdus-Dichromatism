@@ -20,3 +20,6 @@ Turdus_Spectral_Data.tar.gz
 # Files
 */template.docx
 *.odt
+Manuscript/DOCX-CHANGES*
+Bash-Scripts/update-google-drive-MS.sh
+Bash-Scripts/docker_get_docx_changes.sh
