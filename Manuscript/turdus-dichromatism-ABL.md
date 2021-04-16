@@ -21,10 +21,10 @@ papersize: a4
 geometry:
  - margin=1in
 ---
-
 # Abstract
 
 ## Keywords
+*plumage*, *dichromatism*, *species recognition*
 
 # Background
 
