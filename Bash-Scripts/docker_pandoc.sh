@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+
+ 
+
 # Convert to pdf
 docker run --rm -v $PWD:/pandoc -w /pandoc/ dalibo/pandocker --citeproc --mathjax -f markdown --pdf-engine=xelatex Manuscript/turdus-dichromatism-ABL.md -o Manuscript/turdus-dichromatism-ABL.pdf
 
@@ -7,4 +10,4 @@ docker run --rm -v $PWD:/pandoc -w /pandoc/ dalibo/pandocker --citeproc --mathja
 docker run --rm -v $PWD:/pandoc -w /pandoc/ dalibo/pandocker --citeproc --mathjax -f markdown Manuscript/turdus-dichromatism-ABL.md -o Manuscript/turdus-dichromatism-ABL.tex
 
 # Convert to docx
-docker run --rm -v $PWD:/pandoc -w /pandoc/ dalibo/pandocker --citeproc Manuscript/turdus-dichromatism-ABL.md -o Manuscript/turdus-dichromatism-ABL.docx
+docker run --rm -v $PWD:/pandoc -w /pandoc/ dalibo/pandocker --citeproc -f markdown Manuscript/turdus-dichromatism-ABL.md -o Manuscript/turdus-dichromatism-ABL.docx
