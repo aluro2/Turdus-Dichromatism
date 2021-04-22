@@ -38,7 +38,7 @@ A total of N=77 *Turdus* thrush species were sampled for plumage spectral
 reflectance using from bird skins at the American Museum of Natural History in
 New York City and the Field Museum in Chicago. Reflectance measurements from
 300-700nm were taken in triplicate for the belly, breast, throat, crown and
-mantle plumage patches [@anderssonQuantifyingColors2006] of each individual bird
+mantle plumage patches [@andersson2006] of each individual bird
 skin. N=3 male and N=3 female individuals were measured for most species
 (exceptions: *Turdus lawrencii*, N=2 males and N=2 females; *Turdus swalesi*,
 N=1 male and N=1 female). Reflectance spectra were measured using a 400 μm fiber
@@ -50,10 +50,10 @@ measurements were made relative to a diffuse reflectance white standard
 (Spectralon WS-1-SL, Labsphere, North Sutton NH, USA).
 
 We used a receptor-noise limited visual model
-[@vorobyevReceptorNoiseDeterminant1998] of the European Blackbird (*Turdus
-merula*) visual system [@hartVisualPigmentsOil2000] in the *pavo*
-[@maiaPavoNewTools2019, p. 2]⁠ package in R v4.0.0
-[@rcoreteamLanguageEnvironmentStatistical2020]⁠ to calculate avian-perceived
+[@vorobyev1998] of the European Blackbird (*Turdus
+merula*) visual system [@hart2000] in the *pavo*
+[@maia2019, p. 2]⁠ package in R v4.0.0
+[@rcoreteam2020]⁠ to calculate avian-perceived
 chromatic and achromatic visual contrast (in units of “Just-Noticeable
 Differences”,or JNDs) of male vs. female plumage patches for all sampled
 *Turdus* species. Chromatic and achromatic JNDs were calculated for male-female
@@ -63,22 +63,22 @@ averaged for each species’ respective plumage patches. Under ideal laboratory
 conditions, a JND value of 1 is generally considered to be the discriminable
 threshold past which an observer is predicted to be able to perceive the two
 colors as different. However, natural light environments vary both spatially and
-temporally [@endlerColorLightForests1993]⁠, bringing into question the accuracy
+temporally [@endler1993]⁠, bringing into question the accuracy
 of a JND=1 threshold for generalizing visual contrast under natural conditions.
 Therefore, we calculated the total number of sexually-dichromatic plumage
 patches per species (out of N=5 measured patches) as the number of plumage
 patches with average JND values > 1, 2, or 3 to account for uncertainty in
 visual discrimination thresholds due to variation in psychophysical and ambient
 lighting conditions affecting the strength of between-sex plumage visual
-contrast [@kempIntegrativeFrameworkAppraisal2015]⁠.
+contrast [@kemp2015]⁠.
 
 ## *Life History Data*
 
 ### *Breeding Timing Model*
 
 We collected data on migration behavior and breeding season length from
-*Thrushes* [@clementThrushes2000] and the *Handbook of the Birds of the World*
-[@delhoyoHandbookBirdsWorld2017]⁠. We assigned three different kinds of
+*Thrushes* [@clement2000] and the *Handbook of the Birds of the World*
+[@delhoyo2017]⁠. We assigned three different kinds of
 migratory behavior: 1) *full migration* when a species description clearly
 stated that a species "migrates", 2) *partial migration* when a species was
 described to have "altitudinal migration", "latitudinal migration" or "movement
@@ -89,12 +89,12 @@ of months the species breeds.
 ### *Breeding Sympatry Model*
 
 Species’ breeding ranges were acquired from *BirdLife International*
-[@birdlifeinternationalandhandbookofthebirdsoftheworldBirdSpeciesDistribution2018]⁠.
+[@birdlifeinternationalandhandbookofthebirdsoftheworld2018]⁠.
 We calculated congener breeding range overlaps (as percentages) using the
-*letsR* package in R [@vilelaLetsRNewPackage2015]⁠. We then calculated the
+*letsR* package in R [@vilela2015]⁠. We then calculated the
 number of sympatric species as the number of congeners with breeding ranges that
 overlap >30% with the focal species’ breeding range
-[@cooneySexualSelectionSpeciation2017].
+[@cooney2017].
 
 ### *Breeding Spacing Model*
 
@@ -109,13 +109,13 @@ surrounded by an oceanic body of water.
 ## *Statistical Modeling*
 
 We used phylogenetically-corrected Bayesian multilevel logistic regression
-models using the *brms* v2.13.0 package [@burknerBrmsPackageBayesian2017] in R
-v4.0.0 [@rcoreteamLanguageEnvironmentStatistical2020]⁠ where responses, the
+models using the *brms* v2.13.0 package [@burkner2017] in R
+v4.0.0 [@rcoreteam2020]⁠ where responses, the
 number of sexually-dichromatic patches >1, 2, and 3 chromatic and achromatic
 JNDs, were modeled as binomial trials (N=5 plumage patch “trials”) to test for
 associations with breeding timing, breeding sympatry and breeding spacing. For
 all phylogenetically-corrected models, we used the *Turdus* phylogeny from
-Nylander et al. (2008) [@nylanderAccountingPhylogeneticUncertainty2008]to create
+Nylander et al. (2008) [@nylander2008]to create
 a covariance matrix of species’ phylogenetic relationships. All models used a
 dataset of N=67 *Turdus* species for which all data were available.
 
@@ -132,15 +132,15 @@ responses. All models’ intercepts and response standard deviations were assign
 a weak prior (Student T: df = 3, location = 0, scale = 10), and predictor
 coefficients were assigned flat priors. We ran each model for 6,000 iterations
 across 6 chains and assessed Markov Chain Monte Carlo (MCMC) convergence using
-the Gelman-Rubin diagnostic (Rhat) [@gelmanBayesianDataAnalysis2013]. We then
-performed k-fold cross-validation [@vehtariPracticalBayesianModel2017] to refit
+the Gelman-Rubin diagnostic (Rhat) [@gelman2013]. We then
+performed k-fold cross-validation [@vehtari2017] to refit
 each model *K*=16 times. For each k-fold, the training dataset included a
 randomly selected set of $N- N\frac{1}{K}$ or N≈63 species, and the
 testing dataset included $N\frac{1}{K}$ or N≈4 species not included in the
 training dataset. Finally, we compared differences between the models’ expected
 log pointwise predictive densities (ELPD) to assess which model(s) best
 predicted the number of sexually-dichromatic plumage patches
-[@vehtariPracticalBayesianModel2017]⁠.
+[@vehtari2017]⁠.
 
 # Results
 
