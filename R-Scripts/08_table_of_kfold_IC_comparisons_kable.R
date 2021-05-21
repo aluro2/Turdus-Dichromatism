@@ -51,7 +51,7 @@ model_kfolds <-
 
 knitr::kable(model_kfolds, format = "latex", booktabs = T, linesep = "\\addlinespace",
              caption = "Expected log pointwise predictive densities (ELPD) differences and
-kfold information criterion values of models.", 
+kfold information criterion values of models (ELPD Difference ± standard error (kfold IC ± standard error)). Lower values indicate greater model prediction performance.", 
              label = "table01") %>%
 add_header_above(c("", "","Model" = 4), align = "l") %>% 
   kable_styling(latex_options = c("scale_down", "hold_position")) %>% 

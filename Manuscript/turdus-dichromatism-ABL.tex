@@ -30,7 +30,7 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
-  pdftitle={Ecological conditions favoring species recognition and rapid mate pairing are associated with greater plumage sexual dichromatism in true thrushes (genus: Turdus)},
+  pdftitle={Rapid species recognition favors greater avian-perceived plumage dichromatism in true thrushes (genus: Turdus)},
   pdfauthor={Alec B. Luro1*, Mark E. Hauber1},
   colorlinks=true,
   linkcolor=blue,
@@ -74,9 +74,8 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\title{Ecological conditions favoring species recognition and rapid mate
-pairing are associated with greater plumage sexual dichromatism in true
-thrushes (genus: \emph{Turdus})}
+\title{Rapid species recognition favors greater avian-perceived plumage
+dichromatism in true thrushes (genus: \emph{Turdus})}
 \author{Alec B. Luro\textsuperscript{1}*, Mark E.
 Hauber\textsuperscript{1}}
 \date{\textsuperscript{1} Department of Evolution, Ecology and Behavior,
@@ -93,7 +92,7 @@ Urbana-Champaign *alec.b.luro@mail.com}
 \hypertarget{keywords}{%
 \subsection{Keywords}\label{keywords}}
 
-\emph{plumage}, \emph{dichromatism}, \emph{species recognition}
+\emph{dichromatism}, \emph{plumage}, \emph{species recognition}
 
 \hypertarget{background}{%
 \section{Background}\label{background}}
@@ -105,26 +104,27 @@ Urbana-Champaign *alec.b.luro@mail.com}
 \subsection{\texorpdfstring{\emph{Plumage sexual
 dichromatism}}{Plumage sexual dichromatism}}\label{plumage-sexual-dichromatism}}
 
-A total of N=77 \emph{Turdus} thrush species were sampled for plumage
-spectral reflectance using from bird skins at the American Museum of
-Natural History in New York City and the Field Museum in Chicago.
-Reflectance measurements from 300-700nm were taken in triplicate for the
-belly, breast, throat, crown and mantle plumage patches
-{[}\protect\hyperlink{ref-andersson2006}{1}{]} of each individual bird
-skin. N=3 male and N=3 female individuals were measured for most species
-(exceptions: \emph{Turdus lawrencii}, N=2 males and N=2 females;
-\emph{Turdus swalesi}, N=1 male and N=1 female). Reflectance spectra
-were measured using a 400 μm fiber optic reflection probe fitted with a
+A total of N=77 \emph{Turdus} thrush species (approximately
+\textasciitilde89\% of all known true thrush species) were sampled for
+plumage spectral reflectance using prepared bird skin specimens at the
+American Museum of Natural History in New York City and the Field Museum
+in Chicago. Reflectance measurements spanning 300-700nm were taken in
+triplicate from the belly, breast, throat, crown and mantle plumage
+patches {[}\protect\hyperlink{ref-andersson2006}{1}{]} of each
+individual. N=3 male and N=3 female individuals were measured for most
+species (exceptions: \emph{T. lawrencii}, N=2 males and N=2 females;
+\emph{T. swalesi}, N=1 male and N=1 female). Reflectance spectra were
+measured using a 400 μm fiber optic reflection probe fitted with a
 rubber stopper to maintain a consistent measuring distance of 3 mm and
 area of 2 mm2 at a 90° angle to the surface of the feather patch.
 Measurements were taken using a JAZ spectrometer with a pulsed-xenon
-light source (Ocean Optics, Dunedin, USA) and all measurements were made
-relative to a diffuse reflectance white standard (Spectralon WS-1-SL,
-Labsphere, North Sutton NH, USA).
+light source (Ocean Optics, Dunedin, USA) and we used a diffuse 99\%
+reflectance white standard (Spectralon WS-1-SL, Labsphere, North Sutton
+NH, USA).
 
-We used a receptor-noise limited visual model
+We applieda receptor-noise limited visual model
 {[}\protect\hyperlink{ref-vorobyev1998}{2}{]} of the European Blackbird
-(\emph{Turdus merula}) visual system
+(\emph{T. merula}) visual system
 {[}\protect\hyperlink{ref-hart2000}{3}{]} in the \emph{pavo}
 {[}\protect\hyperlink{ref-maia2019}{4}{]}⁠ package in R v4.0.0
 {[}\protect\hyperlink{ref-rcoreteam2020}{5}{]}⁠ to calculate
@@ -135,19 +135,18 @@ JNDs were calculated for male-female pairs within each species (i.e.,
 N=9 JND values calculated per patch for each species where N=3 males and
 N=3 females sampled), and then JND values were averaged for each
 species' respective plumage patches. Under ideal laboratory conditions,
-a JND value of 1 is generally considered to be the discriminable
-threshold past which an observer is predicted to be able to perceive the
-two colors as different. However, natural light environments vary both
-spatially and temporally {[}\protect\hyperlink{ref-endler1993}{6}{]}⁠,
-bringing into question the accuracy of a JND=1 threshold for
-generalizing visual contrast under natural conditions. Therefore, we
-calculated the total number of sexually-dichromatic plumage patches per
-species (out of N=5 measured patches) as the number of plumage patches
-with average JND values \textgreater{} 1, 2, or 3 to account for
-uncertainty in visual discrimination thresholds due to variation in
-psychophysical and ambient lighting conditions affecting the strength of
-between-sex plumage visual contrast
-{[}\protect\hyperlink{ref-kemp2015}{7}{]}⁠.
+1 JND is generally considered to be the discriminable threshold past
+which an observer is predicted to be able to perceive the two colors as
+different. However, natural light environments vary both spatially and
+temporally {[}\protect\hyperlink{ref-endler1993}{6}{]}⁠, bringing into
+question the accuracy of a 1 JND threshold for generalizing visual
+contrast under natural conditions. Therefore, we calculated the total
+number of sexually-dichromatic plumage patches per species (out of N=5
+measured patches) as the number of plumage patches with average JND
+values \textgreater{} 1, 2, or 3 to account for uncertainty in visual
+discrimination thresholds due to variation in psychophysical and ambient
+lighting conditions affecting the strength of between-sex plumage visual
+contrast {[}\protect\hyperlink{ref-kemp2015}{7}{]}⁠.
 
 \hypertarget{life-history-data}{%
 \subsection{\texorpdfstring{\emph{Life History
@@ -167,7 +166,7 @@ species description clearly stated that a species ``migrates'', 2)
 ``altitudinal migration'', ``latitudinal migration'' or ``movement
 during non-breeding season'', or 3) \emph{sedentary} when when a species
 was described as ``resident'' or ``sedentary''. Breeding season length
-was defined as the number of months the species breeds.
+was defined as the number of months the species breeds each year.
 
 \hypertarget{breeding-sympatry-model}{%
 \subsubsection{\texorpdfstring{\emph{Breeding Sympatry
@@ -211,7 +210,8 @@ sympatry and breeding spacing. For all phylogenetically-corrected
 models, we used the \emph{Turdus} phylogeny from Nylander et al.~(2008)
 {[}\protect\hyperlink{ref-nylander2008}{14}{]}to create a covariance
 matrix of species' phylogenetic relationships. All models used a dataset
-of N=67 \emph{Turdus} species for which all data were available.
+of N=67 out of the \emph{Turdus} species for which all the types of data
+(see above) were available.
 
 Our \emph{breeding timing} models included the following predictors:
 z-scores of breeding season length (mean centered and divided by one
@@ -244,12 +244,26 @@ sexually-dichromatic plumage patches
 
 We obtained N ≥ 4000 effective samples for each model parameter and all
 models' Markov Chains (MCMC) successfully converged (Rhat = 1 for all
-models' parameters).
+models' parameters) (Supplementary Figure). All \emph{breeding
+sympatry}, \emph{breeding timing}, and \emph{breeding spacing} models
+performed similarly well and substantially better than \emph{intercept
+only} models in predicting the number of sexually dimorphic plumage
+patches with achromatic JND values \textgreater{} 1, 2, or 3 (Table 1;
+all models predicting achromatic plumage patches had ELPD values within
+4, following the convention of Burnham and Anderson
+(2002){[}\protect\hyperlink{ref-burnham2002}{17}{]}). Among models
+predicting the number of sexually-dichromatic plumage patches with
+chromatic JND values \textgreater1, 2, or 3, all models performed much
+better than \emph{intercept only} models, and \emph{breeding sympatry}
+models had the best predictive performance (Table 1; \emph{breeding
+sympatry} models all have ELPD =0, only the \emph{breeding spacing}
+models predicting dichromatic plumage patches with had similar
+predictive performance).
 
 \begin{table}[!h]
 
 \caption{\label{tab:table01}Expected log pointwise predictive densities (ELPD) differences and
-kfold information criterion values of models.}
+kfold information criterion values of models (ELPD Difference ± standard error (kfold IC ± standard error)). Lower values indicate greater model prediction performance.}
 \centering
 \resizebox{\linewidth}{!}{
 \renewcommand{\arraystretch}{1.5}
@@ -369,9 +383,8 @@ Foundation for Statistical Computing}. }
 
 \leavevmode\hypertarget{ref-endler1993}{}%
 \CSLLeftMargin{6. }
-\CSLRightInline{Endler JA, Monographs E, Feb N. 1993 The {Color} of
-{Light} in {Forests} and {Its Implications}. \emph{Ecological
-Monographs} \textbf{63}, 1--27.
+\CSLRightInline{Endler JA. 1993 The {Color} of {Light} in {Forests} and
+{Its Implications}. \emph{Ecological Monographs} \textbf{63}, 1--27.
 (doi:\href{https://doi.org/10.2307/2937121}{10.2307/2937121})}
 
 \leavevmode\hypertarget{ref-kemp2015}{}%
@@ -440,6 +453,12 @@ Rubin DB. 2013 \emph{Bayesian data analysis, third edition}. Third.
 model evaluation using leave-one-out cross-validation and {WAIC}.
 \emph{Statistics and Computing} \textbf{27}, 1413--1432.
 (doi:\href{https://doi.org/10.1007/s11222-016-9696-4}{10.1007/s11222-016-9696-4})}
+
+\leavevmode\hypertarget{ref-burnham2002}{}%
+\CSLLeftMargin{17. }
+\CSLRightInline{Burnham KP, Anderson DR. 2002 \emph{Model selection and
+multimodel inference: A practical information-theoretic approach}. 2nd
+ed. {New York}: {Springer}. }
 
 \end{CSLReferences}
 
