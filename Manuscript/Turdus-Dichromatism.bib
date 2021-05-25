@@ -33,6 +33,22 @@
   number = {1}
 }
 
+@book{burnham2002,
+  title = {Model Selection and Multimodel Inference: A Practical Information-Theoretic Approach},
+  shorttitle = {Model Selection and Multimodel Inference},
+  author = {Burnham, Kenneth P. and Anderson, David Raymond},
+  year = {2002},
+  edition = {2nd ed},
+  publisher = {{Springer}},
+  address = {{New York}},
+  annotation = {OCLC: ocm48557578},
+  file = {/home/alec/Zotero/storage/6VWLA97H/Burnham et al. - 2002 - Model selection and multimodel inference a practi.pdf},
+  isbn = {978-0-387-95364-9},
+  keywords = {Biology,Mathematical models,Mathematical statistics},
+  language = {en},
+  lccn = {QH323.5 .B87 2002}
+}
+
 @book{clement2000,
   title = {Thrushes},
   author = {Clement, Peter and Hathway, Ren},
@@ -150,6 +166,21 @@
   number = {7}
 }
 
+@article{makowski2019,
+  title = {Indices of {{Effect Existence}} and {{Significance}} in the {{Bayesian Framework}}},
+  author = {Makowski, Dominique and {Ben-Shachar}, Mattan S. and Chen, S. H. Annabel and L{\"u}decke, Daniel},
+  year = {2019},
+  volume = {10},
+  publisher = {{Frontiers}},
+  issn = {1664-1078},
+  doi = {10.3389/fpsyg.2019.02767},
+  abstract = {Turmoil has engulfed psychological science. Causes and consequences of the reproducibility crisis are in dispute. With the hope of addressing some of its aspects, Bayesian methods are gaining increasing attention in psychological science. Some of their advantages, as opposed to the frequentist framework, are the ability to describe parameters in probabilistic terms and explicitly incorporate prior knowledge about them into the model. These issues are crucial in particular regarding the current debate about statistical significance. Bayesian methods are not necessarily the only remedy against incorrect interpretations or wrong conclusions, but there is an increasing agreement that they are one of the keys to avoid such fallacies. Nevertheless, its flexible nature is its power and weakness, for there is no agreement about what indices of ``significance'' should be computed or reported. This lack of a consensual index or guidelines, such as the frequentist p-value, further contributes to the unnecessary opacity that many non-familiar readers perceive in Bayesian statistics. Thus, this study describes and compares several Bayesian indices, provide intuitive visual representation of their ``behavior'' in relationship with common sources of variance such as sample size, magnitude of effects and also frequentist significance. The results contribute to the development of an intuitive understanding of the values that researchers report, allowing to draw sensible recommendations for Bayesian statistics description, critical for the standardization of scientific reporting.},
+  file = {/home/alec/Zotero/storage/RA965AG4/Makowski et al. - 2019 - Indices of Effect Existence and Significance in th.pdf},
+  journal = {Frontiers in Psychology},
+  keywords = {Bayes Factors,Bayesian,NHST,p-value,significance},
+  language = {English}
+}
+
 @article{nylander2008,
   title = {Accounting for Phylogenetic Uncertainty in Biogeography: {{A}} Bayesian Approach to Dispersal-Vicariance Analysis of the Thrushes ({{Aves}}: {{Turdus}})},
   author = {Nylander, Johan A.A. and Olsson, Urban and Alstr{\"o}m, Per and Sanmart{\'i}n, Isabel},
@@ -171,6 +202,21 @@
   year = {2020},
   publisher = {{R Foundation for Statistical Computing}},
   address = {{Vienna, Austria}}
+}
+
+@article{sivula2020,
+  title = {Uncertainty in {{Bayesian Leave}}-{{One}}-{{Out Cross}}-{{Validation Based Model Comparison}}},
+  author = {Sivula, Tuomas and Magnusson, M{\aa}ns and Vehtari, Aki},
+  year = {2020},
+  month = oct,
+  abstract = {Leave-one-out cross-validation (LOO-CV) is a popular method for comparing Bayesian models based on their estimated predictive performance on new, unseen, data. Estimating the uncertainty of the resulting LOO-CV estimate is a complex task and it is known that the commonly used standard error estimate is often too small. We analyse the frequency properties of the LOO-CV estimator and study the uncertainty related to it. We provide new results of the properties of the uncertainty both theoretically and empirically and discuss the challenges of estimating it. We show that problematic cases include: comparing models with similar predictions, misspecified models, and small data. In these cases, there is a weak connection in the skewness of the sampling distribution and the distribution of the error of the LOO-CV estimator. We show that it is possible that the problematic skewness of the error distribution, which occurs when the models make similar predictions, does not fade away when the data size grows to infinity in certain situations.},
+  archiveprefix = {arXiv},
+  eprint = {2008.10296},
+  eprinttype = {arxiv},
+  file = {/home/alec/Zotero/storage/KS2UEP3E/Sivula et al. - 2020 - Uncertainty in Bayesian Leave-One-Out Cross-Valida.pdf;/home/alec/Zotero/storage/DWK3NV29/2008.html},
+  journal = {arXiv:2008.10296 [stat]},
+  keywords = {Statistics - Methodology},
+  primaryclass = {stat}
 }
 
 @article{vehtari2017,
@@ -217,6 +263,23 @@
   keywords = {a key assumption is,Animals,are set by the,Biological,Color Perception,Color Perception: physiology,colour opponency,colour thresholds,colour vision,Humans,mechanism,mechanism in which it,Models,originates,Photoreceptor Cells,Photoreceptor Cells: physiology,receptor noise,Sensory Thresholds,spectral sensitivity,that noise in this,Theoretical,thus,to investigate a given,Visual Perception,when thresholds are used},
   number = {1394},
   pmid = {9523436}
+}
+
+@article{yao2018,
+  title = {Using {{Stacking}} to {{Average Bayesian Predictive Distributions}} (with {{Discussion}})},
+  author = {Yao, Yuling and Vehtari, Aki and Simpson, Daniel and Gelman, Andrew},
+  year = {2018},
+  month = sep,
+  volume = {13},
+  pages = {917--1007},
+  publisher = {{International Society for Bayesian Analysis}},
+  issn = {1936-0975, 1931-6690},
+  doi = {10.1214/17-BA1091},
+  abstract = {Bayesian model averaging is flawed in the M-open setting in which the true data-generating process is not one of the candidate models being fit. We take the idea of stacking from the point estimation literature and generalize to the combination of predictive distributions. We extend the utility function to any proper scoring rule and use Pareto smoothed importance sampling to efficiently compute the required leave-one-out posterior distributions. We compare stacking of predictive distributions to several alternatives: stacking of means, Bayesian model averaging (BMA), Pseudo-BMA, and a variant of Pseudo-BMA that is stabilized using the Bayesian bootstrap. Based on simulations and real-data applications, we recommend stacking of predictive distributions, with bootstrapped-Pseudo-BMA as an approximate alternative when computation cost is an issue.},
+  file = {/home/alec/Zotero/storage/58DN3BQZ/Yao et al. - 2018 - Using Stacking to Average Bayesian Predictive Dist.pdf;/home/alec/Zotero/storage/AVRVNBU7/17-BA1091.html},
+  journal = {Bayesian Analysis},
+  keywords = {Bayesian model averaging,model combination,predictive distribution,proper scoring rule,stacking,Stan},
+  number = {3}
 }
 
 
