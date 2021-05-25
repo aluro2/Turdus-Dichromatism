@@ -47,7 +47,7 @@ surface of the feather patch. Measurements were taken using a JAZ spectrometer
 with a pulsed-xenon light source (Ocean Optics, Dunedin, USA) and we used a diffuse 99% reflectance white standard
 (Spectralon WS-1-SL, Labsphere, North Sutton NH, USA).
 
-We applieda receptor-noise limited visual model
+We applied a receptor-noise limited visual model
 [@vorobyev1998] of the European Blackbird (*T. merula*) visual system [@hart2000] in the *pavo*
 [@maia2019, p. 2]⁠ package in R v4.0.0
 [@rcoreteam2020]⁠ to calculate avian-perceived
@@ -121,8 +121,8 @@ breeding season length (mean centered and divided by one standard deviation),
 migratory behavior (full migration as the reference category versus partial
 migration or sedentary), and their interaction. *Breeding sympatry* models
 included the number of sympatric species with greater than 30% breeding range
-overlap as the only predictor of the number of sexually-dichromatic plumage
-patches. *Breeding spacing* models included $log_{e}$ transformed breeding
+overlap as the only predictor of the probability of having a sexually-dichromatic plumage
+patch. *Breeding spacing* models included $log_{e}$ transformed breeding
 range size (km<sup>2</sup>) and breeding landmass (mainland as the reference
 category versus island). We also ran null models (intercept only) for all
 responses. All models’ intercepts and response standard deviations were assigned
@@ -136,15 +136,18 @@ randomly selected set of $N- N\frac{1}{K}$ or N≈63 species, and the
 testing dataset included $N\frac{1}{K}$ or N≈4 species not included in the
 training dataset. Finally, we compared differences between the models’ expected
 log pointwise predictive densities (ELPD) to assess which model(s) best
-predicted the number of sexually-dichromatic plumage patches
+predicted the probability of having a sexually-dichromatic plumage patch.
 [@vehtari2017]⁠.
+
+Models' predictor effects were assessed using 90% highest-density intervals of the posterior distributions and probability of direction, the proportion of the posterior distribution that shares the same sign (positive or negative) as the posterior median [@makowski2019], to provide estimates of the probability of that a predictor has an entirely positive or negative effect on the presence of sexually-dimorphic plumage patches. 
 
 # Results
 
 We obtained N ≥ 4000 effective samples for each model parameter and all models’
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
-parameters) (Supplementary Figure). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the number of sexually dimorphic plumage patches with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the number of sexually-dichromatic plumage patches with chromatic JND values >1, 2, or 3, all models performed much better than _intercept only_ models, and  _breeding sympatry_ models had the best predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
+parameters) (Supplementary Figure). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all models performed much better than _intercept only_ models, and  _breeding sympatry_ models had the best predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
 
+Among predictors of achromatically sexually-dimorphic plumage patches
 
 
 \begin{table}[!h]
@@ -179,7 +182,7 @@ Plumage Metric & JND Threshold & Breeding Sympatry & Breeding Timing & Breeding 
 \begin{landscape}
 \begin{table}
 
-\caption{\label{tab:table02}Model predictor effect estimates (posterior median log-odds and 90\% credible interval) on the
+\caption{\label{tab:table02}Model predictor effect estimates (posterior median log-odds and 90\% highest-density interval) on the
   presence of a plumage patch with achromatic or chromatic visual contrast values $>$
   1, 2, and 3 JND. Model effects with a probability of direction (pd) value $\geq$ 0.90
   are bolded in \textcolor{red}{\textbf{red}} for a negative effect and \textcolor{blue}{\textbf{blue}} for a positive effect on
@@ -208,7 +211,7 @@ Model & Parameter & Achromatic, 1 JND & Achromatic, 2 JND & Achromatic, 3 JND & 
 \hspace{1em} & Phylogenetic Signal λ, Median (90\% Credible Interval) & \textcolor{black}{0.27 (0.15, 0.41)} & \textcolor{black}{0.71 (0.56, 0.85)} & \textcolor{black}{0.6 (0.42, 0.77)} & \textcolor{black}{0.15 (0.07, 0.25)} & \textcolor{black}{0.72 (0.55, 0.86)} & \textcolor{black}{0.85 (0.71, 0.95)}\\
 \addlinespace[0.3em]
 \multicolumn{1}{l}{\textbf{Breeding Sympatry}}\\
-\hspace{1em} & Intercept & \textcolor{red}{\textbf{-0.9 (-3.45, 1.76), pd = 0.72}} & \textcolor{red}{\textbf{-6.89 (-14.7, -0.02), pd = 0.95}} & \textcolor{red}{\textbf{-6.74 (-13.39, -1.09), pd = 0.98}} & \textcolor{red}{\textbf{-1.38 (-3.25, 0.3), pd = 0.91}} & \textcolor{red}{\textbf{-6.34 (-13.61, 0.11), pd = 0.95}} & \textcolor{red}{\textbf{-11.29 (-22.79, -1.24), pd = 0.98}}\\
+\hspace{1em} & Intercept & \textcolor{black}{-0.9 (-3.45, 1.76), pd = 0.72} & \textcolor{red}{\textbf{-6.89 (-14.7, -0.02), pd = 0.95}} & \textcolor{red}{\textbf{-6.74 (-13.39, -1.09), pd = 0.98}} & \textcolor{red}{\textbf{-1.38 (-3.25, 0.3), pd = 0.91}} & \textcolor{red}{\textbf{-6.34 (-13.61, 0.11), pd = 0.95}} & \textcolor{red}{\textbf{-11.29 (-22.79, -1.24), pd = 0.98}}\\
  & Number of Sympatric Species 
 \hspace{1em} (≥ 30\% Breeding Range Overlap) & \textcolor{black}{0.03 (-0.18, 0.24), pd = 0.61} & \textcolor{black}{0.14 (-0.31, 0.56), pd = 0.71} & \textcolor{black}{0.12 (-0.27, 0.49), pd = 0.71} & \textcolor{blue}{\textbf{0.34 (0.17, 0.51), pd = 0.99}} & \textcolor{blue}{\textbf{0.46 (0.01, 0.92), pd = 0.96}} & \textcolor{blue}{\textbf{0.75 (0.03, 1.5), pd = 0.97}}\\
 \hspace{1em} & Phylogenetic Signal λ, Median (90\% Credible Interval) & \textcolor{black}{0.26 (0.14, 0.39)} & \textcolor{black}{0.7 (0.54, 0.83)} & \textcolor{black}{0.59 (0.41, 0.77)} & \textcolor{black}{0.13 (0.06, 0.23)} & \textcolor{black}{0.69 (0.52, 0.83)} & \textcolor{black}{0.82 (0.67, 0.94)}\\
