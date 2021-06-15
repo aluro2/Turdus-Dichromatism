@@ -274,8 +274,8 @@ and \emph{breeding sympatry} models had the best predictive performance
 with had similar predictive performance).
 
 All model predictors' effect estimates are provided as the posterior
-median log-odds and 90\% highest-density interval in Table 2. Among
-predictors of achromatic sexually-dimorphic plumage patches, only
+median odds-ratio (OR) and 90\% highest-density interval in Table 2.
+Among predictors of achromatic sexually-dimorphic plumage patches, only
 predictors included in the \emph{breeding timing} model have predictors
 with probability of direction (\emph{pd}) values ≥ 0.90 (Table 2).
 Specifically, longer breeding season length is associated with lower
@@ -346,8 +346,8 @@ Model & Parameter & Achromatic, 1 JND & Achromatic, 2 JND & Achromatic, 3 JND & 
 \addlinespace[0.3em]
 \multicolumn{1}{l}{\textbf{Breeding Timing}}\\
  & Intercept & \textcolor{black}{0.31 (0.02, 5.29), pd = 0.76} & \textcolor{red}{\textbf{0 (0, 0.54), pd = 0.98}} & \textcolor{red}{\textbf{0 (0, 0.19), pd = 0.99}} & \textcolor{black}{0.41 (0.05, 2.79), pd = 0.78} & \textcolor{red}{\textbf{0 (0, 1.73), pd = 0.95}} & \textcolor{red}{\textbf{0 (0, 1.37), pd = 0.96}}\\
- & Breeding Season Length & \textcolor{black}{0.94 (0.54, 1.75), pd = 0.57}{0.94 (0.54, 1.75), pd = 0.57} & \textcolor{red}{\textbf{0.1 (0.01, 1.05), pd = 0.97}} & \textcolor{red}{\textbf{0.25 (0.03, 1.49), pd = 0.91}} & \textcolor{black}{0.89 (0.56, 1.4), pd = 0.66} & \textcolor{red}{\textbf{0.14 (0.01, 1.42), pd = 0.94}} & \textcolor{black}{0.08 (0, 9.14), pd = 0.83}\\
- & Partial Migration vs. No Migration & \textcolor{black}{0.96 (0.31, 2.75), pd = 0.53}{0.96 (0.31, 2.75), pd = 0.53} & \textcolor{black}{4.11 (0.3, 61.54), pd = 0.83} & \textcolor{black}{3.65 (0.44, 35.64), pd = 0.85} & \textcolor{blue}{\textbf{2.2 (0.94, 4.89), pd = 0.94}} & \textcolor{black}{6.7 (0.42, 134.8), pd = 0.88} & \textcolor{blue}{\textbf{71.16 (0.32, 59062.92), pd = 0.92}}\\
+ & Breeding Season Length & \textcolor{black}{0.94 (0.54, 1.75), pd = 0.57} & \textcolor{red}{\textbf{0.1 (0.01, 1.05), pd = 0.97}} & \textcolor{red}{\textbf{0.25 (0.03, 1.49), pd = 0.91}} & \textcolor{black}{0.89 (0.56, 1.4), pd = 0.66} & \textcolor{red}{\textbf{0.14 (0.01, 1.42), pd = 0.94}} & \textcolor{black}{0.08 (0, 9.14), pd = 0.83}\\
+ & Partial Migration vs. No Migration & \textcolor{black}{0.96 (0.31, 2.75), pd = 0.53} & \textcolor{black}{4.11 (0.3, 61.54), pd = 0.83} & \textcolor{black}{3.65 (0.44, 35.64), pd = 0.85} & \textcolor{blue}{\textbf{2.2 (0.94, 4.89), pd = 0.94}} & \textcolor{black}{6.7 (0.42, 134.8), pd = 0.88} & \textcolor{blue}{\textbf{71.16 (0.32, 59062.92), pd = 0.92}}\\
  & Full Migration vs. No Migration & \textcolor{blue}{\textbf{4.97 (0.95, 24.41), pd = 0.96}} & \textcolor{blue}{\textbf{66.52 (3.19, 1802.4), pd = 0.99}} & \textcolor{blue}{\textbf{22.34 (1.59, 307.91), pd = 0.98}} & \textcolor{black}{2.29 (0.69, 7.31), pd = 0.88} & \textcolor{blue}{\textbf{80.51 (2.81, 3432.88), pd = 0.99}} & \textcolor{blue}{\textbf{234.71 (0.51, 300382.62), pd = 0.95}}\\
  & Breeding Season Length x Partial Migration & \textcolor{black}{1.34 (0.48, 3.92), pd = 0.68} & \textcolor{blue}{\textbf{20.71 (0.87, 589.09), pd = 0.96}} & \textcolor{blue}{\textbf{8.28 (0.76, 109.11), pd = 0.94}} & \textcolor{black}{1.39 (0.65, 3.12), pd = 0.76} & \textcolor{blue}{\textbf{9.03 (0.44, 251.36), pd = 0.9}} & \textcolor{black}{34.46 (0.08, 68228.71), pd = 0.85}\\
  & Breeding Season Length x Full Migration & \textcolor{blue}{\textbf{4.84 (0.67, 39.63), pd = 0.9}} & \textcolor{blue}{\textbf{66.3 (0.59, 11415.7), pd = 0.93}} & \textcolor{black}{16.41 (0.27, 824.69), pd = 0.89} & \textcolor{black}{1.68 (0.31, 8.33), pd = 0.7} & \textcolor{blue}{\textbf{160.6 (0.84, 67791.13), pd = 0.95}} & \textcolor{black}{433.67 (0.01, 37194569.46), pd = 0.85}\\
@@ -355,7 +355,7 @@ Model & Parameter & Achromatic, 1 JND & Achromatic, 2 JND & Achromatic, 3 JND & 
 \addlinespace[0.3em]
 \multicolumn{1}{l}{\textbf{Breeding Spacing}}\\
 \hspace{1em} & Intercept & \textcolor{black}{0.14 (0, 7.49), pd = 0.8} & \textcolor{red}{\textbf{0 (0, 2.44), pd = 0.95}} & \textcolor{red}{\textbf{0 (0, 0.14), pd = 0.98}} & \textcolor{black}{0.51 (0.03, 9.7), pd = 0.65} & \textcolor{red}{\textbf{0 (0, 7.63), pd = 0.92}} & \textcolor{red}{\textbf{0 (0, 81.95), pd = 0.91}}\\
-\hspace{1em} & Island vs. Mainland & \textcolor{black}{1.08 (0.25, 4.79), pd = 0.54} & \textcolor{black}{0.53 (0.01, 17.83), pd = 0.61} & \textcolor{black}{0.92 (0.05, 19.32), pd = 0.52}{0.92 (0.05, 19.32), pd = 0.52} & \textcolor{red}{\textbf{0.27 (0.09, 0.89), pd = 0.97}} & \textcolor{black}{0.03 (0, 3.99), pd = 0.89} & \textcolor{black}{0.04 (0, 67.59), pd = 0.77}\\
+\hspace{1em} & Island vs. Mainland & \textcolor{black}{1.08 (0.25, 4.79), pd = 0.54} & \textcolor{black}{0.53 (0.01, 17.83), pd = 0.61} & \textcolor{black}{0.92 (0.05, 19.32), pd = 0.52} & \textcolor{red}{\textbf{0.27 (0.09, 0.89), pd = 0.97}} & \textcolor{black}{0.03 (0, 3.99), pd = 0.89} & \textcolor{black}{0.04 (0, 67.59), pd = 0.77}\\
 \hspace{1em} & Breeding Range Size & \textcolor{black}{1.08 (0.88, 1.32), pd = 0.75} & \textcolor{black}{1.23 (0.76, 2.01), pd = 0.77} & \textcolor{black}{1.3 (0.87, 1.93), pd = 0.87} & \textcolor{black}{1.02 (0.87, 1.19), pd = 0.58} & \textcolor{black}{1.24 (0.75, 2.05), pd = 0.77} & \textcolor{black}{1.26 (0.54, 2.99), pd = 0.69}\\
 \hspace{1em} & Phylogenetic Signal λ, Median (90\% Credible Interval) & \textcolor{black}{0.27 (0.15, 0.41)} & \textcolor{black}{0.71 (0.56, 0.85)} & \textcolor{black}{0.6 (0.42, 0.77)} & \textcolor{black}{0.15 (0.07, 0.25)} & \textcolor{black}{0.72 (0.55, 0.86)} & \textcolor{black}{0.85 (0.71, 0.95)}\\
 \addlinespace[0.3em]
