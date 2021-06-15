@@ -10,6 +10,7 @@ library(forcats)
 library(flextable)
 library(stringr)
 library(pbapply)
+library(kableExtra)
 
 # Get model paths ----------------------------------------------------------
 
@@ -50,6 +51,8 @@ posterior_summary_data <-
           test = "pd"
         )  %>%
         as_tibble() %>%
+        # Convert to odd-ratios
+        mutate(across(Median:CI_high, exp)) %>% 
         # Round all values to 2 decimal places
         mutate_if(is.numeric, round, 2) %>%
         # Ignore phylogenetic stdev of intercept, this will always be positive
@@ -313,13 +316,11 @@ table_data %>%
   # Coloring function for pd >=0.9
   mutate(across(`Achromatic, 1 JND`:`Chromatic, 3 JND`,
        ~cell_spec(.x, format = "latex", color = if_else(
-         str_detect(.x, "pd") &
-           str_detect(.x, "^-.*$") &
-           str_detect(.x, "0.9"),
+           as.numeric(str_extract(test, "\\d+\\.*\\d*")) < 1 &
+           str_detect(.x, "pd = 0.9"),
          "red", if_else(
-           str_detect(.x, "pd") &
-             !str_detect(.x, "^-.*$") &
-             str_detect(.x, "0.9"),
+             as.numeric(str_extract(test, "\\d+\\.*\\d*")) > 1 &
+             str_detect(.x, "pd = 0.9"),
            "blue", ifelse(
              !str_detect(.x, "pd") |
                !str_detect(.x, "0.9"),
@@ -328,30 +329,30 @@ table_data %>%
          # Bolding function
          bold = if_else(
            str_detect(.x, "pd") &
-             str_detect(.x, "0.9"),
+             str_detect(.x, "pd = 0.9"),
            TRUE,
            FALSE)))) %>%
   knitr::kable(., format = "latex", booktabs = T, linesep = "\\addlinespace",
-               caption = "Model predictor effect estimates (posterior median log-odds and 90% credible interval) on the
+               caption = "Model predictor effect estimates (posterior median odds ratio and 90% credible interval) on the
   presence of a plumage patch with achromatic or chromatic visual contrast values >
   1, 2, and 3 JND. Model effects with a probability of direction (pd) value ≥ 0.90
   are bolded in red for a negative effect and blue for a positive effect on
   plumage dichromatism.", 
                label = "table02",
                escape = F) %>%
-    kable_styling(latex_options = "scale_down") %>% 
-    group_rows(group_label = "Breeding Timing",
+  kableExtra::kable_styling(latex_options = "scale_down") %>% 
+    kableExtra::group_rows(group_label = "Breeding Timing",
                start_row = 1,
                end_row = 8,
                colnum = 1,
                underline =  FALSE,
                indent = F) %>% 
-  group_rows(group_label = "Breeding Spacing",
+  kableExtra::group_rows(group_label = "Breeding Spacing",
              start_row = 8,
              end_row = 11,
              colnum = 1,
              underline = FALSE) %>% 
-  group_rows(group_label = "Breeding Sympatry",
+  kableExtra::group_rows(group_label = "Breeding Sympatry",
              start_row = 12,
              end_row = 14,
              colnum = 1,
