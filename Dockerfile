@@ -7,6 +7,10 @@ RUN apt-get update && apt-get install -y \
         proj-bin \
         libgdal-dev \
         libproj-dev \
+        tk \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libv8-dev \
 && rm -rf /var/lib/apt/lists/* \
 && apt-get clean 
 
@@ -25,4 +29,4 @@ RUN R -e "devtools::install_version('pavo', version = '2.4.0', repos='http://cra
 # Install extra R packages
 RUN R -e "devtools::install_version('flextable', version = '0.5.10', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)" \
 && R -e "devtools::install_version('patchwork', version = '1.0.0', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)" \
-&& R -e "devtools::install_version('bayestestR', version = '1.0.0', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)"
+&& R -e "devtools::install_version('bayestestR', version = '0.10.0', repos='http://cran.us.r-project.org', clean = T, Ncpus = 6, quick = T)"
