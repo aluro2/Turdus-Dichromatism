@@ -25,27 +25,28 @@ geometry:
 # Abstract
 
 ## Keywords
+
 *dichromatism*, *plumage*, *species recognition*
 
 # Introduction
-   Species recognition is necessary in sexually reproducing lineages for individuals to find compatible conspecific mates and produce viable offspring [@andersson1994; @groning2008]. Specifically, conspicuous traits signaling species and sex identity are predicted to reduce the time and effort expended when searching for compatible mates and lessen the likelihood of mating with heterospecifics [@groning2008]. Accordingly, traits which facilitate species and mate recognition should be favored when congeneric species are highly sympatric, when the time to find a mate is limited, and when conspecifics are not encountered often [@andersson1994]. Alternatively, traits used in species and mate recognition may also serve as signals of status to conspecifics and reduce costly conflicts over resources and mates [@west-eberhard1983]. 
+
+   Species recognition is necessary in sexually reproducing lineages for individuals to find compatible conspecific mates and produce viable offspring [@andersson1994; @groning2008]. Specifically, conspicuous traits signaling species and sex identity reduce the time and effort expended when searching for compatible mates and lessen the likelihood of mating with heterospecifics [@groning2008]. Accordingly, traits which facilitate species and mate recognition should be favored when congeneric species are highly sympatric, when the time to find a mate is limited, and when conspecifics are not encountered often [@andersson1994]. Alternatively, traits used in species and mate recognition may also serve as signals of status to conspecifics and reduce costly conflicts over resources and mates [@west-eberhard1983].
    
    In birds, plumage colouration is a highly conspicuous trait which signals species [@martin2015a; @bitton2016] and (often) sex identity.
    
    Plumage sexual dichromatism, a distinct set of differences in the appearance of male versus female feather colouration, is common in birds and is often attributed to differing selection pressures on males and females [@martin1996; @burns1998; @badyaev2003; @dale2015; @dunn2015]. Fundamentally, plumage sexual dichromatism results in a visible trait useful for recognizing an individual's species, sex, and age (e.g., in species with delayed plumage maturation, see [@hawkins2012]), reducing the time and effort necessary to find a suitable mate. Bird species that migrate to and from their breeding territories and have large geographic ranges tend to have greater plumage sexual dichromatism than species that do not migrate and have limited ranges [@badyaev2003; @friedman2009; @dale2015; @simpson2015a; @matysiokova2017].
    
-   Further, plumage sexual dichromatism likely plays a role in hybridization avoidance via character displacement for species and mate recognition [@seddon2013]. For example, in European _Ficedula_ flycatchers, female choice selects for divergent male plumage colouration, leading to character displacement between species and populations and reduced rates of hybridization [@stre1997]. More broadly and across taxa, greater plumage dichromatism is positively correlated with transitions from allopatry to parapatry and an increase in geographic range overlap among a large sample of passerine sister species pairs [@cooney2017]. In addition, plumage sexual dichromatism has been found to be positively associated with species richness among sister species pairs, and dichromatism is increased mainly by changes in male plumage [@seddon2013], suggesting that female choice and male-male competition lead to concurrent changes in male plumage and speciation events. Further, plumage sexual dichromatism is positively associated with greater interspecific plumage color evolution rate and divergence in _Tyrannida_ suboscines [@cooney2019]. Therefore, plumage sexual dichromatism may be an especially favorable trait to facilitate species and mate recognition when closely-related species have overlapping breeding ranges.
+   Further, plumage sexual dichromatism likely plays a role in hybridization avoidance via character displacement for species and mate recognition [@seddon2013]. For example, in European _Ficedula_ flycatchers, female choice selects for divergent male plumage colouration, leading to character displacement between species and populations and reduced rates of hybridization [@stre1997]. More broadly and across taxa, greater plumage dichromatism is positively correlated with transitions from allopatry to parapatry and an increase in geographic range overlap among a large sample of passerine sister species pairs [@cooney2017]. In addition, plumage sexual dichromatism has been found to be positively associated with species richness among sister species pairs, and dichromatism is increased mainly by changes in male plumage [@seddon2013], suggesting that female choice and male-male competition lead to concurrent changes in male plumage and speciation events. Further, plumage sexual dichromatism is positively associated with greater interspecific plumage colour evolution rate and divergence in _Tyrannida_ suboscines [@cooney2019]. Therefore, plumage sexual dichromatism may be an especially favourable trait to facilitate species and mate recognition when closely-related species have overlapping breeding ranges.
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/hypothesis-figure-mermaid.png}
-\caption {Hypotheses and predictions for each model. Arrow colors indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:01-hypotheses}}
+\caption {Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:01-hypotheses}}
 \end{figure}
 
 # Methods
 
 ## *Plumage sexual dichromatism*
-
 
 A total of N=77 *Turdus* thrush species (approximately ~89% of all known true thrush species) were sampled for plumage spectral
 reflectance using prepared bird skin specimens at the American Museum of Natural History in
@@ -86,13 +87,13 @@ contrast [@kemp2015]⁠.
 
 ### *Breeding Timing Model*
 
-We collected data on migration behavior and breeding season length from
+We collected data on migration behaviour and breeding season length from
 *Thrushes* [@clement2000] and the *Handbook of the Birds of the World*
 [@delhoyo2017]⁠. We assigned three different kinds of
-migratory behavior: 1) *full migration* when a species description clearly
+migratory behaviour: 1) *full migration* when a species description clearly
 stated that a species "migrates", 2) *partial migration* when a species was
 described to have "altitudinal migration", "latitudinal migration" or "movement
-during non-breeding season", or 3) *sedentary* when when a species was described
+during non-breeding season", or 3) *sedentary* when a species was described
 as "resident" or "sedentary". Breeding season length was defined as the number
 of months the species breeds each year.
 
@@ -122,16 +123,16 @@ We used phylogenetically-corrected Bayesian multilevel logistic regression
 models using the *brms* v2.13.0 package [@burkner2017] in R
 v4.0.0 [@rcoreteam2020]⁠ where responses, the
 number of sexually-dichromatic patches >1, 2, and 3 chromatic and achromatic
-JNDs, were modeled as binomial trials (N=5 plumage patch “trials”) to test for
+JNDs, were modelled as binomial trials (N=5 plumage patch “trials”) to test for
 associations with breeding timing, breeding sympatry and breeding spacing. For
 all phylogenetically-corrected models, we used the *Turdus* phylogeny from
-Nylander et al. (2008) [@nylander2008]to create
+Nylander et al. (2008) [@nylander2008] to create
 a covariance matrix of species’ phylogenetic relationships. All models used a
 dataset of N=67 out of the *Turdus* species for which all the types of data (see above) were available.
 
 Our *breeding timing* models included the following predictors: z-scores of
 breeding season length (mean-centered by $\mu$ = 5.4 months, and scaled by one standard deviation $\sigma$ = 2.3 months),
-migratory behavior (no migration as the reference category versus partial
+migratory behaviour (no migration as the reference category versus partial
 or full migration), and their interaction. *Breeding sympatry* models
 included the number of sympatric species with greater than 30% breeding range
 overlap as the only predictor of the probability of having a sexually-dichromatic plumage
@@ -160,15 +161,15 @@ indicative of a true existence of a predictor's effect on sexually-dimorphic plu
 ## *Model comparisons*
 We obtained N ≥ 4000 effective posterior samples for each model parameter and all models’
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
-parameters) (Supplementary Figure). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and  _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
+parameters) (Supplementary Figure). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
 
 ## *Achromatic plumage sexual dimorphism predictors*
 
-All model predictors' effect estimates are provided as the posterior median odds-ratio (OR) and 90% highest-density interval (HDI) in Table 2. Among predictors of achromatic sexually-dimorphic plumage patches, only predictors included in the _breeding timing_ model have predictors with probability of direction (_pd_) values ≥ 0.90 (Table 2). Specifically, longer breeding season length was associated with lower odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 2 (breeding season length, OR [90% HDI] = 0.10 [0.01, 1.1], 89.5% decrease in odds per 2.3-month increase in breeding season) and JND > 3 (breeding season length, OR [90% HDI] = 0.25 [0.03, 1.5], 75% decrease in odds per 2.3-month increase in breeding season). Additionally, full migratory behavior, rather than no migratory behavior, was associated with greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1 (full migration, OR [90% HDI]  = 4.97 [0.95, 24.4]), JND > 2 (full migration, OR [90% HDI]  = 66.5 [3.2, 1802.4]) and JND > 3 (OR [90% HDI]  = 22.3 [1.6, 307.9]). Finally, both full and partial migratory behavior, rather than no migration behavior, in conjunction with longer breeding season lengths are associated with greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1 (breeding season length x full migration, OR [90% HDI]  = 4.84 [0.67, 39.6]), JND > 2 (breeding season length x full migration, OR = 66.3 [0.59, 11415.7]; breeding season length x partial migration, OR [90% HDI] = 20.7 [0.9, 589.1]) and JND > 3 (breeding season length x partial migration, OR [90% HDI]  = 8.28 [0.76, 109.1]). 
+All model predictors' effect estimates are provided as the posterior median odds-ratio (OR) and 90% highest-density interval (HDI) in Table 2. Among predictors of achromatic sexually-dimorphic plumage patches, only predictors included in the _breeding timing_ model have predictors with probability of direction (_pd_) values ≥ 0.90 (Table 2). Specifically, longer breeding season length was associated with lower odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 2 (breeding season length, OR [90% HDI] = 0.10 [0.01, 1.1], 89.5% decrease in odds per 2.3-month increase in breeding season) and JND > 3 (breeding season length, OR [90% HDI] = 0.25 [0.03, 1.5], 75% decrease in odds per 2.3-month increase in breeding season). Additionally, full migratory behaviour, rather than no migratory behaviour, was associated with greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1 (full migration, OR [90% HDI]  = 4.97 [0.95, 24.4]), JND > 2 (full migration, OR [90% HDI]  = 66.5 [3.2, 1802.4]) and JND > 3 (OR [90% HDI]  = 22.3 [1.6, 307.9]). Finally, both full and partial migratory behaviour, rather than no migration behaviour, in conjunction with longer breeding season lengths are associated with greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1 (breeding season length x full migration, OR [90% HDI]  = 4.84 [0.67, 39.6]), JND > 2 (breeding season length x full migration, OR = 66.3 [0.59, 11415.7]; breeding season length x partial migration, OR [90% HDI] = 20.7 [0.9, 589.1]) and JND > 3 (breeding season length x partial migration, OR [90% HDI]  = 8.28 [0.76, 109.1]).
 
 ## *Chromatic plumage sexual dimorphism predictors*
 
-Among predictors of _breeding timing_ models predicting chromatic sexually-dimorphic plumage patches, longer breeding season length was associated with lower odds of a species having a plumage patch with chromatic JND > 2 (OR [90% HDI]  = 0.14 [0.01, 1.42], 86% reduction in odds per 2.3 month increase in breeding season), and both full and partial migratory behavior rather than no migration are associated with greater odds of a species having a plumage patch JND > 1 (partial migration, OR [90% HDI] = 2.2 [0.94, 4.9]), JND > 2 (full migration, OR [90% HDI] = 80.51 [2.8, 3432.9]) and JND > 3 (partial migration, OR [90% HDI] = 71.2 [0.32, 59062.9]; full migration, OR [90% HDI] = 234.7 [ 0.51, 300382.6]). For _breeding spacing models_, island residency rather than mainland residency was associated with lower odds of having a plumage patch > 1 chromatic JND (island, OR [90% HDI] = 0.27 [0.09, 0.89]). Finally, more _Turdus_ species in sympatry was associated with higher odds of a species having a chromatic plumage patch with JND > 1 (number of sympatric species, OR [90% HDI] = 1.4 [1.18, 1.67], 40% increase in odds per each additional sympatic species), JND > 2 (sympatric species, OR [90% HDI] = 1.59 [1.01, 2.52], 59% increase in odds per each additional sympatric species), and JND > 3 (sympatric species, OR [90% HDI] = 2.11 [1.03, 4.46], 111% increase in odds per each additional sympatric species). 
+Among predictors of _breeding timing_ models predicting chromatic sexually-dimorphic plumage patches, longer breeding season length was associated with lower odds of a species having a plumage patch with chromatic JND > 2 (OR [90% HDI]  = 0.14 [0.01, 1.42], 86% reduction in odds per 2.3 month increase in breeding season), and both full and partial migratory behaviour rather than no migration are associated with greater odds of a species having a plumage patch JND > 1 (partial migration, OR [90% HDI] = 2.2 [0.94, 4.9]), JND > 2 (full migration, OR [90% HDI] = 80.51 [2.8, 3432.9]) and JND > 3 (partial migration, OR [90% HDI] = 71.2 [0.32, 59062.9]; full migration, OR [90% HDI] = 234.7 [ 0.51, 300382.6]). For _breeding spacing models_, island residency rather than mainland residency was associated with lower odds of having a plumage patch > 1 chromatic JND (island, OR [90% HDI] = 0.27 [0.09, 0.89]). Finally, more _Turdus_ species in sympatry was associated with higher odds of a species having a chromatic plumage patch with JND > 1 (number of sympatric species, OR [90% HDI] = 1.4 [1.18, 1.67], 40% increase in odds per each additional sympatic species), JND > 2 (sympatric species, OR [90% HDI] = 1.59 [1.01, 2.52], 59% increase in odds per each additional sympatric species), and JND > 3 (sympatric species, OR [90% HDI] = 2.11 [1.03, 4.46], 111% increase in odds per each additional sympatric species). 
 
 
 
