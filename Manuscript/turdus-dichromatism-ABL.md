@@ -30,13 +30,51 @@ geometry:
 
 # Introduction
 
-   Species recognition is necessary in sexually reproducing lineages for individuals to find compatible conspecific mates and produce viable offspring [@andersson1994; @groning2008]. Specifically, conspicuous traits signaling species and sex identity reduce the time and effort expended when searching for compatible mates and lessen the likelihood of mating with heterospecifics [@groning2008]. Accordingly, traits which facilitate species and mate recognition should be favored when congeneric species are highly sympatric, when the time to find a mate is limited, and when conspecifics are not encountered often [@andersson1994]. Alternatively, traits used in species and mate recognition may also serve as signals of status to conspecifics and reduce costly conflicts over resources and mates [@west-eberhard1983].
+   Species recognition is necessary in sexually reproducing lineages for
+   individuals to find compatible conspecific mates and produce viable offspring
+   [@andersson1994; @groning2008]. Specifically, conspicuous traits signaling
+   species and sex identity reduce the time and effort expended when searching
+   for compatible mates and lessen the likelihood of mating with heterospecifics
+   [@groning2008]. Accordingly, traits which facilitate species and mate
+   recognition should be favored when congeneric species are highly sympatric,
+   when the time to find a mate is limited, and when conspecifics are not
+   encountered often [@andersson1994]. Alternatively, traits used in species and
+   mate recognition may also serve as signals of status to conspecifics and
+   reduce costly conflicts over resources and mates [@west-eberhard1983].
    
-   In birds, plumage colouration is a highly conspicuous trait which signals species [@martin2015a; @bitton2016] and (often) sex identity.
+   In birds, plumage colouration is a highly conspicuous trait which signals
+   species [@martin2015a; @bitton2016] and (often) sex identity.
    
-   Plumage sexual dichromatism, a distinct set of differences in the appearance of male versus female feather colouration, is common in birds and is often attributed to differing selection pressures on males and females [@martin1996; @burns1998; @badyaev2003; @dale2015; @dunn2015]. Fundamentally, plumage sexual dichromatism results in a visible trait useful for recognizing an individual's species, sex, and age (e.g., in species with delayed plumage maturation, see [@hawkins2012]), reducing the time and effort necessary to find a suitable mate. Bird species that migrate to and from their breeding territories and have large geographic ranges tend to have greater plumage sexual dichromatism than species that do not migrate and have limited ranges [@badyaev2003; @friedman2009; @dale2015; @simpson2015a; @matysiokova2017].
+   Plumage sexual dichromatism, a distinct set of differences in the appearance
+   of male versus female feather colouration, is common in birds and is often
+   attributed to differing selection pressures on males and females
+   [@martin1996; @burns1998; @badyaev2003; @dale2015; @dunn2015]. Fundamentally,
+   plumage sexual dichromatism results in a visible trait useful for recognizing
+   an individual's species, sex, and age (e.g., in species with delayed plumage
+   maturation, see [@hawkins2012]), reducing the time and effort necessary to
+   find a suitable mate. Bird species that migrate to and from their breeding
+   territories and have large geographic ranges tend to have greater plumage
+   sexual dichromatism than species that do not migrate and have limited ranges
+   [@badyaev2003; @friedman2009; @dale2015; @simpson2015a; @matysiokova2017].
    
-   Further, plumage sexual dichromatism likely plays a role in hybridization avoidance via character displacement for species and mate recognition [@seddon2013]. For example, in European _Ficedula_ flycatchers, female choice selects for divergent male plumage colouration, leading to character displacement between species and populations and reduced rates of hybridization [@stre1997]. More broadly and across taxa, greater plumage dichromatism is positively correlated with transitions from allopatry to parapatry and an increase in geographic range overlap among a large sample of passerine sister species pairs [@cooney2017]. In addition, plumage sexual dichromatism has been found to be positively associated with species richness among sister species pairs, and dichromatism is increased mainly by changes in male plumage [@seddon2013], suggesting that female choice and male-male competition lead to concurrent changes in male plumage and speciation events. Further, plumage sexual dichromatism is positively associated with greater interspecific plumage colour evolution rate and divergence in _Tyrannida_ suboscines [@cooney2019]. Therefore, plumage sexual dichromatism may be an especially favourable trait to facilitate species and mate recognition when closely-related species have overlapping breeding ranges.
+   Further, plumage sexual dichromatism likely plays a role in hybridization
+   avoidance via character displacement for species and mate recognition
+   [@seddon2013]. For example, in European _Ficedula_ flycatchers, female choice
+   selects for divergent male plumage colouration, leading to character
+   displacement between species and populations and reduced rates of
+   hybridization [@stre1997]. More broadly and across taxa, greater plumage
+   dichromatism is positively correlated with transitions from allopatry to
+   parapatry and an increase in geographic range overlap among a large sample of
+   passerine sister species pairs [@cooney2017]. In addition, plumage sexual
+   dichromatism has been found to be positively associated with species richness
+   among sister species pairs, and dichromatism is increased mainly by changes
+   in male plumage [@seddon2013], suggesting that female choice and male-male
+   competition lead to concurrent changes in male plumage and speciation events.
+   Further, plumage sexual dichromatism is positively associated with greater
+   interspecific plumage colour evolution rate and divergence in _Tyrannida_
+   suboscines [@cooney2019]. Therefore, plumage sexual dichromatism may be an
+   especially favourable trait to facilitate species and mate recognition when
+   closely-related species have overlapping breeding ranges.
 
 \begin{figure}[h]
 \centering
