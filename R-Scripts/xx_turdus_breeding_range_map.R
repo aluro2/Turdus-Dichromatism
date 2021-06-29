@@ -71,7 +71,7 @@ plot(wrld_simpl, lwd = 0.0001); plot(sr_turdus_mw,
      interpolate = T,
      col = colfunc(10),
      maxpixels = 1000000,
-     asp = 1.1,
+     asp = 2,
      axes = F,
      bty = "n", add = T); plot(wrld_simpl, lwd = 0.5, add = T)
 

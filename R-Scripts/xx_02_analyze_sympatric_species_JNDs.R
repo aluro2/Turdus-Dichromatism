@@ -126,11 +126,13 @@ summarised_sympatry_jnd <-
   group_by(sympatry, sex1, jnd_threshold, species1) %>% 
   summarise(median = median(n_patches),
             mad = mad(n_patches),
-            n = n()) %>%
+            n = n(),
+            min = min(n_patches)) %>%
   group_by(sympatry, sex1, jnd_threshold) %>%
     summarise(grand_median = median(median),
               grand_mad = mad(median),
-              total_n = n()) %>%
+              total_n = n(),
+              grand_min = min(min)) %>%
   mutate(sympatry = as.factor(str_replace(sympatry, "has_sympatry_", "")),
          metric = ifelse(str_detect(jnd_threshold, "achro"), "Achromatic", "Chromatic"),
          jnd_threshold = paste(">", str_extract(jnd_threshold, "(\\d)+"), "JND")) %>% 
@@ -143,8 +145,6 @@ write_csv(summarised_sympatry_jnd, "Data/summarised_sympatry_jnd.csv")
 summarised_sympatry_jnd %>% 
   ggplot(aes(x = sympatry,
              y = grand_median,
-             #ymin = grand_median - grand_mad,
-             #ymax = grand_median + grand_mad,
              fill = sex1)) +
   geom_line(aes(group = sex1,
                 color = sex1),
@@ -153,7 +153,7 @@ summarised_sympatry_jnd %>%
   geom_pointrange(aes(ymin = grand_median - grand_mad,
                       ymax = grand_median + grand_mad,
                       color = sex1),
-                  position = position_dodge(width = 1)) +
+                position = position_dodge(width = 1)) +
   scale_y_continuous(limits = c(-0.65, 5.5), breaks = 0:5) +
   labs(x = "Percent Breeding Range Overlap Threshold",
          y = "Number of Between-Species \n Discriminable Plumage Patches",
