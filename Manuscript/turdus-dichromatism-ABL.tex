@@ -40,6 +40,19 @@
   pdfcreator={LaTeX via pandoc}}
 \urlstyle{same} % disable monospaced font for URLs
 \usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -180,10 +193,21 @@ sympatry on plumage dichromatism (Fig.1) in the true thrushes (genus:
 \emph{Turdus}), an exceptionally diverse genus of passerine birds
 consisting of about \textasciitilde86 species distributed worldwide.
 
+\begin{figure}
+\hypertarget{fig:fig-01-turdus-ranges}{%
+\centering
+\includegraphics{Figures/01_turdus_species_worldmap_with_HBW.png}
+\caption{Breeding ranges of all recognized \emph{Turdus} species from
+BirdLife International. Colors indicate the number of \emph{Turdus}
+sympatric thrush species with overlapping breeding ranges. Illustrations
+© HBW Alive/Lynx Edicions}\label{fig:fig-01-turdus-ranges}
+}
+\end{figure}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/hypothesis-figure-mermaid.png}
-\caption {Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:01-hypotheses}}
+\caption {Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:02-hypotheses}}
 \end{figure}
 
 \hypertarget{methods}{%

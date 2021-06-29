@@ -36,7 +36,7 @@ geometry:
    species and sex identity reduce the time and effort expended when searching
    for compatible mates and lessen the likelihood of mating with heterospecifics
    [@pfennig2012]. Accordingly, traits which facilitate species and mate
-   recognition should be favored when congeneric species are highly sympatric,
+   recognition should be favored when closely-related species are highly sympatric,
    when the time to find a mate is limited, and when conspecifics are not
    encountered often [@andersson1994]. Alternatively, traits used in species and
    mate recognition may also serve as signals of status to conspecifics and
@@ -54,10 +54,10 @@ geometry:
    identify a suitable mate [@hamilton1961; @saetre1992]. Evidence in favor of the species recognition hypothesis for sexual dichromatism includes a positive association between migratory behaviour, shorter breeding seasons, and plumage sexual dichromatism [@badyaev2003]. Specifically, bird species that migrate to and from their breeding
    territories and have large geographic ranges tend to have greater plumage
    sexual dichromatism than species that do not migrate and have limited breeding ranges
-   [@friedman2009; @dale2015; @simpson2015a; @matysiokova2017]. Additionally, bird species that reside on mainland continents and have larger breeding ranges tend to have greater plumage colour elaboration and sexual dichromatism than species living on islands with limited breeding ranges [@badyaev1998; @figuerola2000; @tobias2009; @roulin2010; @doutrelant2016; @kearns2020].
+   [@friedman2009; @dale2015; @simpson2015a; @matysiokova2017]. Additionally, bird species that reside on mainland continents and have larger breeding ranges often have greater plumage colour elaboration and sexual dichromatism than species living on islands with limited breeding ranges [@badyaev1998; @figuerola2000; @tobias2009; @roulin2010; @doutrelant2016; @kearns2020].
    
    Moreover, plumage sexual dichromatism likely plays a role in hybridization
-   avoidance via character displacement for species and mate recognition. For example, in European _Ficedula_ flycatchers, female choice
+   avoidance via character displacement to facilitate species and mate recognition. For example, in European _Ficedula_ flycatchers, female choice
    selects for divergent male plumage colouration, leading to character
    displacement between species and populations and reduced rates of
    hybridization [@saetre1997]. More broadly and across taxa, greater plumage
@@ -76,20 +76,23 @@ geometry:
    
    Overall, ecological conditions that increase the time and degree of difficulty in finding a
    suitable conspecific mate should select for phenotypic traits that reliably signal species and
-   sex identity. Taken together, repeated findings of greater plumage dichromatism in species that
+   sex identity. Taken together, repeated findings across various bird lineages of greater plumage dichromatism in species that
    are i) migratory rather than nonmigratory, ii) have shorter breeding seasons, ii) live on
    mainlands rather than islands, iv) have larger breeding ranges, and v) breed in sympatry with
    closely-related species suggests that circumstances where rapid species recognition is
    challenging strongly favour the evolution and maintenance of prominent plumage sexual
    dichromatism in birds. Here, we test predictions of the species recognition hypothesis for
-   sexually-dimorphic traits by examining the potential influences of breeding timing, spacing, and
-   sympatry on plumage dichromatism (Fig.1) in the true thrushes (genus: _Turdus_), an exceptionally
-   diverse genus of passerine birds consisting of about ~86 species distributed worldwide.
+   sexually-dimorphic traits. To this end, we evaluate the potential influences of breeding timing, spacing, and
+   sympatry on plumage dichromatism in the true thrushes (genus: _Turdus_), an exceptionally
+   diverse genus of passerine birds consisting of about ~86 species distributed worldwide (Fig. 1,2).
+
+![Breeding ranges of all recognized *Turdus* species from BirdLife International. Colors indicate
+the number of *Turdus* thrush species in sympatry with overlapping breeding ranges. Illustrations © HBW Alive/Lynx Edicions](Figures/01_turdus_species_worldmap_with_HBW.png){#fig:fig-01-turdus-ranges}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/hypothesis-figure-mermaid.png}
-\caption {Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:01-hypotheses}}
+\caption {Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:02-hypotheses}}
 \end{figure}
 
 # Methods
@@ -129,7 +132,7 @@ patches per species (out of N=5 measured patches) as the number of plumage
 patches with average JND values > 1, 2, or 3 to account for uncertainty in
 visual discrimination thresholds due to variation in psychophysical and ambient
 lighting conditions affecting the strength of between-sex plumage visual
-contrast [@kemp2015]⁠.
+contrast [@kemp2015]⁠. Additionally, we modeled the number of divergent plumage patches (JND >1, 2, and 3)  within sexes and between different sympatric species under different levels of breeding range overlap (10% increments between 0-90%, Supplementary Figure 1).
 
 ## *Life History Data*
 
@@ -153,7 +156,7 @@ We calculated congener breeding range overlaps (as percentages) using the
 *letsR* package in R [@vilela2015]⁠. We then calculated the
 number of sympatric species as the number of congeners with breeding ranges that
 overlap >30% with the focal species’ breeding range
-[@cooney2017].
+[@cooney2017]. Comparisons of the number of sexually-dimorphic plumage patches vs. the number of sympatric species among different breeding range overlap thresholds are provided in Supplementary Figure 2.
 
 ### *Breeding Spacing Model*
 
@@ -176,7 +179,7 @@ associations with breeding timing, breeding sympatry and breeding spacing. For
 all phylogenetically-corrected models, we used the *Turdus* phylogeny from
 Nylander et al. (2008) [@nylander2008] to create
 a covariance matrix of species’ phylogenetic relationships. All models used a
-dataset of N=67 out of the *Turdus* species for which all the types of data (see above) were available.
+dataset of N=67 out of the *Turdus* species for which all the types of data (see above) were available. 
 
 Our *breeding timing* models included the following predictors: z-scores of
 breeding season length (mean-centered by $\mu$ = 5.4 months, and scaled by one standard deviation $\sigma$ = 2.3 months),
@@ -209,7 +212,7 @@ indicative of a true existence of a predictor's effect on sexually-dimorphic plu
 ## *Model comparisons*
 We obtained N ≥ 4000 effective posterior samples for each model parameter and all models’
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
-parameters) (Supplementary Figure). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
+parameters) (Supplementary Figure 3, 4). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
 
 ## *Achromatic plumage sexual dimorphism predictors*
 
@@ -292,6 +295,8 @@ Model & Parameter & Achromatic, JND > 1 & Achromatic, JND > 2 & Achromatic, JND 
 \end{landscape}
 
 # Discussion
+
+In support of the species recognition hypothesis for plumage sexual dimorphism, we found that the odds of plumage sexual dimorphism are greater for species that migrate, have short breeding seasons, and are in sympatry with many other congeneric species (Table 1,2). Given the global distribution of
 
 # Conclusions
 
