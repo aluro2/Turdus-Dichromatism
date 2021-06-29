@@ -74,6 +74,9 @@ geometry:
    especially favourable trait to facilitate species and mate recognition when
    closely-related species have sympatric breeding ranges.
    
+   True thrushes (genus: _Turdus_) are an exceptionally
+   diverse genus of passerine birds consisting of about ~86 species distributed across the globe (Fig. 1). Plumage sexual dimorphism and migratory behaviors vary substantially between species and have evolved multiple times in thrushes across the world [@clement2000; @nagy2019]. Interestingly, there have been several documented cases of hybridization in _Turdus_ thrushes, and there is a large hybird zone between four _Turdus_ species (_T. atrogularis_, _T. eunomus_, _T. naumanni_, _T. ruficollis_) in north-central Asia [@mccarthy2006], indicating that some sympatric _Turdus_ species interbreed. Therefore, the true thrushes are an ideal passerine clade for examining the species recognition hypothesis for plumage sexual dimorphism.
+   
    Overall, ecological conditions that increase the time and degree of difficulty in finding a
    suitable conspecific mate should select for phenotypic traits that reliably signal species and
    sex identity. Taken together, repeated findings across various bird lineages of greater plumage dichromatism in species that
@@ -83,8 +86,7 @@ geometry:
    challenging strongly favour the evolution and maintenance of prominent plumage sexual
    dichromatism in birds. Here, we test predictions of the species recognition hypothesis for
    sexually-dimorphic traits. To this end, we evaluate the potential influences of breeding timing, spacing, and
-   sympatry on plumage dichromatism in the true thrushes (genus: _Turdus_), an exceptionally
-   diverse genus of passerine birds consisting of about ~86 species distributed worldwide (Fig. 1,2).
+   sympatry on plumage dichromatism in the _Turdus_ thrushes .
 
 ![Breeding ranges of all recognized *Turdus* species from BirdLife International. Colors indicate
 the number of *Turdus* thrush species in sympatry with overlapping breeding ranges. Illustrations © HBW Alive/Lynx Edicions](Figures/01_turdus_species_worldmap_with_HBW.png){#fig:fig-01-turdus-ranges}
@@ -296,7 +298,11 @@ Model & Parameter & Achromatic, JND > 1 & Achromatic, JND > 2 & Achromatic, JND 
 
 # Discussion
 
-In support of the species recognition hypothesis for plumage sexual dimorphism, we found that the odds of plumage sexual dimorphism are greater for species that migrate, have short breeding seasons, and are in sympatry with many other congeneric species (Table 1,2). Given the global distribution of
+Our results provide strong observational support of the species recognition hypothesis for plumage sexual dimorphism. We found that the odds of plumage sexual dimorphism are much greater for _Turdus_ thrush species that migrate, have relatively short breeding seasons, and are in sympatry with many other congeneric species (Table 1,2). Our results align with broader comparative studies of plumage sexual dimorphism where strong associations between migratory behavior [@dale2015] and  sympatry [@cooney2017] were found among many species of different passerine families. 
+
+Interestingly, we found that chromatic plumage sexual dimorphism was most consistently and accurately predicted by breeding sympatry (Tables 1,2), with the odds of a species having chromatic plumage sexual dimorphism increasing by 41-111% with each additional sympatric species. 
+
+ accounting for avian vision and differences in achromatic and chromatic differences in plumage appearance
 
 # Conclusions
 
