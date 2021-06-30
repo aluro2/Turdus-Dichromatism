@@ -60,7 +60,7 @@ geometry:
    avoidance via reproductive character displacement to facilitate species and mate recognition. For example, in European _Ficedula_ flycatchers, female choice
    selects for divergent male plumage colouration, leading to character
    displacement between species and populations and reduced rates of
-   hybridization [@alatalo1994; @saetre1997]. More broadly and across taxa, greater plumage
+   hybridization [@alatalo1994; @saetre1997; @laaksonen2015]. More broadly and across taxa, greater plumage
    dichromatism is positively correlated with transitions from allopatry to
    parapatry and increases in geographic range overlaps among
    passerine sister species pairs [@cooney2017]. Plumage sexual
@@ -211,6 +211,10 @@ indicative of a true existence of a predictor's effect on sexually-dimorphic plu
 
 # Results
 
+## *Avian visual modeling*
+
+Among N=77 _Turdus_  species, the following proportion have sexually monomorphic plumage (both achromatic and chromatic metrics): 1.3% (n=1 species) have no sexually-dimorphic patches > 1 JND , 44% (n=34 species) have no dimorphic patches > 2 JND, and 63% (n=49 species) have no dimorphic patches > 3 JND. Conversely, 
+
 ## *Model comparisons*
 We obtained N ≥ 4000 effective posterior samples for each model parameter and all models’
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
@@ -298,13 +302,12 @@ Model & Parameter & Achromatic, JND > 1 & Achromatic, JND > 2 & Achromatic, JND 
 
 # Discussion
 
-Our results provide strong observational support of the species recognition hypothesis for plumage sexual dimorphism. We found that the odds of plumage sexual dimorphism are much greater for _Turdus_ thrush species that migrate, have relatively short breeding seasons, and are in sympatry with many other congeneric species (Table 1,2). Our results align with broader comparative studies of plumage sexual dimorphism where strong associations between migratory behavior [@dale2015] and  sympatry [@cooney2017] were found among many species of different passerine families. 
-
-Interestingly, we found that chromatic plumage sexual dimorphism was most consistently and accurately predicted by breeding sympatry (Tables 1,2), with the odds of a species having chromatic plumage sexual dimorphism increasing by 41-111% with each additional sympatric species. 
+Our results yield observational evidence in support the species recognition hypothesis for plumage sexual dimorphism in true thrushes. We found that the odds of plumage sexual dimorphism are much greater for _Turdus_ thrush species that have full or partial migration rather than no migration, have relatively short breeding seasons, and are in sympatry with many other congeneric species (Table 1,2). Further, we determined that sympatric species have distinguishable plumage coloration differences from one when measuring plumage appearance from the avian visual perspective (Supplementary Figure 1).
+Our results align with broader comparative studies of plumage sexual dimorphism where strong associations between migratory behavior [@dale2015] and  sympatry [@cooney2017] were found among many species of different passerine families. 
  
- Our study does not consider differences in song, an important behavioral trait also used in avian mate choice and recognition [@qvarnstrom2006; @freeman2017]. However, because plumage coloration is more static than song, it is likely a more reliable signal for species recognition under many circumstances, especially in breeding range locations where closely-related heterospecifics are in high sympatry [@emlen1975; @uy2009].
+ Our study does not consider differences in song, an important behavioral trait also used in avian mate choice and recognition [@qvarnstrom2006; @freeman2017]. However, because plumage coloration is more static than song, it is likely a more reliable signal for species recognition under many circumstances, especially in breeding range locations where closely-related heterospecifics are in high sympatry [@emlen1975; @baker1990; @uy2009].
  
- Other studies have found that closely-related species tend to have more similar plumage appearance than expected if plumage coloration had evolved to facilitate species recognition via reproductive character displacement [@simpson2020], and attribute the lack of major plumage color divergence in sympatric species to constraints of a shared light environment [@mcnaught2002]. Greater similarity in appearance between highly sympatric closely-related heterospecifics versus allopatric heterospecifics is expected assuming sympatric species share similar light environment constraints and natural selection pressures (e.g., predators, parasites, and weather). Despite greater similarity in plumage appearance in comparison to allopatric species, closely-related sympatric species can still have substantially different achromatic or chromatic plumage appearances when measuring plumage coloration differences from the avian visual perspective as we have in our analyses.
+ Other studies have found that closely-related species tend to have more similar plumage appearance than expected if plumage coloration had evolved to facilitate species recognition via reproductive character displacement [@simpson2020; @miller2019], and attribute the lack of major plumage color divergence in sympatric species to constraints of a shared light environment [@mcnaught2002]. Greater similarity in appearance between highly sympatric closely-related heterospecifics versus allopatric heterospecifics is expected assuming sympatric species share similar light environment constraints and natural selection pressures (e.g., predators, parasites, and weather). Despite greater similarity in plumage appearance in comparison to allopatric species, closely-related sympatric species can still have substantially different achromatic or chromatic plumage appearances when measuring plumage coloration differences from the avian visual perspective as we have in our analyses.
  
   accounting for avian vision and differences in achromatic and chromatic differences in plumage appearance
 
