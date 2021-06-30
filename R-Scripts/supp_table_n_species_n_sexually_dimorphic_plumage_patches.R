@@ -39,6 +39,8 @@ jnds_data <-
     n_achromatic_patches_3 = as.integer(sum(dL_threshold_3))
   )
 
+# Table with separate achro/chrom
+
 jnds_data %>% 
   select(-species) %>% 
   pivot_longer(everything()) %>% 
@@ -51,9 +53,32 @@ jnds_data %>%
   rename("Number of Sexually-Dimorphic Plumage Patches" = value) %>% 
   gtsummary::tbl_summary(by = `JND Threshold`) %>% 
   as_gt() %>% 
-  gt::gtsave(filename = "Figures/supp_00_n_species_n_dimorphic_patches.png")
   # LaTeX
-  #as_latex()
-  # Pandoc (.md)
-  #as_kable
-gtsummary::tbl_summary(jnds_data)
+  #gt::as_latex() %>%
+  # Pandoc (.md), block out as_gt()
+  #gtsummary::as_kable()
+  # Save as image
+  gt::gtsave(filename = "Figures/supp_00_n_species_n_dimorphic_patches.png")
+
+
+
+# All forms of plumage dimorphism -----------------------------------------
+
+totals <-
+  jnds_data %>% 
+    group_by(species) %>% 
+    summarise(`Achromatic & Chromatic JND > 1` = as.integer(n_chromatic_patches_1 + n_achromatic_patches_1),
+              `Achromatic & Chromatic JND > 2`= as.integer(n_chromatic_patches_2 + n_achromatic_patches_2),
+              `Achromatic & Chromatic JND > 3` = as.integer(n_chromatic_patches_3 + n_achromatic_patches_3)) 
+
+totals %>% 
+  select(-species) %>% 
+  pivot_longer(everything())  %>% 
+  gtsummary::tbl_summary(label = list(name ~ "JND Threshold",
+                                      value ~ "Number of Sexually-Dimorphic Plumage Patches"),
+                         type = list(name ~ "categorical",
+                                     value ~ "categorical"),
+                         by = name) %>% 
+  as_gt() %>% 
+  gt::gtsave(filename = "Figures/supp_00_n_species_n_dimorphic_patches_achro_and_chrom.png")
+
