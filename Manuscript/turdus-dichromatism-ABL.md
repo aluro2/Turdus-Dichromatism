@@ -134,7 +134,7 @@ patches per species (out of N=5 measured patches) as the number of plumage
 patches with average JND values > 1, 2, or 3 to account for uncertainty in
 visual discrimination thresholds due to variation in psychophysical and ambient
 lighting conditions affecting the strength of between-sex plumage visual
-contrast [@kemp2015]⁠. Additionally, we modeled the number of divergent plumage patches (JND >1, 2, and 3)  within sexes and between different sympatric species under different levels of breeding range overlap (10% increments between 0-90%, Supplementary Figure 1).
+contrast [@kemp2015]⁠. Additionally, we modeled the number of divergent plumage patches (JND >1, 2, and 3)  within sexes and between different sympatric species under different levels of breeding range overlap (10% increments between 0-90%).
 
 ## *Life History Data*
 
@@ -213,12 +213,12 @@ indicative of a true existence of a predictor's effect on sexually-dimorphic plu
 
 ## *Avian visual modeling*
 
-Among N=77 _Turdus_  species, the following proportion have sexually monomorphic plumage (both achromatic and chromatic metrics): 1.3% (n=1 species) have no sexually-dimorphic patches > 1 JND , 44% (n=34 species) have no dimorphic patches > 2 JND, and 63% (n=49 species) have no dimorphic patches > 3 JND. Conversely, 
+Among N=77 _Turdus_  species, the following proportion have sexually monomorphic plumage (combined achromatic and chromatic JND thresholds): 1.3% (n=1 species) have no sexually-dimorphic patches > 1 JND , 44% (n=34 species) have no dimorphic patches > 2 JND, and 63% (n=49 species) have no dimorphic patches > 3 JND (Table S1). Conversely, 98.7% (n=78 species) have at least one sexually-dimorphic plumage patch > 1 JND, 56% (n=43 species) have at least one plumage patch > 2 JND, and 37% (n=28 species) have at least one patch > 3 JND (Table S1). Additional proportions of _Turdus_ species with sexually-dimorphic achromatic or chromatic plumage patches are available in Table S2. When comparing within sexes between sympatric species (i.e., at least a 30% overlap in breeding ranges: n=39 species with at least one sympatric species and a median of n=6 sympatric species per focal species), the median number of avian-discriminable plumage patches between species is 1 or greater for all achromatic and chromatic JND thresholds except for sympatric females at a chromatic JND threshold > 3 (Fig. S1).
 
 ## *Model comparisons*
 We obtained N ≥ 4000 effective posterior samples for each model parameter and all models’
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
-parameters) (Supplementary Figure 3, 4). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
+parameters) (Supplementary Figure 3, 4). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually-dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
 
 ## *Achromatic plumage sexual dimorphism predictors*
 
