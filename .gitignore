@@ -24,3 +24,4 @@ Manuscript/DOCX-CHANGES*
 Bash-Scripts/docker_get_docx_changes.sh
 Bash-Scripts/update-google-drive-MS.sh
 *.ztr-directory
+.vscode
