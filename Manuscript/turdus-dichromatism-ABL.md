@@ -30,7 +30,7 @@ geometry:
  (_Turdus_), a large and diverse genus of passerine birds. We used receptor-noise limited models of
  avian vision to quantify avian-perceived chromatic and achromatic visual contrasts between male and
  female plumage patches and tested the influence of breeding timing, spacing, and sympatry with
- other _Turdus_ on plumage dimorphism. As predicted, we found that 1) true thrush species with
+ other _Turdus_ species on plumage dimorphism. As predicted, we found that 1) true thrush species with
  migratory
  behaviour have greater plumage sexual dimorphism than non-migratory species, 2) species with longer
  breeding seasons have less sexual dichromatism, and 3) the number of _Turdus_ thrush species
@@ -67,7 +67,7 @@ geometry:
    an individual's species, sex, and (sometimes) age (e.g., in species with sex-specific delayed plumage
    maturation, see [@hawkins2012]). Therefore, plumage sexual dichromatism reduces the time and effort necessary to
    identify a suitable mate [@hamilton1961; @saetre1992]. Evidence in favor of this recognition
-   hypothesis for sexual dichromatism includes a positive association between greater plumage sexual
+   hypothesis for sexual dichromatism includes a positive association of greater plumage sexual
    dichromatism with migratory behaviour and
    shorter breeding seasons [@badyaev2003]. Specifically, bird
    species that migrate to and from their breeding
@@ -124,6 +124,8 @@ the number of *Turdus* thrush species in sympatry with overlapping breeding rang
 \end{figure}
 
 # Methods
+
+Initial pre-registration of the study's methods and analyses are available on [Open Science Framework](https://osf.io/zum6d).
 
 ## *Plumage sexual dichromatism*
 
