@@ -117,11 +117,9 @@ geometry:
 ![Breeding ranges of all recognized *Turdus* species from BirdLife International. Colors indicate
 the number of *Turdus* thrush species in sympatry with overlapping breeding ranges. Illustrations © HBW Alive/Lynx Edicions](Figures/01_turdus_species_worldmap_with_HBW.png){#fig:fig-01-turdus-ranges}
 
-\begin{figure}[h]
-\centering
-\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/hypothesis-figure-mermaid.png}
-\caption {Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive (\textcolor{blue}{\textbf{blue}}) and negative (\textcolor{red}{\textbf{red}}).\label{fig:02-hypotheses}}
-\end{figure}
+
+![Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive
+(blue) and negative (red)](Figures/hypothesis-figure-mermaid.png){#fig:fig:02-hypotheses}
 
 # Methods
 
@@ -255,8 +253,6 @@ All model predictors' effect estimates are provided as the posterior median odds
 ## *Chromatic plumage sexual dimorphism predictors*
 
 Among predictors of _breeding timing_ models predicting chromatic sexually-dimorphic plumage patches, longer breeding season length was associated with lower odds of a species having a plumage patch with chromatic JND > 2 (OR [90% HDI]  = 0.14 [0.01, 1.42], 86% reduction in odds per 2.3 month increase in breeding season), and both full and partial migratory behaviour rather than no migration are associated with greater odds of a species having a plumage patch JND > 1 (partial migration, OR [90% HDI] = 2.2 [0.94, 4.9]), JND > 2 (full migration, OR [90% HDI] = 80.51 [2.8, 3432.9]) and JND > 3 (partial migration, OR [90% HDI] = 71.2 [0.32, 59062.9]; full migration, OR [90% HDI] = 234.7 [ 0.51, 300382.6]). For _breeding spacing models_, island residency rather than mainland residency was associated with lower odds of having a plumage patch > 1 chromatic JND (island, OR [90% HDI] = 0.27 [0.09, 0.89]). Finally, more _Turdus_ species in sympatry was associated with higher odds of a species having a chromatic plumage patch with JND > 1 (number of sympatric species, OR [90% HDI] = 1.4 [1.18, 1.67], 40% increase in odds per each additional sympatric species), JND > 2 (sympatric species, OR [90% HDI] = 1.59 [1.01, 2.52], 59% increase in odds per each additional sympatric species), and JND > 3 (sympatric species, OR [90% HDI] = 2.11 [1.03, 4.46], 111% increase in odds per each additional sympatric species). 
-
-
 
 \begin{table}[!h]
 
