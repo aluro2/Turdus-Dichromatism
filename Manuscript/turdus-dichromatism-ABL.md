@@ -128,7 +128,7 @@ Initial pre-registration of the study's methods and analyses are available on [O
 A total of N=77 *Turdus* thrush species (approximately ~89% of all known true thrush species) were sampled for plumage spectral
 reflectance using prepared bird skin specimens at the American Museum of Natural History in
 New York City and the Field Museum in Chicago. Reflectance measurements spanning
-300-700nm were taken in triplicate from the belly, breast, throat, crown and
+300-700nm were taken in triplicate from the belly, breast, throat, crown, and
 mantle plumage patches [@andersson2006] of each individual. N=3 male and N=3 female individuals were measured for most species
 (exceptions: *T. lawrencii*, N=2 males and N=2 females; *T. swalesi*,
 N=1 male and N=1 female). Reflectance spectra were measured using a 400 μm fiber
@@ -150,7 +150,7 @@ species where N=3 males and N=3 females sampled), and then JND values were
 averaged for each species’ respective plumage patches. Under ideal laboratory
 conditions, 1 JND is generally considered to be the discriminable
 threshold past which an observer is predicted to be able to perceive the two
-colors as different. However, natural light environments vary both spatially and
+colours as different. However, natural light environments vary both spatially and
 temporally [@endler1993]⁠, bringing into question the accuracy
 of a 1 JND threshold for generalizing visual contrast under natural conditions.
 Therefore, we calculated the total number of sexually-dichromatic plumage
@@ -198,14 +198,14 @@ surrounded by an oceanic body of water.
 
 We used phylogenetically-corrected Bayesian multilevel logistic regression
 models using the *brms* v2.13.0 package [@burkner2017] in R
-v4.0.0 [@rcoreteam2020]⁠ where responses, the
+v4.0.0 [@rcoreteam2020]⁠. We modeled plumage sexual dimorphism responses as the
 number of sexually-dichromatic patches >1, 2, and 3 chromatic and achromatic
-JNDs, were modelled as binomial trials (N=5 plumage patch “trials”) to test for
+JNDs. Plumage dimorphism responses were modelled as binomial trials (N=5 plumage patch “trials”) to test for
 associations with breeding timing, breeding sympatry and breeding spacing. For
 all phylogenetically-corrected models, we used the *Turdus* phylogeny from
 Nylander et al. (2008) [@nylander2008] to create
 a covariance matrix of species’ phylogenetic relationships. All models used a
-dataset of N=67 out of the *Turdus* species for which all the types of data (see above) were available. 
+dataset of N=67 out of the *Turdus* species for which all the types of data (see above) were available.
 
 Our *breeding timing* models included the following predictors: z-scores of
 breeding season length (mean-centered by $\mu$ = 5.4 months, and scaled by one standard deviation $\sigma$ = 2.3 months),
@@ -217,8 +217,8 @@ patch. *Breeding spacing* models included $log_{e}$ transformed breeding
 range size (km<sup>2</sup>) and breeding landmass (mainland as the reference
 category versus island). We also ran null models (intercept only) for all
 responses. All models’ intercepts and response standard deviations were assigned
-a weak prior (Student T: df = 3, location = 0, scale = 10), and predictor
-coefficients were assigned flat priors. We ran each model for 6,000 iterations
+a weakly informative prior (Student T: df = 3, location = 0, scale = 10) [@gelman2013], and predictor
+coefficients were assigned flat uninformative priors. We ran each model for 6,000 iterations
 across 6 chains and assessed Markov Chain Monte Carlo (MCMC) convergence using
 the Gelman-Rubin diagnostic (Rhat) [@gelman2013]. We then
 performed k-fold cross-validation [@vehtari2017] to refit
@@ -237,20 +237,62 @@ indicative of a true existence of a predictor's effect on sexually-dimorphic plu
 
 ## *Avian visual modeling*
 
-Among N=77 _Turdus_  species, the following proportion have sexually monomorphic plumage (combined achromatic and chromatic JND thresholds): 1.3% (n=1 species) have no sexually-dimorphic patches > 1 JND , 44% (n=34 species) have no dimorphic patches > 2 JND, and 63% (n=49 species) have no dimorphic patches > 3 JND (Table S1). Conversely, 98.7% (n=78 species) have at least one sexually-dimorphic plumage patch > 1 JND, 56% (n=43 species) have at least one plumage patch > 2 JND, and 37% (n=28 species) have at least one patch > 3 JND (Table S1). Additional proportions of _Turdus_ species with sexually-dimorphic achromatic or chromatic plumage patches are available in Table S2. When comparing within sexes between sympatric species (i.e., at least a 30% overlap in breeding ranges: n=39 species with at least one sympatric species and a median of n=6 sympatric species per focal species), the median number of avian-discriminable plumage patches between species is 1 or greater for all achromatic and chromatic JND thresholds except for sympatric females at a chromatic JND threshold > 3 (Fig. S1).
+Among N=77 _Turdus_  species, the following proportion have sexually monomorphic plumage (combined
+achromatic and chromatic JND thresholds): 1.3% (n=1 species) have no sexually-dimorphic patches > 1
+JND , 44% (n=34 species) have no dimorphic patches > 2 JND, and 63% (n=49 species) have no dimorphic
+patches > 3 JND (Table S1). Additional proportions of _Turdus_ species with sexually-dimorphic
+achromatic or chromatic plumage patches are available in Table S2. When comparing within sexes
+between sympatric species (i.e., at least a 30% overlap in breeding ranges: n=39 species with at least one sympatric species and a median of n=6 sympatric species per focal species), the median
+number of avian-discriminable plumage patches between species is 1 or greater for all achromatic and
+chromatic JND thresholds of JND > 1, > 2 and > 3 except for sympatric females at a chromatic JND threshold > 3 (Fig. S1).
 
 ## *Model comparisons*
-We obtained N ≥ 4000 effective posterior samples for each model parameter and all models’
+_Breeding sympatry_, _breeding timing_, and _breeding spacing_ performed considerably better than
+_intercept-only_ (null models) in predicting the probability of a species
+having a sexually-dimorphic plumage patch. We obtained N ≥ 4000 effective posterior samples for each model parameter and all models’
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
-parameters) (Supplementary Figure 3, 4). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually-dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of Burnham and Anderson (2002)[@burnham2002]).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches with had similar predictive performance). 
+parameters) (Supplementary Figure 3, 4). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually-dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of @burnham2002).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches had similar predictive performance).
 
 ## *Achromatic plumage sexual dimorphism predictors*
 
-All model predictors' effect estimates are provided as the posterior median odds-ratio (OR) and 90% highest-density interval (HDI) in Table 2. Among predictors of achromatic sexually-dimorphic plumage patches, only predictors included in the _breeding timing_ model have predictors with probability of direction (_pd_) values ≥ 0.90 (Table 2). Specifically, longer breeding season length was associated with lower odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 2 (breeding season length, OR [90% HDI] = 0.10 [0.01, 1.1], 89.5% decrease in odds per 2.3-month increase in breeding season) and JND > 3 (breeding season length, OR [90% HDI] = 0.25 [0.03, 1.5], 75% decrease in odds per 2.3-month increase in breeding season). Additionally, full migratory behaviour, rather than no migratory behaviour, was associated with greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1 (full migration, OR [90% HDI]  = 4.97 [0.95, 24.4]), JND > 2 (full migration, OR [90% HDI]  = 66.5 [3.2, 1802.4]) and JND > 3 (OR [90% HDI]  = 22.3 [1.6, 307.9]). Finally, both full and partial migratory behaviour, rather than no migration behaviour, in conjunction with longer breeding season lengths are associated with greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1 (breeding season length x full migration, OR [90% HDI]  = 4.84 [0.67, 39.6]), JND > 2 (breeding season length x full migration, OR = 66.3 [0.59, 11415.7]; breeding season length x partial migration, OR [90% HDI] = 20.7 [0.9, 589.1]) and JND > 3 (breeding season length x partial migration, OR [90% HDI]  = 8.28 [0.76, 109.1]).
+Migratory behaviour and shorter breeding season lengths were strongly associated with greater odds
+of a species having achromatic plumage sexual dimorphism. All model predictors' effect estimates are provided as the posterior median odds-ratio (OR) and
+90% highest-density interval (HDI) in Table 2. Among predictors of achromatic sexually-dimorphic
+plumage patches, only predictors included in the _breeding timing_ model have predictors with
+probability of direction (_pd_) values ≥ 0.90 (Table 2). Specifically, longer breeding season length
+was associated with lower odds of a species having a sexually-dimorphic plumage patch with
+achromatic JND > 2 (breeding season length, OR [90% HDI] = 0.10 [0.01, 1.1], 89.5% decrease in odds
+per 2.3-month increase in breeding season) and JND > 3 (breeding season length, OR [90% HDI] = 0.25
+[0.03, 1.5], 75% decrease in odds per 2.3-month increase in breeding season). Additionally, full
+migratory behaviour, rather than no migratory behaviour, was associated with greater odds of a
+species having a sexually-dimorphic plumage patch with achromatic JND > 1 (full migration, OR [90%
+HDI] = 4.97 [0.95, 24.4]), JND > 2 (full migration, OR [90% HDI] = 66.5 [3.2, 1802.4]) and JND > 3
+(OR [90% HDI] = 22.3 [1.6, 307.9]). Finally, both full and partial migratory behaviour, rather than
+no migration behaviour, in conjunction with longer breeding season lengths are associated with
+greater odds of a species having a sexually-dimorphic plumage patch with achromatic JND > 1
+(breeding season length x full migration, OR [90% HDI]  = 4.84 [0.67, 39.6]), JND > 2 (breeding
+season length x full migration, OR = 66.3 [0.59, 11415.7]; breeding season length x partial
+migration, OR [90% HDI] = 20.7 [0.9, 589.1]) and JND > 3 (breeding season length x partial
+migration, OR [90% HDI] = 8.28 [0.76, 109.1]).
 
 ## *Chromatic plumage sexual dimorphism predictors*
-
-Among predictors of _breeding timing_ models predicting chromatic sexually-dimorphic plumage patches, longer breeding season length was associated with lower odds of a species having a plumage patch with chromatic JND > 2 (OR [90% HDI]  = 0.14 [0.01, 1.42], 86% reduction in odds per 2.3 month increase in breeding season), and both full and partial migratory behaviour rather than no migration are associated with greater odds of a species having a plumage patch JND > 1 (partial migration, OR [90% HDI] = 2.2 [0.94, 4.9]), JND > 2 (full migration, OR [90% HDI] = 80.51 [2.8, 3432.9]) and JND > 3 (partial migration, OR [90% HDI] = 71.2 [0.32, 59062.9]; full migration, OR [90% HDI] = 234.7 [ 0.51, 300382.6]). For _breeding spacing models_, island residency rather than mainland residency was associated with lower odds of having a plumage patch > 1 chromatic JND (island, OR [90% HDI] = 0.27 [0.09, 0.89]). Finally, more _Turdus_ species in sympatry was associated with higher odds of a species having a chromatic plumage patch with JND > 1 (number of sympatric species, OR [90% HDI] = 1.4 [1.18, 1.67], 40% increase in odds per each additional sympatric species), JND > 2 (sympatric species, OR [90% HDI] = 1.59 [1.01, 2.52], 59% increase in odds per each additional sympatric species), and JND > 3 (sympatric species, OR [90% HDI] = 2.11 [1.03, 4.46], 111% increase in odds per each additional sympatric species). 
+Migratory behaviour, shorter breeding season lengths, and a high number of sympatric _Turdus_ species were strongly associated with greater odds
+of a species having chromatic plumage sexual dimorphism.
+Among predictors of _breeding timing_ models predicting chromatic sexually-dimorphic plumage
+patches, longer breeding season length was associated with lower odds of a species having a plumage
+patch with chromatic JND > 2 (OR [90% HDI] = 0.14 [0.01, 1.42], 86% reduction in odds per 2.3 month
+increase in breeding season). Both full and partial migratory behaviour rather than no migration are
+associated with greater odds of a species having a plumage patch JND > 1 (partial migration, OR [90%
+HDI] = 2.2 [0.94, 4.9]), JND > 2 (full migration, OR [90% HDI] = 80.51 [2.8, 3432.9]) and JND > 3
+(partial migration, OR [90% HDI] = 71.2 [0.32, 59062.9]; full migration, OR [90% HDI] = 234.7 [
+0.51, 300382.6]). For _breeding spacing models_, island residency rather than mainland residency was
+associated with lower odds of having a plumage patch > 1 chromatic JND (island, OR [90% HDI] = 0.27
+[0.09, 0.89]). Finally, more _Turdus_ species in sympatry was associated with higher odds of a
+species having a sexually-dimorphic chromatic plumage patch with JND > 1 (number of sympatric
+species, OR [90% HDI] = 1.4 [1.18, 1.67], 40% increase in odds per each additional sympatric
+species), JND > 2 (sympatric species, OR [90% HDI] = 1.59 [1.01, 2.52], 59% increase in odds per
+each additional sympatric species), and JND > 3 (sympatric species, OR [90% HDI] = 2.11 [1.03,
+4.46], 111% increase in odds per each additional sympatric species). 
 
 \begin{table}[!h]
 
@@ -278,7 +320,6 @@ Plumage Metric & JND Threshold & Breeding Sympatry & Breeding Timing & Breeding 
 \bottomrule
 \end{tabular}}
 \end{table}
-
 
 \newpage
 \begin{landscape}
@@ -337,14 +378,23 @@ among many species of different passerine families.
 
  Further, we determined that sympatric _Turdus_ species have distinguishable plumage colouration
  differences from one another when measuring plumage appearance from the avian visual perspective
- (Fig. S1). Therefore, plumage sexual dichromatism may have evolved to facilitate species
-and mate recognition in species breeding under greater sympatry with other true thrushes. However, we cannot
- directly determine here if plumage sexual dimorphism in sympatric _Turdus_ species is the result of
- reproductive character displacement. Namely, we do not know if past changes in species' plumage
+ (Fig. S1). Divergent plumage colouration within sexes between closely-related species indicates that plumage sexual dichromatism may have evolved to facilitate species
+and mate recognition in _Turdus_ species breeding under higher sympatry with other true thrushes. However, we cannot
+ directly determine if the plumage sexual dimorphism in sympatric _Turdus_ species is the result of
+ reproductive character displacement. We do not know if past changes in species' plumage
  sexual dimorphism occurred before or during periods of sympatry with other _Turdus_ species.
  Regardless, present-day plumage sexual dimorphism and perceivable differences in plumage
- colouration between sympatric species likely reduces the challenge of finding compatible mates.
- 
+ colouration between sympatric species likely reduces the challenge of finding compatible mates by
+ signaling an individual's sex, breeding status, and species. For example, the four species _Turdus_ hybrid zone
+ in north-central Asia [@mccarthy2006] is a particularly striking example where repoductive character
+ displacement has likely occurred. All four species exhibit strong plumage sexual
+ dimorphism (Figure S2). Comparing within sexes between sister species pairs of _T.ruficollis_ and _T.atrogularis_, and
+ _T.naumanni_ and _T.eunomus_ [@nylander2008], plumage patterns of the species pairs are nearly identical
+ except for a divergence in colour. _T.ruficollis_ and _T.atrogularis_ share similar facial and
+ throat colouring patterns, with the main difference being red colouration in _T.ruficollis_ in
+ opposition to the black colouration of _T.atrogularis_. In the second species pair, _T.naumanni_
+ has red ventral plumage colouration and _T.eunomus_ has black ventral plumage colouration.
+
  Previous studies have found that closely-related sympatric species tend to have more similar
  plumage appearance than expected if plumage colouration patterns had evolved to facilitate species
  recognition via reproductive character displacement [@simpson2021;@miller2019]. The potential lack

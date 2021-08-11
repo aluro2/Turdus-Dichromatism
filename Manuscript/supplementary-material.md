@@ -33,4 +33,8 @@ just noticeable differences (JND) thresholds by number of *Turdus* thrush specie
 
 ![**Fig S1**: Median ± median absolute deviation of number of distinguishable plumage patches by
 just noticeable differences (JND) thresholds of 1,2 and 3 between male and
-female *Turdus* thrush species in sympatry at various breeding range overlaps (percent).](Figures/supp_01_sympatry-heterospecific-plumage.png)
+female *Turdus* thrush species in sympatry at various breeding range overlaps
+(percent).](Figures/supp_01_sympatry-heterospecific-plumage.png)
+
+![**Fig S2**: Four species hybrid zone in north-central Asia (_T.atrogularis_,
+_T.ruficollis_,_T.eunomus_, and _T.naumanni_). Map is from [@mccarthy2006]. Illustrations © HBW Alive/Lynx Edicions.](Figures/supp_02_turdus_hybrid_zone.png)
