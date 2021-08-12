@@ -30,13 +30,13 @@ geometry:
  (_Turdus_), a large and diverse genus of passerine birds. We used receptor-noise limited models of
  avian vision to quantify avian-perceived chromatic and achromatic visual contrasts between male and
  female plumage patches and tested the influence of breeding season length, spatial distribution, and sympatry with
- other _Turdus_ species on plumage dimorphism. As predicted, we found that 1) true thrush species with
+ other _Turdus_ species on plumage dichromatism. As predicted, we found that 1) true thrush species with
  migratory
- behaviour have greater plumage sexual dimorphism than non-migratory species, 2) species with longer
- breeding seasons have less sexual dichromatism, and 3) the number of _Turdus_ thrush species
- breeding in sympatry is associated with more plumage dimorphism. These results suggest that
+ behaviour have greater plumage sexual dichromatism than non-migratory species, 2) species with longer
+ breeding seasons have less plumage sexual dichromatism, and 3) the number of _Turdus_ thrush species
+ breeding in sympatry is associated with more plumage sexual dichromatism. These results suggest that
  social recognition systems, including species and mate recognition, play a prominent role in the
- evolution of thrush plumage sexual dimorphism.
+ evolution of thrush plumage sexual dichromatism.
 
 ## Keywords
 
@@ -71,10 +71,11 @@ geometry:
    identify a suitable mate [@hamilton1961;@saetre1992]. Evidence in favour of this recognition
    hypothesis for sexual dichromatism includes a positive association of greater plumage sexual
    dichromatism with migratory behaviour and
-   shorter breeding seasons [@badyaev2003]. Avian
-   species that migrate to and from their breeding
-   territories, reside on mainland continents, and have large geographic ranges tend to have greater plumage
-   sexual dichromatism and plumage colour elaboration than species that do not migrate, reside on islands, and have limited breeding ranges
+   shorter breeding seasons [@badyaev2003]. Additional support for the recognition hypothesis
+   includes a consistent pattern of greater plumage
+   sexual dichromatism and plumage colour elaboration in avian species that reside on mainland
+   continents and have large geographic ranges in comparison to species that do not migrate, reside on islands,
+   and have limited breeding ranges
    [@friedman2009;@dale2015;@simpson2015a;@matysiokova2017;@badyaev1998;@figuerola2000;@tobias2009;@roulin2010;@doutrelant2016;@kearns2020].
 
    Moreover, plumage sexual dichromatism likely plays a role in hybridization
@@ -86,7 +87,7 @@ geometry:
    dichromatism is positively correlated with transitions from allopatry to
    parapatry and increases in geographic range overlaps among
    passerine sister species pairs [@cooney2017]. Greater plumage sexual
-   dichromatism has also been found to be positively associated with greater species divergence and richness
+   dichromatism has also been found to be positively associated with greater avian species divergence and richness
    [@seddon2013;@cooney2019].
    Among passerine sister species pairs, more pronounced changes in male rather than female plumage
    colouration in sexually-dichromatic species suggest that female choice and male-male
@@ -95,7 +96,9 @@ geometry:
 
    True thrushes (_Turdus_ spp.) are an exceptionally
    diverse monophyletic genus of passerine birds consisting of about ~86 species distributed across the globe
-   (Fig. 1). The true thrushes are an ideal passerine clade for examining the species recognition hypothesis for plumage sexual dimorphism. Plumage sexual dimorphism and migratory behaviours vary substantially between species
+   ([Fig. 1](#fig:fig-01-turdus-ranges)). The true thrushes are an ideal passerine clade for
+   examining the species recognition hypothesis for plumage sexual dichromatism because plumage sexual
+   dichromatism and migratory behaviours vary substantially between species
    and sexual dichromatism has evolved multiple times in thrushes across the world
    [@clement2000;@nagy2019]. Hybridization also occurs in some, but not all, _Turdus_ species. There is a large hybrid zone between four _Turdus_ species (_T. atrogularis_, _T. eunomus_,
    _T. naumanni_, _T. ruficollis_) in north-central Asia [@mccarthy2006], indicating that some
@@ -111,7 +114,7 @@ geometry:
    challenging strongly favour the evolution and maintenance of prominent plumage sexual
    dichromatism in birds. Here, we test these predictions of the recognition hypothesis for
    sexually-dimorphic avian plumage by evaluating the potential influences of breeding timing, spacing, and
-   sympatry on plumage dichromatism in _Turdus_ thrushes.
+   sympatry on plumage dichromatism in _Turdus_ thrushes ([Fig. 2](#fig:fig:02-hypotheses)).
 
 ![Breeding ranges of all recognized *Turdus* species from BirdLife International, with
 representative species' males and females shown for species with sexually dimorphic plumage. The
@@ -120,12 +123,13 @@ the number of *Turdus* thrush species in sympatry with overlapping breeding rang
 used with permission from HBW Alive/Lynx
 Edicions](Figures/01_turdus_species_worldmap_with_HBW.png){#fig:fig-01-turdus-ranges}
 
-![Hypotheses and predictions for each model. Arrow colours indicate predicted correlation, positive
+![Hypotheses and predictions for each model (large yellow boxes).  Arrow colours indicate predicted correlation, positive
 (blue) and negative (red)](Figures/hypothesis-figure-mermaid.png){#fig:fig:02-hypotheses}
 
 # Methods
 
-Initial pre-registration of the study's methods and analyses are available on [Open Science Framework](https://osf.io/zum6d).
+Initial pre-registration of the study's methods and analyses are available on [Open Science
+Framework](https://osf.io/zum6d) [@luro2019].
 
 ## *Plumage sexual dichromatism*
 
@@ -204,9 +208,9 @@ surrounded by a marine body of water.
 
 We used phylogenetically-corrected Bayesian multilevel logistic regression
 models using the *brms* v2.13.0 package [@burkner2017] in R
-v4.0.0 [@rcoreteam2020]⁠. We modeled plumage sexual dimorphism responses as the
+v4.0.0 [@rcoreteam2020]⁠. We modeled plumage sexual dichromatism responses as the
 number of sexually-dichromatic patches > 1, 2, or 3 chromatic and achromatic
-JNDs. Plumage dimorphism responses were modeled as binomial trials (N=5 plumage patch “trials”) to test for
+JNDs. Plumage dichromatism responses were modeled as binomial trials (N=5 plumage patch “trials”) to test for
 associations with breeding timing, breeding sympatry and breeding spacing. For
 all phylogenetically-corrected models, we used the *Turdus* molecular phylogeny from
 Nylander et al. (2008) [@nylander2008] to create
@@ -259,10 +263,10 @@ having a sexually-dimorphic plumage patch. We obtained N ≥ 4000 effective post
 Markov Chains (MCMC) successfully converged (Rhat = 1 for all models’
 parameters). All _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed similarly well and substantially better than _intercept only_ models in predicting the probability of having a sexually-dimorphic plumage patch with achromatic JND values > 1, 2, or 3 (Table 1; all models predicting achromatic plumage patches had ELPD values within 4, following the convention of @burnham2002).  Among models predicting the probability of having a  sexually-dichromatic plumage patch with chromatic JND values >1, 2, or 3, all _breeding sympatry_, _breeding timing_, and _breeding spacing_ models performed much better than _intercept only_ models, and _breeding sympatry_ models had the top predictive performance (Table 1; _breeding sympatry_ models all have ELPD =0, only the _breeding spacing_ models predicting dichromatic plumage patches had similar predictive performance).
 
-## *Achromatic plumage sexual dimorphism predictors*
+## *Achromatic plumage sexual dichromatism predictors*
 
 Migratory behaviour and shorter breeding season lengths were strongly associated with greater odds
-of a species having achromatic plumage sexual dimorphism. All model predictors' effect estimates are provided as the posterior median odds-ratio (OR) and
+of a species having achromatic plumage sexual dichromatism. All model predictors' effect estimates are provided as the posterior median odds-ratio (OR) and
 90% highest-density interval (HDI) in Table 2. Among predictors of achromatic sexually-dimorphic
 plumage patches, only predictors included in the _breeding timing_ model have predictors with
 probability of direction (_pd_) values ≥ 0.90 (Table 2). Specifically, longer breeding season length
@@ -281,9 +285,9 @@ season length x full migration, OR = 66.3 [0.59, 11415.7]; breeding season lengt
 migration, OR [90% HDI] = 20.7 [0.9, 589.1]) and JND > 3 (breeding season length x partial
 migration, OR [90% HDI] = 8.28 [0.76, 109.1]).
 
-## *Chromatic plumage sexual dimorphism predictors*
+## *Chromatic plumage sexual dichromatism predictors*
 Migratory behaviour, shorter breeding season lengths, and larger numbers of sympatric _Turdus_ species were strongly associated with greater odds
-of a species having chromatic plumage sexual dimorphism.
+of a species having chromatic plumage sexual dichromatism.
 Among predictors of _breeding timing_ models predicting chromatic sexually-dimorphic plumage
 patches, longer breeding season length was associated with lower odds of a species having a plumage
 patch with chromatic JND > 2 (OR [90% HDI] = 0.14 [0.01, 1.42], 86% reduction in odds per 2.3 month
@@ -371,12 +375,12 @@ Model & Parameter & Achromatic, JND > 1 & Achromatic, JND > 2 & Achromatic, JND 
 
 # Discussion
 
-Our results provide comparative correlative evidence in support of predictions of the recognition hypothesis for plumage sexual dimorphism in true thrushes. We used a receptor-noise
+Our results provide comparative correlative evidence in support of predictions of the recognition hypothesis for plumage sexual dichromatism in true thrushes. We used a receptor-noise
 limited model of _Turdus merula_ vision [@vorobyev1998;@hart2000] to measure avian-perceivable
-visual contrast of plumage colours and found that the odds of plumage sexual dimorphism are much
+visual contrast of plumage colours and found that the odds of plumage sexual dichromatism are much
 greater for _Turdus_ thrush species that have full or partial migration rather than no migration,
 have relatively short breeding seasons, and are in sympatry with many other true thrush species
-(Table 1,2). Our results align with prior comparative studies of avian plumage sexual dimorphism where
+(Table 1,2). Our results align with prior comparative studies of avian plumage sexual dichromatism where
 strong associations of sexual dichromatism with greater migratory behaviour [@dale2015] and more
 sympatric taxa [@cooney2017] were found
 among many species of different passerine families.
@@ -385,20 +389,20 @@ among many species of different passerine families.
  differences from one another when measuring plumage appearance from the avian visual perspective
  (Fig. S1). Divergent plumage colouration within sexes between closely-related species indicates that plumage sexual dichromatism may have evolved to facilitate species
 and mate recognition in _Turdus_ species breeding under higher sympatry with other true thrushes. However, we cannot
- directly determine if the plumage sexual dimorphism in sympatric _Turdus_ species is the result of
+ directly determine if the plumage sexual dichromatism in sympatric _Turdus_ species is the result of
  reproductive character displacement. We do not know if past changes in species' plumage
- sexual dimorphism occurred before or during periods of sympatry with other _Turdus_ species.
- Regardless, present-day plumage sexual dimorphism and perceivable differences in plumage
+ sexual dichromatism occurred before or during periods of sympatry with other _Turdus_ species.
+ Regardless, present-day plumage sexual dichromatism and perceivable differences in plumage
  colouration between sympatric species likely reduces the challenge of finding compatible mates by
  signaling an individual's sex, breeding status, and species. For example, the four species _Turdus_ hybrid zone
  in north-central Asia [@mccarthy2006] is a particularly striking example where reproductive character
  displacement has likely occurred and all four species exhibit strong plumage sexual
- dimorphism (Fig. S2). Comparing within sexes between sister species pairs of _T.ruficollis_ and _T.atrogularis_, and
+ dichromatism (Fig. S2). Comparing within sexes between sister species pairs of _T.ruficollis_ and _T.atrogularis_, and
  _T.naumanni_ and _T.eunomus_ [@nylander2008], plumage patterns of the species pairs are nearly identical
  except for a divergence in colour. _T.ruficollis_ and _T.atrogularis_ share similar facial and
  throat colouring patterns, with the main difference being red colouration in _T.ruficollis_ in
  opposition to the black colouration of _T.atrogularis_. In the second species pair, _T.naumanni_
- has red ventral plumage colouration and _T.eunomus_ has black ventral plumage colouration .
+ has red ventral plumage colouration and _T.eunomus_ has black ventral plumage colouration.
 
  Previous studies have found that closely-related sympatric species tend to have more similar
  plumage appearance than expected if plumage colouration patterns had evolved to facilitate species
@@ -413,13 +417,13 @@ and mate recognition in _Turdus_ species breeding under higher sympatry with oth
 
 # Conclusions
 
-Patterns of plumage sexual dimorphism in true thrushes (_Turdus_) are consistent with select predictions of
-the recognition hypothesis for plumage sexual dimorphism. Migratory behaviour and limited
+Patterns of plumage sexual dichromatism in true thrushes (_Turdus_) are consistent with select predictions of
+the recognition hypothesis for plumage sexual dichromatism. Migratory behaviour and limited
 breeding seasons reduce the amount of time available to find a mate, and greater plumage sexual
-dimorphism may help migratory species find compatible mates more rapidly. Greater plumage sexual
-dimorphism in _Turdus_ species under sympatry with other true thrush species also supports the
+dichromatism may help migratory species find compatible mates more rapidly. Greater plumage sexual
+dichromatism in _Turdus_ species under sympatry with other true thrush species also supports the
 possibility that increased plumage sexual dichromatism may be the result of reproductive character
-displacement. Therefore, greater plumage sexual dimorphism likely reduces species and mate
+displacement. Therefore, greater plumage sexual dichromatism likely reduces species and mate
 recognition errors and decreases hybridization.
 
 # Acknowledgements
@@ -429,5 +433,15 @@ access to museum specimens used in this study. We also thank the Department of E
 and Behavior at the University of Illinois for funding and support. MEH was funded by the University
 of Illinois Harley Jones Van Cleave Professorship. We are grateful for the extensive feedback and
 comments from Becky Fuller, Jeffrey Hoover, and Al Roca that greatly improved the manuscript.
+
+# Data Accessibility
+
+Data and code used for the analyses can be found at
+[https://github.com/aluro2/Turdus-Dichromatism](https://github.com/aluro2/Turdus-Dichromatism).
+
+# Author Contributions
+
+**Alec Luro**: Conceptualization, Investigation, Methodology, Software, Formal Analysis, Data Curation,
+Visualization, Writing-Original Draft, Writing-Review & Editing. **Mark Hauber**: Conceptualization, Resources, Supervision, Project administration, Funding acquisition, Writing-Review & Editing.
 
 # References

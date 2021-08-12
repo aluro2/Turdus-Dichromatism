@@ -11,6 +11,8 @@ header-includes:
   - \usepackage{booktabs}
   - \usepackage{caption}
   - \captionsetup[figure]{labelformat=empty}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
   - \usepackage{lscape}
 link-citations: true
 linkcolor: blue
@@ -23,7 +25,7 @@ geometry:
  - margin=1in
 ---
 
-# Tables and Figures 
+## Supplementary Tables and Figures 
 
 ![**Table S1**: Number of sexually-dimorphic plumage patches for combined achromatic and chromatic
 just noticeable differences (JND) thresholds by number of *Turdus* thrush species (% of species).](Figures/supp_00_n_species_n_dimorphic_patches_achro_and_chrom.png)
@@ -32,9 +34,12 @@ just noticeable differences (JND) thresholds by number of *Turdus* thrush specie
 just noticeable differences (JND) thresholds by number of *Turdus* thrush species (% of species).](Figures/supp_00_n_species_n_dimorphic_patches.png)
 
 ![**Fig S1**: Median ± median absolute deviation of number of distinguishable plumage patches by
-just noticeable differences (JND) thresholds of 1,2 and 3 between male and
+just noticeable differences (JND) thresholds of 1, 2, and 3 between male and
 female *Turdus* thrush species in sympatry at various breeding range overlaps
 (percent).](Figures/supp_01_sympatry-heterospecific-plumage.png)
 
 ![**Fig S2**: Four species hybrid zone in north-central Asia (_T.atrogularis_,
-_T.ruficollis_,_T.eunomus_, and _T.naumanni_). Map is from [@mccarthy2006]. Illustrations © HBW Alive/Lynx Edicions.](Figures/supp_02_turdus_hybrid_zone.png)
+_T.ruficollis_,_T.eunomus_, and _T.naumanni_). Map is from [@mccarthy2006]. Illustrations © HBW
+Alive/Lynx Edicions.](Figures/supp_02_turdus_hybrid_zone.png)
+
+## References
