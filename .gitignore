@@ -16,6 +16,7 @@ nohup.out
 # Dirs
 Turdus_Spectral_Data/
 Turdus_Spectral_Data.tar.gz
+Turdus_Data/HBW_no_bg
 
 # Files
 */template.docx
@@ -24,3 +25,6 @@ Manuscript/DOCX-CHANGES*
 Bash-Scripts/docker_get_docx_changes.sh
 Bash-Scripts/update-google-drive-MS.sh
 *.ztr-directory
+.vscode
+R-Scripts/xx_*
+
