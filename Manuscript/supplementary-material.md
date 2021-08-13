@@ -1,7 +1,7 @@
 ---
 title: "Supplementary Material: Rapid mate recognition promotes greater avian-perceived plumage sexual dichromatism in true thrushes (genus: *Turdus*)"
 author: "Alec B. Luro^1^<sup>*</sup>, Mark E. Hauber^1^"
-date: "^1^ Department of Evolution, Ecology and Behavior, School of Integrative Biology, University of Illinois at Urbana-Champaign <br> <sup>*</sup>alec.b.luro@mail.com </br>"
+date: "^1^ Department of Evolution, Ecology and Behavior, School of Integrative Biology, University of Illinois at Urbana-Champaign <br> <sup>*</sup>alec.b.luro@gmail.com </br>"
 csl: Manuscript/proceedings-of-the-royal-society-b.csl
 bibliography: Manuscript/Turdus-Dichromatism.bib
 header-includes:
