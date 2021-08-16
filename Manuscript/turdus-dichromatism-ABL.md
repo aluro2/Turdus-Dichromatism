@@ -28,7 +28,7 @@ geometry:
  doing so likely promote the evolution of traits used for species and mate recognition. Conspicuous traits that signal an individual's species, sex, and breeding status
  reduce the challenge of identifying a compatible conspecific mate, and should be present more frequently in
  species with limited time to find a mate and species facing higher risk of making mate recognition errors, including
- migratory rather than sedentary species, species shorter breeding seasons, and species breeding under high
+ migratory rather than sedentary species, species with shorter breeding seasons, and species breeding under high
  sympatry with many closely-related heterospecifics. Here, we
  tested this recognition hypothesis for promoting plumage sexual dichromatism in the true thrushes
  (_Turdus_), a large and diverse genus of passerine birds. We used receptor-noise limited models of
