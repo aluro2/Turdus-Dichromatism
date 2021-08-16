@@ -26,21 +26,20 @@ geometry:
 
  Ecological conditions limiting the time to find a compatible mate or increasing the difficulty in
  doing so likely promote the evolution of traits used for species and mate recognition. Conspicuous traits that signal an individual's species, sex, and breeding status
- reduce the challenge of identifying a compatible conspecific mate, and should be present more frequently in
- species with limited time to find a mate and species facing higher risk of making mate recognition errors, including
+ reduce the challenge of identifying a compatible conspecific mate, and should be more common in
  migratory rather than sedentary species, species with shorter breeding seasons, and species breeding under high
  sympatry with many closely-related heterospecifics. Here, we
  tested this recognition hypothesis for promoting plumage sexual dichromatism in the true thrushes
- (_Turdus_), a large and diverse genus of passerine birds. We used receptor-noise limited models of
+ (_Turdus_ spp.), a large and diverse genus of passerine birds. We used receptor-noise limited models of
  avian vision to quantify avian-perceived chromatic and achromatic visual contrasts between male and
  female plumage patches and tested the influence of breeding season length, spatial distribution, and sympatry with
  other _Turdus_ species on plumage dichromatism. As predicted, we found that 1) true thrush species with
  migratory
  behaviour have greater plumage sexual dichromatism than non-migratory species, 2) species with longer
- breeding seasons have less plumage sexual dichromatism, and 3) the number of _Turdus_ thrush species
+ breeding seasons have less plumage sexual dichromatism, and 3) greater numbers of _Turdus_ thrush species
  breeding in sympatry is associated with more plumage sexual dichromatism. These results suggest that
  social recognition systems, including species and mate recognition, play a prominent role in the
- evolution of thrush plumage sexual dichromatism.
+ evolution of plumage sexual dichromatism in true thrushes.
 
 ## Keywords
 
