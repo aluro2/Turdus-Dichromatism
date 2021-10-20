@@ -1,7 +1,7 @@
 ---
 title: "Pressure for rapid and accurate mate recognition promotes avian-perceived plumage sexual dichromatism in true thrushes (genus: *Turdus*)"
-author: "Alec B. Luro^1^<sup>*</sup>, Mark E. Hauber^1^"
-date: "^1^ Department of Evolution, Ecology and Behavior, School of Integrative Biology, University of Illinois at Urbana-Champaign <br> <sup>*</sup>alec.b.luro@gmail.com </br>"
+author: ""
+date: ""
 csl: Manuscript/proceedings-of-the-royal-society-b.csl
 bibliography: Manuscript/Turdus-Dichromatism.bib
 header-includes:
@@ -142,10 +142,6 @@ Edicions](Figures/01_turdus_species_worldmap_with_HBW.png){#fig:fig-01-turdus-ra
 (blue) and negative (red)](Figures/hypothesis-figure-mermaid.png){#fig:fig:02-hypotheses}
 
 # Methods
-
-Initial pre-registration of the study's methods and analyses are available on [Open Science
-Framework](https://osf.io/zum6d) [@luro2019].
-
 ## *Plumage sexual dichromatism*
 
 A total of N=77 *Turdus* thrush species (approximately ~89% of all known true thrush species) were sampled for plumage spectral
@@ -443,23 +439,5 @@ possibility that increased plumage sexual dichromatism may be the result of repr
 displacement. Therefore, greater plumage sexual dichromatism likely increases the speed and accuracy
 of finding a compatible breeding mate, reduces species and mate
 recognition errors, and decreases hybridization.
-
-# Acknowledgements
-
-We thank the American Museum of Natural History in New York City and Field Museum of Chicago for
-access to museum specimens used in this study. We also thank the Department of Evolution, Ecology,
-and Behavior at the University of Illinois for funding and support. MEH was funded by the University
-of Illinois Harley Jones Van Cleave Professorship. We are grateful for the extensive feedback and
-comments from Becky Fuller, Jeffrey Hoover, and Al Roca that greatly improved the manuscript.
-
-# Data Accessibility
-
-Data and code used for the analyses can be found at
-[https://github.com/aluro2/Turdus-Dichromatism](https://github.com/aluro2/Turdus-Dichromatism).
-
-# Author Contributions
-
-**Alec Luro**: Conceptualization, Investigation, Methodology, Software, Formal Analysis, Data Curation,
-Visualization, Writing-Original Draft, Writing-Review & Editing. **Mark Hauber**: Conceptualization, Resources, Supervision, Project administration, Funding acquisition, Writing-Review & Editing.
 
 # References

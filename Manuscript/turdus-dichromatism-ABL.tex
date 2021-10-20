@@ -31,7 +31,6 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Pressure for rapid and accurate mate recognition promotes avian-perceived plumage sexual dichromatism in true thrushes (genus: Turdus)},
-  pdfauthor={Alec B. Luro1*, Mark E. Hauber1},
   colorlinks=true,
   linkcolor=blue,
   filecolor=Maroon,
@@ -90,11 +89,8 @@
 \title{Pressure for rapid and accurate mate recognition promotes
 avian-perceived plumage sexual dichromatism in true thrushes (genus:
 \emph{Turdus})}
-\author{Alec B. Luro\textsuperscript{1}*, Mark E.
-Hauber\textsuperscript{1}}
-\date{\textsuperscript{1} Department of Evolution, Ecology and Behavior,
-School of Integrative Biology, University of Illinois at
-Urbana-Champaign *alec.b.luro@gmail.com}
+\author{}
+\date{}
 
 \begin{document}
 \maketitle
@@ -282,10 +278,6 @@ negative (red)}\label{fig:fig:02-hypotheses}
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-Initial pre-registration of the study's methods and analyses are
-available on \href{https://osf.io/zum6d}{Open Science Framework}
-{[}\protect\hyperlink{ref-luro2019}{37}{]}.
-
 \hypertarget{plumage-sexual-dichromatism}{%
 \subsection{\texorpdfstring{\emph{Plumage sexual
 dichromatism}}{Plumage sexual dichromatism}}\label{plumage-sexual-dichromatism}}
@@ -296,7 +288,7 @@ plumage spectral reflectance using prepared bird skin specimens at the
 American Museum of Natural History in New York City and the Field Museum
 in Chicago, USA. Reflectance measurements spanning 300-700nm were taken
 in triplicate from the belly, breast, throat, crown, and mantle plumage
-patches {[}\protect\hyperlink{ref-andersson2006}{38}{]} of each
+patches {[}\protect\hyperlink{ref-andersson2006}{37}{]} of each
 individual. N=3 male and N=3 female individuals were measured for most
 species (exceptions: \emph{T. lawrencii}, N=2 males and N=2 females;
 \emph{T. swalesi}, N=1 male and N=1 female). Reflectance spectra were
@@ -309,11 +301,11 @@ reflectance white standard (Spectralon WS-1-SL, Labsphere, North Sutton
 NH, USA).
 
 We applied a receptor-noise limited visual model
-{[}\protect\hyperlink{ref-vorobyev1998}{39}{]} of the European Blackbird
+{[}\protect\hyperlink{ref-vorobyev1998}{38}{]} of the European Blackbird
 (\emph{T. merula}) visual system
-{[}\protect\hyperlink{ref-hart2000}{40}{]} in the \emph{pavo}
-{[}\protect\hyperlink{ref-maia2019}{41}{]}⁠ package in R v4.0.0
-{[}\protect\hyperlink{ref-rcoreteam2020}{42}{]}⁠ to calculate
+{[}\protect\hyperlink{ref-hart2000}{39}{]} in the \emph{pavo}
+{[}\protect\hyperlink{ref-maia2019}{40}{]}⁠ package in R v4.0.0
+{[}\protect\hyperlink{ref-rcoreteam2020}{41}{]}⁠ to calculate
 avian-perceived chromatic and achromatic visual contrast (in units of
 ``Just-Noticeable Differences'',or JNDs) of male vs.~female plumage
 patches for all sampled \emph{Turdus} species. Chromatic and achromatic
@@ -324,7 +316,7 @@ species' respective plumage patches. Under ideal laboratory conditions,
 1 JND is generally considered to be the discriminable threshold past
 which an observer is predicted to be able to perceive the two colours as
 different. However, natural light environments vary both spatially and
-temporally {[}\protect\hyperlink{ref-endler1993}{43}{]}⁠, bringing into
+temporally {[}\protect\hyperlink{ref-endler1993}{42}{]}⁠, bringing into
 question the accuracy of a 1 JND threshold for generalizing visual
 contrast under natural conditions. Therefore, we calculated the total
 number of sexually-dichromatic plumage patches per species (out of N=5
@@ -332,7 +324,7 @@ measured patches) as the number of plumage patches with average JND
 values \textgreater{} 1, 2, or 3 to account for uncertainty in visual
 discrimination thresholds due to variation in psychophysical and ambient
 lighting conditions affecting the strength of between-sex plumage visual
-contrast {[}\protect\hyperlink{ref-kemp2015}{44}{]}⁠. Additionally, we
+contrast {[}\protect\hyperlink{ref-kemp2015}{43}{]}⁠. Additionally, we
 modeled the number of divergent plumage patches (at the three different
 JND thresholds listed above) within sexes and between different
 sympatric species under different levels of breeding range overlap (10\%
@@ -349,7 +341,7 @@ Model}}{Breeding Timing Model}}\label{breeding-timing-model}}
 We collected data on migration behaviour and breeding season length from
 \emph{Thrushes} {[}\protect\hyperlink{ref-clement2000}{31}{]} and the
 \emph{Handbook of the Birds of the World}
-{[}\protect\hyperlink{ref-delhoyo2017}{45}{]}⁠. We assigned three
+{[}\protect\hyperlink{ref-delhoyo2017}{44}{]}⁠. We assigned three
 different kinds of migratory behaviour: 1) \emph{full migration} when a
 species description clearly stated that a species ``migrates'', 2)
 \emph{partial migration} when a species was described to have
@@ -364,10 +356,10 @@ Model}}{Breeding Sympatry Model}}\label{breeding-sympatry-model}}
 
 Species' breeding ranges were acquired from \emph{BirdLife
 International}
-{[}\protect\hyperlink{ref-birdlifeinternationalandhandbookofthebirdsoftheworld2018}{46}{]}⁠.
+{[}\protect\hyperlink{ref-birdlifeinternationalandhandbookofthebirdsoftheworld2018}{45}{]}⁠.
 We calculated congener breeding range overlaps (as percentages) using
 the \emph{letsR} package in R
-{[}\protect\hyperlink{ref-vilela2015}{47}{]}⁠. We then calculated the
+{[}\protect\hyperlink{ref-vilela2015}{46}{]}⁠. We then calculated the
 number of sympatric species as the number of congeners with breeding
 ranges that overlap \textgreater30\% with the focal species' breeding
 range {[}\protect\hyperlink{ref-cooney2017}{27}{]}. Comparisons of the
@@ -393,8 +385,8 @@ modeling}}{Statistical modeling}}\label{statistical-modeling}}
 
 We used phylogenetically-corrected Bayesian multilevel logistic
 regression models using the \emph{brms} v2.13.0 package
-{[}\protect\hyperlink{ref-burkner2017}{48}{]} in R v4.0.0
-{[}\protect\hyperlink{ref-rcoreteam2020}{42}{]}⁠. We modeled plumage
+{[}\protect\hyperlink{ref-burkner2017}{47}{]} in R v4.0.0
+{[}\protect\hyperlink{ref-rcoreteam2020}{41}{]}⁠. We modeled plumage
 sexual dichromatism responses as the number of sexually-dichromatic
 patches \textgreater{} 1, 2, or 3 chromatic and achromatic JNDs. Plumage
 dichromatism responses were modeled as binomial trials (N=5 plumage
@@ -402,7 +394,7 @@ patch ``trials'') to test for associations with breeding timing,
 breeding sympatry and breeding spacing. For all
 phylogenetically-corrected models, we used the \emph{Turdus} molecular
 phylogeny from Nylander et al.~(2008)
-{[}\protect\hyperlink{ref-nylander2008}{49}{]} to create a covariance
+{[}\protect\hyperlink{ref-nylander2008}{48}{]} to create a covariance
 matrix of species' phylogenetic relationships. All models used a dataset
 of N=67 out of the \emph{Turdus} species for which all the types of data
 (see above) were available.
@@ -420,12 +412,12 @@ range size (km2) and breeding landmass (mainland as the reference
 category versus island). We also ran null models (intercept only) for
 all responses. All models' intercepts and response standard deviations
 were assigned a weakly informative prior (Student T: df = 3, location =
-0, scale = 10) {[}\protect\hyperlink{ref-gelman2013}{50}{]}, and
+0, scale = 10) {[}\protect\hyperlink{ref-gelman2013}{49}{]}, and
 predictor coefficients were assigned flat uninformative priors. We ran
 each model for 6,000 iterations across 6 chains and assessed Markov
 Chain Monte Carlo (MCMC) convergence using the Gelman-Rubin diagnostic
-(Rhat) {[}\protect\hyperlink{ref-gelman2013}{50}{]}. We then performed
-k-fold cross-validation {[}\protect\hyperlink{ref-vehtari2017}{51}{]} to
+(Rhat) {[}\protect\hyperlink{ref-gelman2013}{49}{]}. We then performed
+k-fold cross-validation {[}\protect\hyperlink{ref-vehtari2017}{50}{]} to
 assess each model's accuracy in predicting plumage sexual dichromatism
 of randomly-selected samples of \emph{Turdus} thrush species, refitting
 each model \emph{K}=16 times. For each k-fold, the training dataset
@@ -435,19 +427,19 @@ included in the training dataset. Finally, we compared differences
 between the models' expected log pointwise predictive densities (ELPD)
 to assess which model(s) best predicted the probability of having a
 sexually-dichromatic plumage patch.
-{[}\protect\hyperlink{ref-vehtari2017}{51}{]}⁠.
+{[}\protect\hyperlink{ref-vehtari2017}{50}{]}⁠.
 
 Models' predictor effects were assessed using 90\% highest-density
 intervals of the posterior distributions and probability of direction,
 the proportion of the posterior distribution that shares the same sign
 (positive or negative) as the posterior median
-{[}\protect\hyperlink{ref-makowski2019}{52}{]}, to provide estimates of
+{[}\protect\hyperlink{ref-makowski2019}{51}{]}, to provide estimates of
 the probability of that a predictor has an entirely positive or negative
 effect on the presence of sexually-dimorphic plumage patches. We assume
 predictor estimates with a probability of direction ≥ 0.90 to be
 indicative of a reliable existence of a predictor's effect on
 sexually-dimorphic plumage patches
-{[}\protect\hyperlink{ref-makowski2019}{52}{]}.
+{[}\protect\hyperlink{ref-makowski2019}{51}{]}.
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
@@ -488,7 +480,7 @@ spacing} models performed similarly well and substantially better than
 sexually-dimorphic plumage patch with achromatic JND values
 \textgreater{} 1, 2, or 3 (Table 1; all models predicting achromatic
 plumage patches had ELPD values within 4, following the convention of
-{[}\protect\hyperlink{ref-burnham2002}{53}{]}). Among models predicting
+{[}\protect\hyperlink{ref-burnham2002}{52}{]}). Among models predicting
 the probability of having a sexually-dichromatic plumage patch with
 chromatic JND values \textgreater1, 2, or 3, all \emph{breeding
 sympatry}, \emph{breeding timing}, and \emph{breeding spacing} models
@@ -641,7 +633,7 @@ Our results provide comparative correlative evidence in support of
 predictions of the recognition hypothesis for plumage sexual
 dichromatism in true thrushes. We used a receptor-noise limited model of
 \emph{Turdus merula} vision
-{[}\protect\hyperlink{ref-vorobyev1998}{39},\protect\hyperlink{ref-hart2000}{40}{]}
+{[}\protect\hyperlink{ref-vorobyev1998}{38},\protect\hyperlink{ref-hart2000}{39}{]}
 to measure avian-perceivable visual contrast of plumage colours and
 found that the odds of plumage sexual dichromatism are much greater for
 \emph{Turdus} thrush species that have full or partial migration rather
@@ -674,7 +666,7 @@ striking example where reproductive character displacement has likely
 occurred and all four species exhibit strong plumage sexual dichromatism
 (Fig. S3). Comparing within sexes between sister species pairs of
 \emph{T.ruficollis} and \emph{T.atrogularis}, and \emph{T.naumanni} and
-\emph{T.eunomus} {[}\protect\hyperlink{ref-nylander2008}{49}{]}, plumage
+\emph{T.eunomus} {[}\protect\hyperlink{ref-nylander2008}{48}{]}, plumage
 patterns of the species pairs are nearly identical except for a
 divergence in colour. \emph{T.ruficollis} and \emph{T.atrogularis} share
 similar facial and throat colouring patterns, with the main difference
@@ -687,11 +679,11 @@ Previous studies have found that closely-related sympatric species tend
 to have more similar plumage appearance than expected if plumage
 colouration patterns had evolved to facilitate species recognition via
 reproductive character displacement
-{[}\protect\hyperlink{ref-simpson2021}{54},\protect\hyperlink{ref-miller2019}{55}{]}.
+{[}\protect\hyperlink{ref-simpson2021}{53},\protect\hyperlink{ref-miller2019}{54}{]}.
 The potential lack of major plumage colour divergence among
 closely-related sympatric species may be attributable to constraints
 imposed by a shared light environment on colour signal efficiency
-{[}\protect\hyperlink{ref-mcnaught2002}{56}{]}, or similar natural
+{[}\protect\hyperlink{ref-mcnaught2002}{55}{]}, or similar natural
 selection pressures (e.g., predators, parasites, and weather).
 Generally, despite greater similarity in plumage appearance in
 comparison to allopatric species, closely-related sympatric species can
@@ -715,32 +707,6 @@ of reproductive character displacement. Therefore, greater plumage
 sexual dichromatism likely increases the speed and accuracy of finding a
 compatible breeding mate, reduces species and mate recognition errors,
 and decreases hybridization.
-
-\hypertarget{acknowledgements}{%
-\section{Acknowledgements}\label{acknowledgements}}
-
-We thank the American Museum of Natural History in New York City and
-Field Museum of Chicago for access to museum specimens used in this
-study. We also thank the Department of Evolution, Ecology, and Behavior
-at the University of Illinois for funding and support. MEH was funded by
-the University of Illinois Harley Jones Van Cleave Professorship. We are
-grateful for the extensive feedback and comments from Becky Fuller,
-Jeffrey Hoover, and Al Roca that greatly improved the manuscript.
-
-\hypertarget{data-accessibility}{%
-\section{Data Accessibility}\label{data-accessibility}}
-
-Data and code used for the analyses can be found at
-\url{https://github.com/aluro2/Turdus-Dichromatism}.
-
-\hypertarget{author-contributions}{%
-\section{Author Contributions}\label{author-contributions}}
-
-\textbf{Alec Luro}: Conceptualization, Investigation, Methodology,
-Software, Formal Analysis, Data Curation, Visualization,
-Writing-Original Draft, Writing-Review \& Editing. \textbf{Mark Hauber}:
-Conceptualization, Resources, Supervision, Project administration,
-Funding acquisition, Writing-Review \& Editing.
 
 \hypertarget{references}{%
 \section*{References}\label{references}}
@@ -817,7 +783,7 @@ Evolution, and Systematics} \textbf{34}, 27--49.
 \CSLLeftMargin{10. }
 \CSLRightInline{Dale J, Dey C, Delhey K, Kempenaers B, Valcu M. 2015 The
 effects of life-history and social selection on male and female plumage
-coloration. \emph{Nature} \textbf{000}, 1--17.
+coloration. \emph{Nature} \textbf{527}, 367--370.
 (doi:\href{https://doi.org/10.1038/nature15509}{10.1038/nature15509})}
 
 \leavevmode\hypertarget{ref-dunn2015}{}%
@@ -915,7 +881,7 @@ P-A, Covas R. 2016 Worldwide patterns of bird colouration on islands.
 \CSLRightInline{Kearns AM, Joseph L, Austin JJ, Driskell AC, Omland KE.
 2020 Complex mosaic of sexual dichromatism and monochromatism in
 {Pacific} robins results from both gains and losses of elaborate
-coloration. \emph{Journal of Avian Biology} \textbf{51}.
+coloration. \emph{Journal of Avian Biology} \textbf{51}, e02404.
 (doi:\href{https://doi.org/10.1111/jav.02404}{10.1111/jav.02404})}
 
 \leavevmode\hypertarget{ref-alatalo1994}{}%
@@ -1009,57 +975,50 @@ comparative study of thrushes ({Passeriformes}: {Turdidae}).
 \textbf{51}, 64--71.
 (doi:\href{https://doi.org/10.1111/j.1439-0469.2012.00668.x}{10.1111/j.1439-0469.2012.00668.x})}
 
-\leavevmode\hypertarget{ref-luro2019}{}%
-\CSLLeftMargin{37. }
-\CSLRightInline{Luro A, Hauber ME. 2019 Plumage dichromatism in {Turdus}
-thrushes.
-(doi:\href{https://doi.org/10.17605/OSF.IO/ZUM6D}{10.17605/OSF.IO/ZUM6D})}
-
 \leavevmode\hypertarget{ref-andersson2006}{}%
-\CSLLeftMargin{38. }
+\CSLLeftMargin{37. }
 \CSLRightInline{Andersson S, Prager M. 2006 Quantifying {Colors}. In
 \emph{Bird coloration, {Volume} 1: {Mechanisms} and {Measurements}} (eds
 GE Hill, KJ McGraw), pp. 76--77. {Cambridge, MA}: {Harvard University
 Press}. }
 
 \leavevmode\hypertarget{ref-vorobyev1998}{}%
-\CSLLeftMargin{39. }
+\CSLLeftMargin{38. }
 \CSLRightInline{Vorobyev M, Osorio D. 1998 Receptor noise as a
-determinant of colour thresholds. \emph{Proceedings. Biological sciences
-/ The Royal Society} \textbf{265}, 351--8.
+determinant of colour thresholds. \emph{Proceedings of the Royal Society
+B: Biological Sciences} \textbf{265}, 351--358.
 (doi:\href{https://doi.org/10.1098/rspb.1998.0302}{10.1098/rspb.1998.0302})}
 
 \leavevmode\hypertarget{ref-hart2000}{}%
-\CSLLeftMargin{40. }
+\CSLLeftMargin{39. }
 \CSLRightInline{Hart NS, Partridge JC, Cuthill IC, Bennett AT. 2000
 Visual pigments, oil droplets, ocular media and cone photoreceptor
 distribution in two species of passerine bird: The blue tit ({Parus}
-caeruleus {L}.) And the blackbird ({Turdus} merula {L}.). \emph{Journal
-of comparative physiology. A, Sensory, neural, and behavioral
-physiology} \textbf{186}, 375--387.
+caeruleus) and the blackbird ({Turdus} merula). \emph{Journal of
+Comparative Physiology A} \textbf{186}, 375--387.
 (doi:\href{https://doi.org/10.1007/s003590050437}{10.1007/s003590050437})}
 
 \leavevmode\hypertarget{ref-maia2019}{}%
-\CSLLeftMargin{41. }
+\CSLLeftMargin{40. }
 \CSLRightInline{Maia R, Gruson H, Endler JA, White TE. 2019 Pavo 2:
 {New} tools for the spectral and spatial analysis of colour in r.
 \emph{Methods in Ecology and Evolution} \textbf{10}, 1097--1107.
 (doi:\href{https://doi.org/10.1111/2041-210X.13174}{10.1111/2041-210X.13174})}
 
 \leavevmode\hypertarget{ref-rcoreteam2020}{}%
-\CSLLeftMargin{42. }
+\CSLLeftMargin{41. }
 \CSLRightInline{R Core Team. 2020 \emph{R: {A Language} and
 {Environment} for {Statistical Computing}}. {Vienna, Austria}: {R
 Foundation for Statistical Computing}. }
 
 \leavevmode\hypertarget{ref-endler1993}{}%
-\CSLLeftMargin{43. }
+\CSLLeftMargin{42. }
 \CSLRightInline{Endler JA. 1993 The {Color} of {Light} in {Forests} and
 {Its Implications}. \emph{Ecological Monographs} \textbf{63}, 1--27.
 (doi:\href{https://doi.org/10.2307/2937121}{10.2307/2937121})}
 
 \leavevmode\hypertarget{ref-kemp2015}{}%
-\CSLLeftMargin{44. }
+\CSLLeftMargin{43. }
 \CSLRightInline{Kemp DJ, Herberstein ME, Fleishman LJ, Endler JA,
 Bennett ATD, Dyer AG, Hart NS, Marshall J, Whiting MJ. 2015 An
 {Integrative Framework} for the {Appraisal} of {Coloration} in {Nature}.
@@ -1067,32 +1026,33 @@ Bennett ATD, Dyer AG, Hart NS, Marshall J, Whiting MJ. 2015 An
 (doi:\href{https://doi.org/10.1086/681021}{10.1086/681021})}
 
 \leavevmode\hypertarget{ref-delhoyo2017}{}%
-\CSLLeftMargin{45. }
+\CSLLeftMargin{44. }
 \CSLRightInline{del Hoyo J, Elliott A, Sargatal J, Christie DA, de Juana
-E. 2017 \emph{Handbook of the birds of the world alive}. }
+E. 2017 \emph{Handbook of the {Birds} of the {World Alive}}.
+{Barcelona}: {Lynx Edicions}. }
 
 \leavevmode\hypertarget{ref-birdlifeinternationalandhandbookofthebirdsoftheworld2018}{}%
-\CSLLeftMargin{46. }
+\CSLLeftMargin{45. }
 \CSLRightInline{BirdLife International and Handbook of the Birds of the
 World. 2018 \emph{Bird species distribution maps of the world. {Version}
 2018.1.} }
 
 \leavevmode\hypertarget{ref-vilela2015}{}%
-\CSLLeftMargin{47. }
+\CSLLeftMargin{46. }
 \CSLRightInline{Vilela B, Villalobos F. 2015 {letsR}: A new {R} package
 for data handling and analysis in macroecology. \emph{Methods in Ecology
 and Evolution} \textbf{6}, 1229--1234.
 (doi:\href{https://doi.org/10.1111/2041-210X.12401}{10.1111/2041-210X.12401})}
 
 \leavevmode\hypertarget{ref-burkner2017}{}%
-\CSLLeftMargin{48. }
+\CSLLeftMargin{47. }
 \CSLRightInline{Bürkner PC. 2017 Brms: {An R} package for {Bayesian}
 multilevel models using {Stan}. \emph{Journal of Statistical Software}
 \textbf{80}, 1--28.
 (doi:\href{https://doi.org/10.18637/jss.v080.i01}{10.18637/jss.v080.i01})}
 
 \leavevmode\hypertarget{ref-nylander2008}{}%
-\CSLLeftMargin{49. }
+\CSLLeftMargin{48. }
 \CSLRightInline{Nylander JAA, Olsson U, Alström P, Sanmartín I. 2008
 Accounting for phylogenetic uncertainty in biogeography: {A} bayesian
 approach to dispersal-vicariance analysis of the thrushes ({Aves}:
@@ -1100,34 +1060,34 @@ approach to dispersal-vicariance analysis of the thrushes ({Aves}:
 (doi:\href{https://doi.org/10.1080/10635150802044003}{10.1080/10635150802044003})}
 
 \leavevmode\hypertarget{ref-gelman2013}{}%
-\CSLLeftMargin{50. }
+\CSLLeftMargin{49. }
 \CSLRightInline{Gelman A, Carlin JB, Stern HS, Dunson DB, Vehtari A,
 Rubin DB. 2013 \emph{Bayesian data analysis, third edition}. Third.
 {Boca Raton, FL}: {CRC Press}.
 (doi:\href{https://doi.org/10.1201/b16018}{10.1201/b16018})}
 
 \leavevmode\hypertarget{ref-vehtari2017}{}%
-\CSLLeftMargin{51. }
+\CSLLeftMargin{50. }
 \CSLRightInline{Vehtari A, Gelman A, Gabry J. 2017 Practical {Bayesian}
 model evaluation using leave-one-out cross-validation and {WAIC}.
 \emph{Statistics and Computing} \textbf{27}, 1413--1432.
 (doi:\href{https://doi.org/10.1007/s11222-016-9696-4}{10.1007/s11222-016-9696-4})}
 
 \leavevmode\hypertarget{ref-makowski2019}{}%
-\CSLLeftMargin{52. }
+\CSLLeftMargin{51. }
 \CSLRightInline{Makowski D, Ben-Shachar MS, Chen SHA, Lüdecke D. 2019
 Indices of {Effect Existence} and {Significance} in the {Bayesian
 Framework}. \emph{Frontiers in Psychology} \textbf{10}.
 (doi:\href{https://doi.org/10.3389/fpsyg.2019.02767}{10.3389/fpsyg.2019.02767})}
 
 \leavevmode\hypertarget{ref-burnham2002}{}%
-\CSLLeftMargin{53. }
+\CSLLeftMargin{52. }
 \CSLRightInline{Burnham KP, Anderson DR. 2002 \emph{Model selection and
 multimodel inference: A practical information-theoretic approach}. 2nd
 ed. {New York}: {Springer}. }
 
 \leavevmode\hypertarget{ref-simpson2021}{}%
-\CSLLeftMargin{54. }
+\CSLLeftMargin{53. }
 \CSLRightInline{Simpson RK, Wilson DR, Mistakidis AF, Mennill DJ, Doucet
 SM. 2021 Sympatry drives colour and song evolution in wood-warblers
 ({Parulidae}). \emph{Proceedings of the Royal Society B: Biological
@@ -1135,14 +1095,14 @@ Sciences} \textbf{288}, 20202804.
 (doi:\href{https://doi.org/10.1098/rspb.2020.2804}{10.1098/rspb.2020.2804})}
 
 \leavevmode\hypertarget{ref-miller2019}{}%
-\CSLLeftMargin{55. }
+\CSLLeftMargin{54. }
 \CSLRightInline{Miller ET, Leighton GM, Freeman BG, Lees AC, Ligon RA.
 2019 Ecological and geographical overlap drive plumage evolution and
 mimicry in woodpeckers. \emph{Nature Communications} \textbf{10}, 1602.
 (doi:\href{https://doi.org/10.1038/s41467-019-09721-w}{10.1038/s41467-019-09721-w})}
 
 \leavevmode\hypertarget{ref-mcnaught2002}{}%
-\CSLLeftMargin{56. }
+\CSLLeftMargin{55. }
 \CSLRightInline{McNaught MK, Owens IPF. 2002 Interspecific variation in
 plumage colour among birds: {Species} recognition or light environment?
 \emph{Journal of Evolutionary Biology} \textbf{15}, 505--514.
