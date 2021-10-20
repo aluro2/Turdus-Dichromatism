@@ -27,4 +27,7 @@ Bash-Scripts/update-google-drive-MS.sh
 *.ztr-directory
 .vscode
 R-Scripts/xx_*
+cover-letter.md
+cover-letter.txt
+cover-letter.pdf
 
