@@ -1,7 +1,16 @@
-\begin{table}[!h]
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Lato}
+\pagestyle{empty}
 
-\caption{\label{tab:table01}Expected log pointwise predictive densities (ELPD) differences and
-kfold information criterion values of models.}
+\begin{document}
+
+\begin{table}
+
 \centering
 \resizebox{\linewidth}{!}{
 \begin{tabular}[t]{llllll}
@@ -23,3 +32,4 @@ Plumage Metric & JND Threshold & Breeding Sympatry & Breeding Timing & Breeding 
 \bottomrule
 \end{tabular}}
 \end{table}
+\end{document}
