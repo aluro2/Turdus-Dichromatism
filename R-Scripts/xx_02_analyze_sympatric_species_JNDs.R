@@ -109,11 +109,34 @@ n_species_overlap <-
   )  
 
 
+# JND +  sympatry data -----------------------------------------------------------
+
+
 sympatry_jnd <-
   left_join(n_species_overlap,
             jnds_patches_btw_sp_within_sexes,
             by = c("species1", "species2")) %>% 
   drop_na() 
+
+# Sympatry at 30% range overlap -------------------------------------------
+
+ median_sympatry30_species_pairs <-
+  sympatry_jnd %>% 
+  # Keep only species paris with 30% breeding range overlap
+  filter(has_sympatry_30 == 1) %>% 
+  select(species1, species2, sex1, n_chromatic_patches_1:n_achromatic_patches_3) %>% 
+  pivot_longer(cols = n_chromatic_patches_1:n_achromatic_patches_3,
+               names_to = "jnd_threshold",
+               values_to = "n_patches") %>%
+  filter(sex1 == "male") %>%
+  group_by(species1) %>% 
+  summarise(n_pairs = n()) %>% 
+  select(n_pairs) %>% 
+  summarise(median_species_pairs = median(n_pairs))
+
+
+# Sympatry at various % range overlaps ------------------------------------
+
 
 summarised_sympatry_jnd <-
   sympatry_jnd %>% 
@@ -164,15 +187,20 @@ summarised_sympatry_jnd %>%
   theme(panel.grid.minor = element_blank(),
         text = element_text(family = "Lato"),
         axis.title = element_text(size = 12),
-        axis.text = element_text(size = 11),
+        axis.text = element_text(size = 8),
         strip.text = element_text(size = 14))
 
 ggsave("Figures/sympatry-heterospecific-plumage.png",
-       width = 8,
+       width = 10,
        height = 6,
        units = "in"
        )
 
+# Shortened summary for 30% range overlap ---------------------------------
 
+summarised_sympatry_jnd %>% 
+  filter(
+    sympatry == 30
+  )
 
 
