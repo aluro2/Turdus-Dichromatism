@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/346175229.svg)](https://zenodo.org/badge/latestdoi/346175229)
+
 # Data and analyses for Turdus thrush dichromatism study
 ![](.images/turdus-collage.png)
 
